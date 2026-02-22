@@ -410,7 +410,7 @@ a .navItem{
         display: none;
     }
     #swiperSubNav {
-         display: flex;
+        display: flex;
     }
     #cpd, #rospa{
         display: none;
