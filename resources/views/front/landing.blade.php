@@ -149,7 +149,7 @@
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/44.png')}}" alt="Support">
                         </div>
-                        <p class="premium-step-text" x-text="data.bulkSection[4]">For technical support, please contact us at info@irelandSafetyCourse.ie.</p>
+                        <p class="premium-step-text" x-text="data.bulkSection[4]">For technical support, please contact us at info@ireland-safetycourse.com.</p>
                     </div>
                 </div>
             </div>
@@ -452,7 +452,7 @@
 
                     <div class="imh-contact-box">
                         <p x-text="data.homeAboutUs[4]">For inquiries, student support, sales, or technical assistance, reach out via chat or email.</p>
-                        <a href="mailto:info@irish-manualhandling.com" class="imh-email-link">info@irish-manualhandling.com</a>
+                        <a href="mailto:info@ireland-safetycourse.com" class="imh-email-link">info@info@ireland-safetycourse.com</a>
                     </div>
                 </div>
 
@@ -566,7 +566,7 @@
 
                     <div class="imh-expert-cta-card">
                         <h3 x-text="data.expert[6]">Elevate your workplace safety standards...</h3>
-                        <a href="mailto:info@irish-manualhandling.com" class="imh-expert-btn">Email Us Today</a>
+                        <a href="mailto:info@ireland-safetycourse.com" class="imh-expert-btn">Email Us Today</a>
                     </div>
                 </div>
 

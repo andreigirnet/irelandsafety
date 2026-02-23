@@ -56,7 +56,7 @@
         "loginFaq": [
             "Account Access",
             "I paid for the course, what now?",
-            "Visit <a href=\"{{route('home')}}\" style=\"color: blue\">\"https://irelandSafetyCourse.ie/packages\"</a> to activate your license. If you have trouble, contact us via the Online Chat.",
+            "Visit <a href=\"{{route('home')}}\" style=\"color: blue\">\"https://ireland-safetycourse.com/packages\"</a> to activate your license. If you have trouble, contact us via the Online Chat.",
             "Password recovery",
             "Use the 'Forgot Password' link on the login page. If the course seems stuck, we recommend clearing your browser cache and using Google Chrome for the best experience. For further help, message us on the Online Chat.",
             "Technical issues during training",
