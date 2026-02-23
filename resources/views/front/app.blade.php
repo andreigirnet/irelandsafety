@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- Title --}}
-    <title>{{ config('app.name', 'Laravel') }} - Online Safety Courses from €25</title>
+    <title>Online Safety Courses Ireland | CPD Certified Training from €25 - {{ config('app.name') }}</title>
     {{-- Meta description --}}
-    <meta name="description" content="Get certified for only €25! Fully online safety courses. ⭐️ 1 Hour Duration ⭐️ Digital Certificate ⭐️ Unlimited Exam Attempts. Recognized in Ireland & UK.">
+    <meta name="description" content="€25 CPD-certified online safety courses in Ireland. Manual Handling, Fire Safety, First Aid & more. Instant certificate. Fully compliant training.">
     <meta name="keywords" content="Manual Handling Courses Online, Best Manual Handling Training Ireland, Manual Handling Certification & Courses, Manual Handling Instructor Certification, Expert Manual Handling Assessment, Compliance with Manual Handling Regulations, Safety in Manual Handling Techniques, Ergonomic Lifting Practices, Efficient Load Handling Methods, Preventing Manual Handling Injuries, Top-Rated Manual Handling Practices in Ireland, Manual Handling Guidelines and Certification, Advanced Manual Handling Training Solutions, Certified Manual Handling Programs, Affordable Manual Handling Certification in Ireland, Professional Manual Handling Courses">
     {{-- Open Graph / Facebook --}}
     <link rel="canonical" href="{{ url()->current() }}">
@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="Online Safety Courses Ireland | CPD Certified - {{ config('app.name') }}">
-    <meta property="og:description" content="Get certified in 1 hour with our fully online safety courses. Recognized in Ireland, UK, and Europe. Unlimited exam attempts included.">
+    <meta property="og:description" content="Complete your CPD-certified safety training online. Manual Handling, Fire Safety, First Aid & more. Instant certificate included.">
     <meta property="og:image:alt" content="Ireland Safety Course - Accredited Online Training">
     <meta property="og:image" content="https://www.irelandsafetycourse.com/images/metaImage.png">
 
