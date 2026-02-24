@@ -122,7 +122,7 @@
         });
     </script>
 
-
+    <script src="{{asset('js/prevent.js')}}"></script>
 </body>
 
 </html>
