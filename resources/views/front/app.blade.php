@@ -6,7 +6,7 @@
     {{-- Title --}}
     <title>Online Safety Courses Ireland | CPD Certified Training from €25 - {{ config('app.name') }}</title>
     {{-- Meta description --}}
-    <meta name="description" content="€25 CPD-certified online safety courses in Ireland. Manual Handling, Fire Safety, First Aid & more. Instant certificate. Fully compliant training.">
+    <meta name="description" content="25€ CPD-certified online safety courses in Ireland. Manual Handling, Fire Safety, First Aid & more. Instant certificate. Fully compliant training.">
     <meta name="keywords" content="Manual Handling Courses Online, Best Manual Handling Training Ireland, Manual Handling Certification & Courses, Manual Handling Instructor Certification, Expert Manual Handling Assessment, Compliance with Manual Handling Regulations, Safety in Manual Handling Techniques, Ergonomic Lifting Practices, Efficient Load Handling Methods, Preventing Manual Handling Injuries, Top-Rated Manual Handling Practices in Ireland, Manual Handling Guidelines and Certification, Advanced Manual Handling Training Solutions, Certified Manual Handling Programs, Affordable Manual Handling Certification in Ireland, Professional Manual Handling Courses">
     {{-- Open Graph / Facebook --}}
     <link rel="canonical" href="{{ url()->current() }}">
@@ -20,12 +20,13 @@
     <meta property="og:description" content="Complete your CPD-certified safety training online. Manual Handling, Fire Safety, First Aid & more. Instant certificate included.">
     <meta property="og:image:alt" content="Ireland Safety Course - Accredited Online Training">
     <meta property="og:image" content="https://www.irelandsafetycourse.com/images/metaImage.png">
-
+    <link rel = "icon" href ="{{asset('images/logo/flavicons.ico')}}" type = "image/x-icon">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow" rel="stylesheet">
     {{-- Css --}}
-    <link rel = "icon" href ="{{asset('images/logo/flavicons.ico')}}" type = "image/x-icon">
+
     <link rel="stylesheet" href="{{asset("css/main.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/registerInclude.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/footer.css")}}">

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -62,31 +63,13 @@ class BlogController extends Controller
 
         $blog = new Blog();
         $blog->title = $request->input('title');
-        $blog->slug = str_replace(' ', '-', $request->input('title'));
+        $blog->slug = Str::slug($request->input('title'));
         $blog->description = $request->input('description');
         $blog->content = $request->input('blogContent');
         $blog->image = $imageName;
         // You may also associate the blog with a user if you have a user relationship
 
         $blog->save();
-
-        $blogUrl = url("/blog/{$blog->slug}");
-        $blogUrl = str_replace("http://", "https://", $blogUrl);// Update this based on your blog URL structure
-        $sitemapPath = public_path('sitemap.xml'); // Update this based on your actual sitemap path
-
-        if (File::exists($sitemapPath)) {
-            $sitemapContent = File::get($sitemapPath);
-
-            // Add the new URL to the sitemap
-            $newUrl = "<url><loc>{$blogUrl}</loc><changefreq>daily</changefreq><priority>0.8</priority></url>";
-            $sitemapContent = str_replace('</urlset>', $newUrl.'</urlset>', $sitemapContent);
-
-            // Update the last modification date if needed
-            // $sitemapContent = preg_replace('/<lastmod>.*?<\/lastmod>/', '<lastmod>'.now().'</lastmod>', $sitemapContent);
-
-            // Save the updated sitemap
-            File::put($sitemapPath, $sitemapContent);
-        }
         return redirect(route('admin.blogs.index'))->with('success', 'Blog has been created');
     }
 
