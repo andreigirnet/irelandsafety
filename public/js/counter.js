@@ -12,8 +12,8 @@ let certificatesIntervalId;
 let instructorsIntervalId;
 
 function incrementCounterCustomers() {
-    counterValueCustomers+=120;
-    counterElementCustomers.textContent = counterValueCustomers;
+    counterValueCustomers+=423556;
+    counterElementCustomers.textContent = counterValueCustomers + '+';
 
     if (counterValueCustomers > MAX_COUNT_CUSTOMERS) {
         clearInterval(customersIntervalId); // Stop the counter
@@ -30,8 +30,8 @@ function incrementCounterCertificates() {
 }
 
 function incrementCounterInstructors() {
-    counterValueInstructors+=120;
-    counterElementInstructors.textContent = counterValueInstructors;
+    counterValueInstructors+=99;
+    counterElementInstructors.textContent = counterValueInstructors + '%';
 
     if (counterValueInstructors > MAX_COUNT_INSTRUCTORS) {
         clearInterval(instructorsIntervalId); // Stop the counter

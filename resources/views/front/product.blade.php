@@ -1,7 +1,7 @@
 @extends('front.app')
 @section('content')
     <div class="title" data-aos="fade-up">
-        <div class="titleText">{{$product->name}}</div>
+        <div class="product-title">{{$product->name}}</div>
         <div class="borderTitle" style="margin-bottom: 20px"></div>
     </div>
 

@@ -21,11 +21,10 @@
     <meta property="og:image:alt" content="Ireland Safety Course - Accredited Online Training">
     <meta property="og:image" content="https://www.irelandsafetycourse.com/images/metaImage.png">
     <link rel = "icon" href ="{{asset('images/logo/flavicons.ico')}}" type = "image/x-icon">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow" rel="stylesheet">
-    {{-- Css --}}
 
     <link rel="stylesheet" href="{{asset("css/main.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/registerInclude.css")}}">
@@ -39,6 +38,7 @@
     <link rel="stylesheet" href="{{asset("css/front/contact.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/consulting.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/login.css")}}">
+    <link rel="stylesheet" href="{{asset("css/front/working-at-heights.css")}}">
     <link rel="stylesheet" href="{{asset("css/front/blog.css")}}">
     <link rel="stylesheet" href="{{asset("css/admin/adminProduct.css")}}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
@@ -77,10 +77,10 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="{{asset("js/swiper.js")}}"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="{{asset('js/mainScript.js')}}"></script>
+{{--<script src="{{asset('js/mainScript.js')}}"></script>--}}
 <script>
     AOS.init();
 </script>
-<script src="{{asset('js/prevent.js')}}"></script>
+{{--<script src="{{asset('js/prevent.js')}}"></script>--}}
 </body>
 </html>

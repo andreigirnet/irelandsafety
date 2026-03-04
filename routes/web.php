@@ -33,11 +33,58 @@ use Spatie\Sitemap\Tags\Url;
     Route::get('/consulting', function(){return view("front.consulting");})->name('front.consulting');
     Route::get('/verify/certificate', function(){return view("front.verify");})->name('front.verify');
     Route::get('/cookies', function(){return view("front.cookies");})->name('front.cookies');
-    Route::get('/product/{product:slug}', [App\Http\Controllers\ProductController::class, 'show'])->name('front.product');
+    Route::get('/product/{product:slug}/info', [App\Http\Controllers\ProductController::class, 'show'])->name('front.product');
     Route::get('/infoPdf', function(){
       $path = "pdf/info.pdf";
       return response()->download($path, 'info.pdf');
     })->name('infoPdf');
+    Route::get('/manual-handing', function () {
+        return view('front.manual-handling');
+    })->name('front.manual.handling');
+    Route::get('/working-at-heights', function () {
+        return view('front.working-at-heights');
+    })->name('front.working.at.heights');
+
+    Route::get('/abrasive-wheels', function () {
+        return view('front.abrasive-wheels');
+    })->name('front.abrasive.wheels');
+
+    Route::get('/fire-warden-fire-marshal', function () {
+        return view('front.fire-warden-fire-marshal');
+    })->name('front.fire.warden.fire.marshal');
+
+    Route::get('/fire-extinguisher', function () {
+        return view('front.fire-extinguisher');
+    })->name('front.fire.extinguisher');
+
+    Route::get('/asbestos-awareness', function () {
+        return view('front.asbestos-awareness');
+    })->name('front.asbestos.awareness');
+
+    Route::get('/emergency-first-aid-at-workplace', function () {
+        return view('front.emergency-first-aid-at-workplace');
+    })->name('front.emergency.first.aid.workplace');
+
+    Route::get('/office-health-safety-training', function () {
+        return view('front.office-health-safety-training');
+    })->name('front.office.health.safety.training');
+
+    Route::get('/ppe', function () {
+        return view('front.ppe');
+    })->name('front.ppe');
+
+    Route::get('/haccp-for-catering-and-retail-level-1-2', function () {
+        return view('front.haccp-for-catering-and-retail-level-1-2');
+    })->name('front.haccp.catering.retail.level.1.2');
+
+    Route::get('/working-in-confined-spaces', function () {
+        return view('front.working-in-confined-spaces');
+    })->name('front.working.in.confined.spaces');
+
+    Route::get('/fire-safety-training', function () {
+        return view('front.fire-safety-training');
+    })->name('front.fire.safety.training');
+
 
 
     Route::get('/blogs', [App\Http\Controllers\BlogController::class, 'index'])->name('front.blog');
@@ -187,6 +234,20 @@ Route::get('/generate-sitemap', function () {
     $sitemap->add(Url::create(route('front.verify')));
     $sitemap->add(Url::create(route('front.cookies')));
     $sitemap->add(Url::create(route('front.blog')));
+
+    $sitemap->add(Url::create(route('front.manual.handling')));
+    $sitemap->add(Url::create(route('front.working.at.heights')));
+    $sitemap->add(Url::create(route('front.abrasive.wheels')));
+    $sitemap->add(Url::create(route('front.fire.warden.fire.marshal')));
+    $sitemap->add(Url::create(route('front.fire.extinguisher')));
+    $sitemap->add(Url::create(route('front.asbestos.awareness')));
+    $sitemap->add(Url::create(route('front.emergency.first.aid.workplace')));
+    $sitemap->add(Url::create(route('front.office.health.safety.training')));
+    $sitemap->add(Url::create(route('front.ppe')));
+    $sitemap->add(Url::create(route('front.haccp.catering.retail.level.1.2')));
+    $sitemap->add(Url::create(route('front.working.in.confined.spaces')));
+    $sitemap->add(Url::create(route('front.fire.safety.training')));
+
 
     // Products (dynamic)
     Product::all()->each(function ($product) use ($sitemap) {

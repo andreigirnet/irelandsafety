@@ -8,9 +8,9 @@
         <div class="opacityLayer"></div>
         <div class="mainBannerContent">
             <div class="mainBannerRight">
-                <h1 class="mainBannerTitle" x-html="data.videoTitle">Convenient & Effective,<br> Ensuring Your Safe Return to Work</h1>
-                <div class="mainBannerDescription" x-text="data.videoContent">Providing best Online Manual Handling Training Course that delivers top-quality safety instruction, certification management, and consultative services, simplifying the task of ensuring every worker returns home safely.</div>
-                <a href="{{route('register')}}"><div class="videoButton" x-text="data.registerButton">Pay / Register Here</div></a>
+                <h1 class="mainBannerTitle">HEALTH AND SAFETY COURSES IRELAND -<br> HEALTH AND SAFETY COURSES ONLINE</h1>
+                <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our CPD and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
+                <a href="{{route('register')}}"><div class="videoButton" >GET CERTIFIED TODAY</div></a>
             </div>
         </div>
     </div>
@@ -19,21 +19,21 @@
         <div id="counterWrap">
             <div class="counterContent">
                 <div class="counterNumbers" id="customersCounter"></div>
-                <div class="counterDescription" x-text="data.counterLanding[0]">CUSTOMERS</div>
+                <div class="counterDescription" >CUSTOMERS</div>
             </div>
             <div class="counterContent">
                 <div class="counterNumbers" id="certificatesCounter"></div>
-                <div class="counterDescription" x-text="data.counterLanding[1]">CERTIFICATE'S ISSUED</div>
+                <div class="counterDescription" >CERTIFICATE'S ISSUED</div>
             </div>
             <div class="counterNumbers" class="counterContent">
                 <div id="instructorsCounter"></div>
-                <div class="counterDescription" x-text="data.counterLanding[2]">QUALIFIED INSTRUCTORS</div>
+                <div class="counterDescription" >PASS RATE</div>
             </div>
         </div>
     </div>
 
     <div class="title" data-aos="fade-up">
-        <div class="titleText" x-text="data.landingProduct[0]">Awarded for Exceptional Performance in Online Learning in Ireland, UK and Europe</div>
+        <div class="titleText" >Exlplore our Health and Safety Courses</div>
         <div class="borderTitle"></div>
         <img src="{{asset("images/products/saleOver.png")}}" id="overImgDash" alt="">
     </div>
@@ -101,7 +101,9 @@
     </div>
 
     <div class="langTitle" data-aos="fade-up">
-        <div class="languageText"  x-text="data.landingProduct[5]">When you start the course, you'll have the opportunity to choose from that 6 languages:</div>
+        <div class="languageText"  >
+            At Ireland Safety Course, our QQI-accredited health and safety courses and online health and safety training programs are designed to be simple, engaging, and accessible for learners of all nationalities. Each safety course online includes clear videos, illustrative graphics, straightforward images, and easy-to-read content to ensure every step is simple to follow. Our health and safety courses fully comply with HSA and HSE standards, align with European Union legislation, and provide recognized certification trusted across Ireland, the UK, Europe, and beyond. Discover our safety courses online and begin your health and safety training today.
+        </div>
         <div class="languagesSection">
             <img src="{{asset('images/flags/en.png')}}" alt="">
             <img src="{{asset('images/flags/pl.png')}}" alt="">
@@ -117,8 +119,8 @@
 
             <div class="premium-info-wing">
                 <header class="premium-info-header">
-                    <h2 class="premium-main-title" x-text="data.bulkSection[0]">
-                        Our digital modules are built for a smooth user experience.
+                    <h2 class="premium-main-title" >
+                        How Our Health and Safety Courses Work: 4 Easy Steps
                     </h2>
                     <div class="premium-divider"></div>
                 </header>
@@ -128,28 +130,28 @@
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/11.png')}}" alt="Purchase">
                         </div>
-                        <p class="premium-step-text" x-text="data.bulkSection[1]">Purchase your training license online.</p>
+                        <p class="premium-step-text" >Purchase your training license online.</p>
                     </div>
 
                     <div class="premium-step-card">
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/22.png')}}" alt="Activate">
                         </div>
-                        <p class="premium-step-text" x-text="data.bulkSection[2]">Activate your account and begin your modules immediately.</p>
+                        <p class="premium-step-text" >Activate your account and begin your modules immediately.</p>
                     </div>
 
                     <div class="premium-step-card">
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/33.png')}}" alt="Achieve">
                         </div>
-                        <p class="premium-step-text" x-text="data.bulkSection[3]">Learn & Achieve - Progress through the course, pass the assessment, and instantly download your credentials.</p>
+                        <p class="premium-step-text" >Learn & Achieve - Progress through the course, pass the assessment, and instantly download your credentials.</p>
                     </div>
 
                     <div class="premium-step-card">
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/44.png')}}" alt="Support">
                         </div>
-                        <p class="premium-step-text" x-text="data.bulkSection[4]">For technical support, please contact us at info@ireland-safetycourse.com.</p>
+                        <p class="premium-step-text" >For technical support, please contact us at info@ireland-safetycourse.com.</p>
                     </div>
                 </div>
             </div>
@@ -167,12 +169,11 @@
                 <img src="{{asset('images/trust.png')}}" alt="">
             </div>
             <div class="trustRight">
-                <div class="trustTitle" x-text="data.trustSection[0]">Training you can trust</div>
+                <div class="trustTitle" >Acredited Health and Safety Courses You Can Trust</div>
                 <div class="trustContent">
-                    <div x-text="data.trustSection[1]">All of our courses comply with Continuing Professional Development standards and are accredited by the CPD Certification Service.
-                        We go above and beyond by ensuring that our courses receive independent approval from reputable authorities such as RoSPA, IATP, IIRSM, and the Institute of Hospitality.</div>
+                    <div >Ireland Safety Course is a legally registered Irish company, fully compliant with national regulations. Every Ireland Safety Course we provide meets HSA standards, holds QQI accreditation, and is aligned with European legislation.</div>
                     <br><br>
-                    <div x-text="data.trustSection[2]">The Manual Handling course is endorsed by Skills for Care, the foremost organization in workforce development for social care across Ireland, the UK, and all European countries. This respected accreditation is exclusive to top-quality learning and development providers in the social care sector.</div>
+                    <div >All our health and safety courses are independently approved by leading professional bodies, giving you recognised, high quality training that employers trust across Ireland, the UK, and Europe. Choose safety courses online with confidence.</div>
                 </div>
             </div>
         </div>
@@ -181,7 +182,7 @@
     <div class="cpdContainer">
         <div class="cpdInner">
             <div class="paddingCpd">
-                <h2 class="cpdTitle" x-text="data.certificateSection[0]">Complete this CPD and ROSPA Accredited Course to obtain your Official Certificate!</h2>
+                <h2 class="cpdTitle" >Get Your Health And Safety Certificate Today</h2>
                 <div class="cpdFlex">
                     <div class="cpdLeft">
                         <div class="cpdItems">
@@ -190,8 +191,8 @@
                                     <img src="{{asset('images/icons/1.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  x-text="data.certificateSection[1]">Complete this CPD and ROSPA </div>
-                                    <div class="cpdItemContent"  x-text="data.certificateSection[2]">Accredited Course to obtain your Official Certificate!</div>
+                                    <div class="cpdItemTitle"  >Complete this CPD and ROSPA </div>
+                                    <div class="cpdItemContent"  >Accredited Course to obtain your Official Certificate!</div>
                                 </div>
                             </div>
                             <div class="cpdItem">
@@ -199,8 +200,8 @@
                                     <img src="{{asset('images/icons/2.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  x-text="data.certificateSection[3]">Certify Your Skills</div>
-                                    <div class="cpdItemContent"  x-text="data.certificateSection[4]">An Irish Manual Handling Diploma/Certificate, accredited by CPD and ROSPA, validates the skills you have acquired.</div>
+                                    <div class="cpdItemTitle"  >Certify Your Skills</div>
+                                    <div class="cpdItemContent"  >An Ireland Safety Training Diploma/Certificate, accredited by CPD and ROSPA, validates the skills you have acquired.</div>
                                 </div>
                             </div>
                             <div class="cpdItem">
@@ -208,8 +209,8 @@
                                     <img src="{{asset('images/icons/3.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  x-text="data.certificateSection[5]">Stand Out From the Crowd</div>
-                                    <div class="cpdItemContent"  x-text="data.certificateSection[6]">Include your Irish Manual Handling Certification on your resume to outshine competitors.</div>
+                                    <div class="cpdItemTitle"  >Stand Out From the Crowd</div>
+                                    <div class="cpdItemContent"  >Include your Ireland Safety Course Certification on your resume to outshine competitors.</div>
                                 </div>
                             </div>
                             <div class="cpdItem">
@@ -217,8 +218,8 @@
                                     <img src="{{asset('images/icons/4.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  x-text="data.certificateSection[7]">Advance in Your Career</div>
-                                    <div class="cpdItemContent"  x-text="data.certificateSection[8]">Showcase your Irish Manual Handling Certification to prospective employers, highlighting your skills and capabilities.</div>
+                                    <div class="cpdItemTitle"  >Advance in Your Career</div>
+                                    <div class="cpdItemContent"  >Showcase your Ireland Safety Course Certification to prospective employers, highlighting your skills and capabilities.</div>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +233,7 @@
     </div>
 
     <div class="title" data-aos="fade-up" style="margin-bottom: 25px;">
-        <div class="titleText sizeTextMobile" x-text="data.reviewTitle">What Our Customers Say</div>
+        <div class="titleText sizeTextMobile" >What Our Customers Say</div>
         <div class="borderTitle"></div>
     </div>
 
@@ -270,7 +271,7 @@
                         </div>
                     </div>
                     <div class="premium-review-body">
-                        "The online Manual Handling training provided by Irish-ManualHandling was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."
+                        "The online Health And Safety Course Online provided by ireland-safetycourse was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."
                     </div>
                 </div>
                 <div class="premium-review-footer">
@@ -299,7 +300,7 @@
                         </div>
                     </div>
                     <div class="premium-review-body">
-                        "I found the course from Irish Manual Handling to be informative and well-structured. The convenience of online learning coupled with their engaging content made the whole experience worthwhile."
+                        "I found the course from Ireland Safety Course to be informative and well-structured. The convenience of online learning coupled with their engaging content made the whole experience worthwhile."
                     </div>
                 </div>
                 <div class="premium-review-footer">
@@ -328,7 +329,7 @@
                         </div>
                     </div>
                     <div class="premium-review-body">
-                        "The Manual Handling training exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"
+                        "The Health And Safety Course Online exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"
                     </div>
                 </div>
                 <div class="premium-review-footer">
@@ -429,7 +430,7 @@
 
 
     {{--    <div class="title" data-aos="fade-up">--}}
-    {{--        <div class="titleText sizeTextMobile" x-text="data.homeAboutUs[0]">About Us</div>--}}
+    {{--        <div class="titleText sizeTextMobile" >About Us</div>--}}
     {{--        <div class="borderTitle"></div>--}}
     {{--    </div>--}}
 
@@ -437,21 +438,21 @@
         <div class="imh-container">
             <div class="imh-header">
                 <span class="imh-subtitle">Excellence in Safety</span>
-                <h2 class="imh-title">Who We Are</h2>
+                <h2 class="imh-title">Safety Courses Online: Study Anytime, Anywhere With Ireland Safety Course</h2>
                 <div class="imh-divider"></div>
             </div>
 
             <div class="imh-content-grid">
                 <div class="imh-main-text">
-                    <p class="imh-lead-para" x-text="data.homeAboutUs[1]">
-                        Welcome to Irish-ManualHandling.com, your premier destination for top-notch online Manual Handling training in Ireland...
+                    <p class="imh-lead-para" >
+                        Welcome to IrelandSafety-Course.com, your premier destination for top-notch online Health And Safety Course Online in Ireland...
                     </p>
-                    <p class="imh-body-para" x-text="data.homeAboutUs[2]">
-                        At Irish Manual Handling, we take immense pride in the integrity and excellence of our safety training services...
+                    <p class="imh-body-para" >
+                        At Ireland Safety Course, we take immense pride in the integrity and excellence of our safety training services...
                     </p>
 
                     <div class="imh-contact-box">
-                        <p x-text="data.homeAboutUs[4]">For inquiries, student support, sales, or technical assistance, reach out via chat or email.</p>
+                        <p >For inquiries, student support, sales, or technical assistance, reach out via chat or email.</p>
                         <a href="mailto:info@ireland-safetycourse.com" class="imh-email-link">info@info@ireland-safetycourse.com</a>
                     </div>
                 </div>
@@ -484,7 +485,7 @@
     </section>
 
     <div class="title">
-        <div class="titleText sizeTextMobile" x-text="data.getCertificate[0]">Get your Certificate</div>
+        <div class="titleText sizeTextMobile" >Get your Certificate</div>
         <div class="borderTitle"></div>
         <a href="{{route('register')}}"><div class="pulse-button" data-aos="fade-up">Pay / Register Here</div></a>
     </div>
@@ -497,30 +498,29 @@
                     <div class="exclusive-icon-box" style="border-color: #e60b31;">
                         <img src="{{asset('images/logo/home.svg')}}" alt="Home">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[1]">LEARN ON YOUR OWN SCHEDULE</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[2]">Complete your training online at a time and location that fits your lifestyle.</p>
+                    <h3 class="exclusive-title" >FLEXIBLE HEALTH AND SAFETY COURSE</h3>
+                    <p class="exclusive-text" >Complete your training online at a time and location that fits your lifestyle.</p>
                 </div>
 
                 <div class="exclusive-card">
                     <div class="exclusive-icon-box" style="border-color: #c3d600;">
                         <img src="{{asset('images/logo/clock.svg')}}" alt="Clock">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[3]">SAVE TIME WITH VIRTUAL LEARNING</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[4]">Avoid travel time and the wait for physical classes to begin.</p>
+                    <h3 class="exclusive-title" >SAVE TIME WITH VIRTUAL LEARNING</h3>
+                    <p class="exclusive-text" >Avoid travel time and the wait for physical classes to begin.</p>
                 </div>
 
                 <div class="exclusive-card">
                     <div class="exclusive-icon-box" style="border-color: #345cb3;">
                         <img src="{{asset('images/logo/wallet.svg')}}" alt="Wallet">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[5]">REDUCE COSTS BY STUDYING DIGITALLY</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[6]">Online education removes the overhead expenses of traditional classroom settings.</p>
+                    <h3 class="exclusive-title" >AFFORDABLE HEALTH AND SAFETY COURSE ONLINE</h3>
+                    <p class="exclusive-text" >Online education removes the overhead expenses of traditional classroom settings.</p>
                 </div>
             </div>
 
             <div class="exclusive-hero-center" data-aos="zoom-in">
-                {{--                <img src="{{asset('images/banners/laptop1.webp')}}" class="exclusive-laptop-img" alt="Platform Preview">--}}
-                <img src="{{asset('images/indian.png')}}" class="indianimage" alt="">
+                <img src="{{asset('images/indian.png')}}" class="indianimage" alt="Health and Safety Training">
             </div>
 
             <div class="exclusive-col" data-aos="fade-up" data-aos-delay="100">
@@ -528,24 +528,24 @@
                     <div class="exclusive-icon-box" style="border-color: #f49c12;">
                         <img src="{{asset('images/logo/download.svg')}}" alt="Download">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[7]">STUDY WHENEVER YOU WANT</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[8]">Finish your modules at your own pace, wherever you have an internet connection.</p>
+                    <h3 class="exclusive-title" >INSTANT HEALTH AND SAFETY CERTIFICATE</h3>
+                    <p class="exclusive-text" >Finish your modules and download your accredited certificate immediately upon completion.</p>
                 </div>
 
                 <div class="exclusive-card">
                     <div class="exclusive-icon-box" style="border-color: #356ce6;">
                         <img src="{{asset('images/logo/internet.svg')}}" alt="Global">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[9]">MAXIMIZE EFFICIENCY</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[10]">Skip the commute and work at the speed that is right for you.</p>
+                    <h3 class="exclusive-title" >MAXIMIZE EFFICIENCY</h3>
+                    <p class="exclusive-text" >Skip the commute and work through your health and safety course at the speed that is right for you.</p>
                 </div>
 
                 <div class="exclusive-card">
                     <div class="exclusive-icon-box" style="border-color: #f91819;">
                         <img src="{{asset('images/logo/high-quality.svg')}}" alt="Quality">
                     </div>
-                    <h3 class="exclusive-title" x-text="data.getCertificate[11]">AFFORDABLE TRAINING</h3>
-                    <p class="exclusive-text" x-text="data.getCertificate[12]">Digital learning is a cost-effective alternative to in-person training.</p>
+                    <h3 class="exclusive-title" >RECOGNISED QUALIFICATIONS</h3>
+                    <p class="exclusive-text" >Our digital learning is a cost-effective alternative to earn your official health and safety certificate.</p>
                 </div>
             </div>
 
@@ -553,7 +553,7 @@
     </section>
 
     <div class="title spaceTop" data-aos="fade-up" >
-        <div class="titleText sizeTextMobile" x-text="data.expert[0]">Expert Online Manual Handling Training | Irish-ManualHandling.com</div>
+        <div class="titleText sizeTextMobile" >Expert Online Health And Safety Course Online | ireland-safetycourse.com</div>
         <div class="borderTitle"></div>
     </div>
 
@@ -562,16 +562,16 @@
 
             <div class="imh-expert-main-grid">
                 <div class="imh-expert-narrative">
-                    <p x-text="data.expert[3]">At Irish-ManualHandling.com, we understand the critical importance...</p>
+                    <p >At ireland-safetycourse.com, we understand the critical importance...</p>
 
                     <div class="imh-expert-cta-card">
-                        <h3 x-text="data.expert[6]">Elevate your workplace safety standards...</h3>
+                        <h3 >Elevate your workplace safety standards...</h3>
                         <a href="mailto:info@ireland-safetycourse.com" class="imh-expert-btn">Email Us Today</a>
                     </div>
                 </div>
 
                 <div class="imh-expert-features">
-                    <h4 class="imh-feature-heading" x-text="data.expert[4]">Why Choose Irish-ManualHandling.com?</h4>
+                    <h4 class="imh-feature-heading" >Why Choose ireland-safetycourse.com?</h4>
 
                     <div class="imh-feature-item">
                         <span class="imh-feature-icon">📋</span>
@@ -608,7 +608,7 @@
             </div>
 
             <div class="imh-expert-footer">
-                <p x-text="data.expert[7]">Ensure your team's safety and efficiency—choose Irish-ManualHandling.com today!</p>
+                <p >Ensure your team's safety and efficiency—choose ireland-safetycourse.com today!</p>
             </div>
         </div>
     </section>

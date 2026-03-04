@@ -31,7 +31,7 @@
 
                     <div class="ct-detail-text">
                         <strong>Email Us:</strong><br>
-                        <a href="mailto:info@manualhandlingireland.com" style="color: #2563eb; text-decoration: none;">info@manualhandlingireland.com</a>
+                        <a href="mailto:info@manualhandlingireland.com" style="color: #2563eb; text-decoration: none;">info@ireland-safetycurse.com</a>
                     </div>
 
                     <div class="ct-address-box">

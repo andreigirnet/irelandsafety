@@ -47,7 +47,7 @@ function app(){
             this.currentLanguage = string
             localStorage.setItem('lang',  string);
             this.currentLanguage = localStorage.getItem('lang');
-            this.fetchData();
+            // this.fetchData();
         },
         init(){
             this.fetchData();

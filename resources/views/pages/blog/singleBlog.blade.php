@@ -43,24 +43,77 @@
         <div class="secondaryBannerTeamLayer"></div>
         <div class="secondaryBannerTitle">Blog</div>
     </div>
-    <div class="blogContainer">
-        <div class="blogInnerSingle">
-            <div class="singleBlogTitleContainer">
-                <h1 class="singleBogTitle">{{$blog->title}}</h1>
-            </div>
-            <div class="imgSingleBlogContainer">
-                <img src="{{asset('images/blogImages/'. $blog->image)}}" alt="" class="singleBlogImage" >
-            </div>
-            <div class="singleBlogTitleContainer" style="margin-top: 10px">
-                <p class="singleBogTitle" style="font-size: 20px; font-weight: 600"><span>Created at: </span>{{$blog->created_at}}</p>
-            </div>
-            <div class="blogSingleContentContainer">
-                <div class="blogSingleContent">
-                    {!! $blog->content !!}
+<article class="post-article">
+    {{-- Header Section --}}
+    <header class="post-header">
+        <div class="post-header__container">
+            <nav class="post-breadcrumb">
+                <a href="{{ route('front.blog') }}">Blog</a> <span>/</span> <span>{{ $blog->category ?? 'Safety' }}</span>
+            </nav>
+            <h1 class="post-article__title">{{ $blog->title }}</h1>
+
+            <div class="post-meta">
+                <div class="post-meta__info">
+                    <span class="post-meta__label">Published on</span>
+                    <time class="post-meta__date">{{ $blog->created_at->format('M d, Y') }}</time>
+                </div>
+                <div class="post-meta__share">
                 </div>
             </div>
         </div>
+    </header>
+
+    {{-- Featured Image --}}
+    <div class="post-feature-image">
+        <div class="post-feature-image__wrapper">
+            <img src="{{asset('images/blogImages/'. $blog->image)}}" alt="{{ $blog->title }}" class="post-feature-image__img">
+        </div>
     </div>
+
+    {{-- Content Body --}}
+    <div class="post-body">
+        <div class="post-body__container">
+            <div class="post-content-entry">
+                {!! $blog->content !!}
+            </div>
+
+            <footer class="post-article__footer">
+                <div class="post-tags">
+                    <span class="tag-exclusive">#Safety</span>
+                    <span class="tag-exclusive">#Workplace</span>
+                </div>
+                <hr class="post-divider">
+                <a href="{{ route('front.blog') }}" class="back-to-blog">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to all stories
+                </a>
+            </footer>
+        </div>
+    </div>
+    <section class="topic-section">
+        <div class="topic-section__container">
+            <h3 class="topic-section__title">Related Training Topics</h3>
+            <div class="topic-section__grid">
+                <a href="{{ route('front.manual.handling') }}" class="topic-pill">Manual Handling Course</a>
+                <a href="{{ route('front.working.at.heights') }}" class="topic-pill">Working at Heights</a>
+                <a href="{{ route('front.abrasive.wheels') }}" class="topic-pill">Abrasive Wheels</a>
+                <a href="{{ route('front.fire.warden.fire.marshal') }}" class="topic-pill">Fire Warden (Fire Marshal)</a>
+                <a href="{{ route('front.fire.extinguisher') }}" class="topic-pill">Fire Extinguisher</a>
+                <a href="{{ route('front.asbestos.awareness') }}" class="topic-pill">Asbestos Awareness</a>
+                <a href="{{ route('front.emergency.first.aid.workplace') }}" class="topic-pill">Emergency First Aid at Workplace</a>
+                <a href="{{ route('front.office.health.safety.training') }}" class="topic-pill">Office Health & Safety Training</a>
+                <a href="{{ route('front.ppe') }}" class="topic-pill">PPE</a>
+                <a href="{{ route('front.haccp.catering.retail.level.1.2') }}" class="topic-pill">HACCP for Catering and Retail Level 1&2</a>
+                <a href="{{ route('front.working.in.confined.spaces') }}" class="topic-pill">Working in Confined Spaces</a>
+                <a href="{{ route('front.fire.safety.training') }}" class="topic-pill">Fire Safety Training</a>
+                <a href="{{route('front.faq')}}" class="topic-pill">FAQ</a>
+                <a href="{{route('front.contact')}}" class="topic-pill">Contact Us</a>
+            </div>
+        </div>
+    </section>
+</article>
 
 <script>
 window.replainSettings = { id: '9f43da79-85c0-4dd0-9467-72fe6bdf1bff' };

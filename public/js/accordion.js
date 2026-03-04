@@ -1,14 +1,16 @@
 var acc = document.getElementsByClassName("actionAccordion");
-var i;
-for (i = 0; i < acc.length; i++) {
+
+for (var i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
+        var panel = this.nextElementSibling; // the content div
+        var arrow = this.querySelector('img'); // your arrow icon inside header
+
         if (panel.style.display === "block") {
             panel.style.display = "none";
-            arrow.style.transform = "rotate(180deg)"
+            if (arrow) arrow.style.transform = "rotate(0deg)";
         } else {
             panel.style.display = "block";
+            if (arrow) arrow.style.transform = "rotate(180deg)";
         }
     });
 }
