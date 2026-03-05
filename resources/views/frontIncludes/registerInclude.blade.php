@@ -5,8 +5,5 @@
             GET CERTIFIED TODAY
         </a>
     </div>
-    <div id="layer">
-
-    </div>
 </div>
 
