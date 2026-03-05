@@ -1,7 +1,9 @@
 <div id="registerInclude">
     <div id="registerIncludeContent">
         <div id="ready">Ready to get started?</div>
-        <a href="{{route('register')}}"><div id="start" data-aos="fade-right"><div id="inner-start" >Register Right Now</div></div></a>
+        <a href="{{route('register')}}" class="modern-glow-btn">
+            GET CERTIFIED TODAY
+        </a>
     </div>
     <div id="layer">
 

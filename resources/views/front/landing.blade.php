@@ -10,7 +10,9 @@
             <div class="mainBannerRight">
                 <h1 class="mainBannerTitle">HEALTH AND SAFETY COURSES IRELAND -<br> HEALTH AND SAFETY COURSES ONLINE</h1>
                 <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our CPD and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
-                <a href="{{route('register')}}"><div class="videoButton" >GET CERTIFIED TODAY</div></a>
+                <a href="{{route('register')}}" class="modern-glow-btn">
+                    GET CERTIFIED TODAY
+                </a>
             </div>
         </div>
     </div>

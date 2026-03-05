@@ -164,7 +164,55 @@
     color: white;
     -webkit-animation: pulse 1.5s infinite;
 }
+.modern-glow-btn {
+    /* Layout & Typography */
+    margin-top: 20px;
+    display: inline-block;
+    padding: 30px 50px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px; /* Slightly more modern than rounded caps */
+    border: none;
 
+    /* The Secret: Background Size for Animation */
+    background: linear-gradient(90deg, #ff8a00, #ff5e00, #ff8a00);
+    background-size: 200% auto;
+
+    /* Smoothness */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+
+    /* Initial subtle shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* THE HOVER EFFECT: Liquid Color Shift */
+.modern-glow-btn:hover {
+    /* Moves the gradient background to create a "liquid" flow */
+    background-position: right center;
+
+    /* The Glow: Intense but soft orange glow on the dark background */
+    box-shadow: 0 0 30px rgba(255, 94, 0, 0.5),
+    0 10px 40px rgba(255, 94, 0, 0.2);
+
+    /* No scaling, just a very tiny lift for feedback */
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Active State for a "Button Press" feel */
+.modern-glow-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(255, 94, 0, 0.4);
+    transition: all 0.1s;
+}
 
 @-webkit-keyframes pulse {
     0% {
@@ -1623,6 +1671,9 @@
     width: 50%;
 }
 @media only screen and (max-width: 1200px) {
+    .modern-glow-btn{
+        font-size: 19px;
+    }
     #customersReviews{
         padding: 0;
     }
