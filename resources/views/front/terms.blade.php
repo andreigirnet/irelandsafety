@@ -13,7 +13,6 @@
 
         <h2 style="margin-top: 20px">Company Information:</h2>
         <p>Online Irish Manual Handling Training<br>
-            Contact Number: 089 463 1967<br>
             Email: <a href="mailto:info@ireland-safetycourse.com" style="color: blue">info@ireland-safetycourse.com</a><br>
             Registered and licensed company.</p>
 
