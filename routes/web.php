@@ -18,7 +18,9 @@ use Spatie\Sitemap\Tags\Url;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+    Route::get('/alert', function(){
+        return view("ui.alerts");
+    });
 
     //Front end routes, User experience
     Route::get('/', function(){

@@ -53,6 +53,7 @@ const stripePaymentMethodHandler = async (result) => {
         button.disabled = false;
         button.style.opacity = '1';
     } else {
+        console.log('Cart Total Element:', document.getElementById('cartTotal'));
         // Otherwise send paymentMethod.id to your server (see Step 4)
         const res = await fetch('/payment', {
             method: 'POST',
@@ -63,7 +64,10 @@ const stripePaymentMethodHandler = async (result) => {
                 county: document.getElementById('county').value,
                 city: document.getElementById('city').value,
                 country: document.getElementById('country').value,
-                cartTotal: document.getElementById('cartTotal').value
+                cartTotal: document.getElementById('cartTotal').value,
+                cartQty: document.getElementById('cartQty').value,
+                cart_items: document.getElementById('cart_items').value,
+                userId: document.getElementById('userId').value
             }),
         })
         const paymentResponse = await res.json();
@@ -99,6 +103,10 @@ const handleServerResponse = async (response) => {
             handleServerResponse(await serverResponse.json());
         }
     } else {
+        localStorage.removeItem('cart');
+        if (window.Alpine && Alpine.store('cart')) {
+            Alpine.store('cart').items = [];
+        }
         window.location.href = '/payment/success';
     }
 }

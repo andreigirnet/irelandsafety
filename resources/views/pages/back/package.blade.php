@@ -1,61 +1,77 @@
 @extends('layouts.vertical', ['title' => 'Dashboard', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('content')
-    @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-    <div class="dashWrapper">
-        <div class="adminHomePageTitle">My Courses</div>
+    <div class="profile-dashboard"> <div class="dashboard-header-flex">
+            <h2 class="user-name-title">My Learning Journey</h2>
+            <span class="status-pill">{{ count($packages) }} Courses</span>
+        </div>
+
         @if(count($packages))
-            <table class="styled-table">
-                <thead>
-                <tr>
-                    <th>Action</th>
-                    <th class="hiddenRows">Package ID</th>
-                    <th>Course Name</th>
-                    <th class="hiddenRows">Status</th>
-                    <th>Certificate</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($packages as $package)
+            <div class="luxury-card no-padding overflow-hidden">
+                <table class="exclusive-table">
+                    <thead>
                     <tr>
-                        <td class="actionOrder">
-                            {{--                        <form class="deleteFormOrders" action="" method="POST">@csrf @method('DELETE')<button class="submitDeleteOrder"><img src="{{asset('images/icons/bin.png')}}" alt=""></button></form>--}}
-                            @if($package->status === 'purchased')
-                                <a href="{{route('package.share',$package->id)}}"><div class="shareCourseButton">Send Course</div></a>
-                                <a href="{{route('course.index',$package->id)}}" class="startCourseButton">Start Course</a>
-                            @else
-                                <div class="greenMessage">This course has been completed</div>
-                                <a href="{{route('course.index',$package->id)}}" class="startCourseButton">View Course</a>
-                            @endif
-                        </td>
-                        <td class="hiddenRows" style="color: black">{{$package->id}}</td>
-                        <td style="color: black">{{$package->course_name}}</td>
-                        <td class="hiddenRows" style="color: black">{{$package->status}}</td>
-                        @if($package->certificate_id)
-                            <td><a href="{{route('certificate.download', $package->certificate_id)}}"><img class="invoiceLink" src="{{asset('images/icons/pdf.png')}}" alt=""></a></td>
-                        @else
-                            <td>-</td>
-                        @endif
+                        <th>Course Details</th>
+                        <th class="hiddenRows">ID</th>
+                        <th class="hiddenRows">Status</th>
+                        <th>Certificate</th>
+                        <th class="text-right">Action</th>
                     </tr>
-                @endforeach
-                {{--        <tr class="active-row">--}}
-                {{--            <td>Melissa</td>--}}
-                {{--            <td>5150</td>--}}
-                {{--        </tr>--}}
-                {{--        <!-- and so on... -->--}}
-                </tbody>
-            </table>
-            <div class="paginationContainer">
+                    </thead>
+                    <tbody>
+                    @foreach($packages as $package)
+                        <tr>
+                            <td>
+                                <div class="course-info-cell">
+                                    <div class="course-icon">📚</div>
+                                    <div class="course-name-text">{{$package->course_name}}</div>
+                                </div>
+                            </td>
+                            <td class="hiddenRows id-badge">#{{$package->id}}</td>
+                            <td class="hiddenRows">
+                                    <span class="status-indicator {{ $package->status === 'purchased' ? 'status-active' : 'status-completed' }}">
+                                        {{ ucfirst($package->status) }}
+                                    </span>
+                            </td>
+                            <td>
+                                @if($package->certificate_id)
+                                    <a href="{{route('certificate.download', $package->certificate_id)}}" class="cert-link">
+                                        <img class="pdf-icon" src="{{asset('images/icons/pdf.png')}}" alt="PDF">
+                                        <span>Download</span>
+                                    </a>
+                                @else
+                                    <span class="no-cert">Certificate - Not available</span>
+                                @endif
+                            </td>
+                            <td class="text-right">
+                                <div class="action-btn-group">
+                                    @if($package->status === 'purchased')
+                                        <a href="{{route('package.share',$package->id)}}" class="btn-outline-sm">Send</a>
+                                        <a href="{{route('course.index',$package->id)}}" class="btn-premium-sm">Start</a>
+                                    @else
+                                        <a href="{{route('course.index',$package->id)}}" class="btn-view-sm">Review</a>
+                                    @endif
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-wrapper">
                 {{ $packages->links('paginator') }}
             </div>
         @else
-            <div class="textAdmin">No Courses at the moment</div>
-            <a href="/home" class="sale-button" >Buy a course here</a>
+            <div class="empty-state luxury-card">
+                <div class="empty-icon">📂</div>
+                <h3>No Courses Found</h3>
+                <p>Ready to level up your skills?</p>
+                <a href="/home" class="glow-button small-width">Browse Catalog</a>
+            </div>
         @endif
     </div>
-    <script src="{{asset('js/adminPage.js')}}"></script>
 @endsection
-
 @section('script')
     @vite(['resources/js/pages/dashboard.js'])
 @endsection

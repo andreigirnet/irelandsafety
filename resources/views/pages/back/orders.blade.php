@@ -1,44 +1,74 @@
 @extends('layouts.vertical', ['title' => 'Dashboard', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('content')
-    @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-    <div class="dashWrapper">
-        <div class="adminHomePageTitle">Orders</div>
+    <div class="profile-dashboard">
+        <div class="dashboard-header-flex">
+            <h2 class="user-name-title">Order History</h2>
+            <span class="status-pill">{{ count($orders) }} Transactions</span>
+        </div>
+
         @if(count($orders))
-            <table class="styled-table">
-                <thead>
-                <tr>
-                    <th class="hiddenRows">Purchase Date</th>
-                    <th>Order Id</th>
-                    <th>Amount</th>
-                    <th>Quantity</th>
-                    <th class="hiddenRows">Status</th>
-                    <th>Invoice</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($orders as $order)
-                    <tr style="color: black">
-                        <td class="hiddenRows">{{$order->created_at}}</td>
-                        <td>{{$order->id}}</td>
-                        <td>{{$order->paid}}</td>
-                        <td>{{$order->quantity}}</td>
-                        <td class="hiddenRows">{{$order->status}}</td>
-                        <td><a href="{{route('invoice.download',$order->id)}}"><img class="invoiceLink" src="{{asset('images/icons/pdf.png')}}" alt=""></a></td>
+            <div class="luxury-card no-padding overflow-hidden">
+                <table class="exclusive-table">
+                    <thead>
+                    <tr>
+                        <th class="hiddenRows">Purchase Date</th>
+                        <th>Order Reference</th>
+                        <th>Total Amount</th>
+                        <th>Quantity</th>
+                        <th class="hiddenRows">Status</th>
+                        <th class="text-right">Invoice</th>
                     </tr>
-                @endforeach
-                {{--        <tr class="active-row">--}}
-                {{--            <td>Melissa</td>--}}
-                {{--            <td>5150</td>--}}
-                {{--        </tr>--}}
-                {{--        <!-- and so on... -->--}}
-                </tbody>
-            </table>
-            <div class="paginationContainer">
+                    </thead>
+                    <tbody>
+                    @foreach($orders as $order)
+                        <tr>
+                            <td class="hiddenRows">
+                                <div class="stat-value" style="font-size: 14px; color: #64748b;">
+                                    {{ $order->created_at->format('M d, Y') }}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="course-info-cell">
+                                    <div class="course-icon">💳</div>
+                                    <div class="course-name-text">#{{ $order->id }}</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="stat-value" style="font-weight: 800; color: #1e293b; font-size: 18px;">
+                                    €{{ number_format($order->paid, 2) }}
+                                </div>
+                            </td>
+                            <td>
+                                <span class="id-badge">{{ $order->quantity }} {{ Str::plural('Course', $order->quantity) }}</span>
+                            </td>
+                            <td class="hiddenRows">
+                                    <span class="status-indicator {{ $order->status === 'completed' ? 'status-active' : 'status-completed' }}">
+                                        {{ $order->status }}
+                                    </span>
+                            </td>
+                            <td class="text-right">
+                                <a href="{{route('invoice.download', $order->id)}}" class="cert-link">
+                                    <img class="pdf-icon" src="{{asset('images/icons/pdf.png')}}" alt="PDF">
+                                    <span class="hiddenRows">Download</span>
+                                </a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination-wrapper">
                 {{ $orders->links('paginator') }}
             </div>
         @else
-            <div class="textAdmin">No Orders at the moment</div>
+            <div class="empty-state luxury-card">
+                <div class="empty-icon">🛒</div>
+                <h3>No Orders Yet</h3>
+                <p>Your transaction history will appear here once you make a purchase.</p>
+                <a href="/home" class="glow-button small-width">Start Shopping</a>
+            </div>
         @endif
     </div>
 @endsection

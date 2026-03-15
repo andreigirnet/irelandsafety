@@ -2,7 +2,14 @@
 
 @section('content')
 @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-<div class="homePageAdminContent">
+<div class="homePageAdminContent" x-data="{ cartAlert: false }">
+    <div
+        x-show="cartAlert"
+        class="alert alert-info shadow-sm cartAlert"
+        x-cloak
+    >
+        <strong>Item</strong> added to the cart
+    </div>
     @if (session('created'))
         <div class="modalRegisterComplete" id="modalRegisterEmployer">
             <div class="modalTitle">Hi there</div>
@@ -24,40 +31,47 @@
             <div class="adminButtonModal" style="display: flex; align-items: center; justify-content: center; margin-top: 20px" id="understoodButton">UNDERSTOOD</div>
         </div>
     @endif
-    <div class="adminHomePageTitle">EFFECTIVE AND ACCESIBLE</div>
-    <div class="adminHomePageInformation">
-        <b class="textColorTitle">{{env('APP_NAME')}}</b>
-        stands as one of Ireland's premier providers of straightforward, efficient, and easily accessible training materials for occupational health and safety. Our primary focus lies in delivering exceptional customer service and ensuring regulatory compliance for our extensive clientele in Ireland and internationally. Through our user-friendly online learning platform, we facilitate seamless training experiences, whether for individuals or large groups of staff members.
-    </div>
-    @if($userPackageId)
-        <div class="notice">
-            <div class="noticeTitle">Notice:</div>
-            <div class="noticeText">
-                You have received the course/courses, either through your own purchase or from your employer.
-                <br>
-                To commence the training, please activate it by clicking the link below and then proceed by pressing the "Start Course" button to get started.
-                <br><br>
-                Follow the link bellow
-                <br>
-            </div>
-            <a class="homeDownloadButton" href="{{route('package.index')}}">Link</a>
+    <div class="luxury-card brand-intro-card">
+
+        <div class="brand-content-text">
+            <h2 class="brand-title">
+                <span class="exclusive-icon" s>&#x1F340;</span>
+                <span class="gradient-text">{{env('APP_NAME')}}</span>
+            </h2>
+            <p class="brand-description">
+                Ireland’s <strong>Leader</strong> in accessible health and safety materials. We offer compliant online training and exceptional service to a global clientele via our seamless digital platform. <strong>Best Prices</strong> on market guarantee
+            </p>
         </div>
-    @endif
-    <div class="homeActionButtons">
-        @if($userPackageId)
-            <a href="{{route('course.index', $userPackageId[0]->id)}}" class="homeStartCourseButton">Start Course</a>
-        @else
-            <form action="{{route('basket.add')}}" method="POST">
-                @csrf
-                <input type="hidden" value="1" name="productId">
-                <button type="submit" class="homeStartCourseButton">Buy a course</button>
-            </form>
-        @endif
-        @if($certificateId)
-            <a href="{{route('certificate.download', $certificateId[0]->id)}}" class="homeDownloadButton">Downloand Certificate</a>
-        @endif
     </div>
-        <img src="{{asset("images/products/saleOver.png")}}" class="overImgDashBack" alt="">
+{{--    @if($userPackageId)--}}
+{{--        <div class="notice">--}}
+{{--            <div class="noticeTitle">Notice:</div>--}}
+{{--            <div class="noticeText">--}}
+{{--                You have received the course/courses, either through your own purchase or from your employer.--}}
+{{--                <br>--}}
+{{--                To commence the training, please activate it by clicking the link below and then proceed by pressing the "Start Course" button to get started.--}}
+{{--                <br><br>--}}
+{{--                Follow the link bellow--}}
+{{--                <br>--}}
+{{--            </div>--}}
+{{--            <a class="homeDownloadButton" href="{{route('package.index')}}">Link</a>--}}
+{{--        </div>--}}
+{{--    @endif--}}
+{{--    <div class="homeActionButtons">--}}
+{{--        @if($userPackageId)--}}
+{{--            <a href="{{route('course.index', $userPackageId[0]->id)}}" class="homeStartCourseButton">Start Course</a>--}}
+{{--        @else--}}
+{{--            <form action="{{route('basket.add')}}" method="POST">--}}
+{{--                @csrf--}}
+{{--                <input type="hidden" value="1" name="productId">--}}
+{{--                <button type="submit" class="homeStartCourseButton">Buy a course</button>--}}
+{{--            </form>--}}
+{{--        @endif--}}
+{{--        @if($certificateId)--}}
+{{--            <a href="{{route('certificate.download', $certificateId[0]->id)}}" class="homeDownloadButton">Downloand Certificate</a>--}}
+{{--        @endif--}}
+{{--    </div>--}}
+        <img src="{{asset("images/products/saleOver.png")}}" class="overImgDashBack" alt="" style="border-radius: 10px">
         <div class="adminProductsBack">
             @foreach($products as $product)
                 @if($product->status == 0)
@@ -90,25 +104,31 @@
                                 <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 1.31)}} €</del> <span style="color: red; font-size: 20px">{{$product->price}} €</span></div>
                             </div>
                         </div>
-                        @if($product->status == 0)
-                            <form action="{{route('basket.add')}}" method="POST">
-                                @csrf
-                                <input type="hidden" value="{{$product->id}}" name="productId">
-                                <div class="productButtonsBack">
-                                    @if($product->description)
-                                        <a href="{{route('front.product', $product->slug)}}" class="homeInfoCourseButton">Info</a>
-                                    @endif
-                                        <button type="submit" class="buttonProductAdminAddBack">Add To Basket</button>
-                                </div>
-                            </form>
-{{--                        @else--}}
-{{--                            <div class="productButtons">--}}
-{{--                                --}}{{--                                    <button type="submit" class="buttonProductAdminAdd">Coming Soon</button>--}}
-{{--                                @if($product->description)--}}
-{{--                                    <a href="{{route('front.product', $product->id)}}" class="homeStartCourseButton">Info</a>--}}
-{{--                                @endif--}}
-{{--                            </div>--}}
-                        @endif
+                        <div x-data="{}">
+                            <div class="productButtonsBack">
+                                @if($product->description)
+                                    <a href="{{route('front.product', $product->slug)}}" class="homeInfoCourseButton">Info</a>
+                                @endif
+
+                                <!-- Add to Basket Button -->
+                                    <button
+                                        type="button"
+                                        class="buttonProductAdminAddBack"
+                                        @click="
+                                                $store.cart.addItem({
+                                                    id: {{ $product->id }},
+                                                    title: '{{ addslashes($product->name) }}',
+                                                    image: '{{ addslashes($product->image) }}',
+                                                    price: {{ $product->price }},
+                                                    quantity: 1
+                                                });
+                                                cartAlert = true;
+                                                setTimeout(() => { cartAlert = false }, 1000);
+                                            ">
+                                        Add To Basket
+                                    </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 @endif
@@ -116,18 +136,6 @@
         </div>
         <div style=" bottom: 30px;" id="stripeLogo"><img src="{{asset('images/brands/stripe.webp')}}" alt="" style="width: 235px"></div>
 
-
-        {{--    <div class="langTitle">--}}
-{{--        <div class="languageText">When you start the course, you'll have the opportunity to choose from that 6 languages:</div>--}}
-{{--        <div class="languagesSection">--}}
-{{--            <img src="{{asset('images/flags/en.png')}}" alt="">--}}
-{{--            <img src="{{asset('images/flags/pl.png')}}" alt="">--}}
-{{--            <img src="{{asset('images/flags/ro.png')}}" alt="">--}}
-{{--            <img src="{{asset('images/flags/ru.png')}}" alt="">--}}
-{{--            <img src="{{asset('images/flags/sp.png')}}" alt="">--}}
-{{--            <img src="{{asset('images/flags/ukr.png')}}" alt="">--}}
-{{--        </div>--}}
-{{--    </div>--}}
 </div>
 <script src="{{asset('js/showModalRegisterEmployee.js')}}"></script>
 @endsection

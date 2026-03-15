@@ -2,46 +2,63 @@
 
 @section('content')
     @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-    <div class="profileContent">
-        <div class="userInfo">
-            <div class="userImage">
-                @if(auth()->user()->profilePic)
-                    <img src="{{asset('images/profilePic/'. auth()->user()->profilePic)}}" alt="">
-                @else
-                    <img src="{{asset('images/avatars/profile.png')}}" alt="">
-                @endif
+    <div class="profile-dashboard">
+        <div class="luxury-card profile-main">
+            <div class="avatar-container">
+                <div class="avatar-ring">
+                    @if(auth()->user()->profilePic)
+                        <img src="{{asset('images/profilePic/'. auth()->user()->profilePic)}}" class="profile-img">
+                    @else
+                        <img src="{{asset('images/avatars/profile.png')}}" class="profile-img">
+                    @endif
+                    <form action="{{route('store.profileImg')}}" method="POST" enctype="multipart/form-data" class="upload-overlay">
+                        @csrf
+                        @method('PUT')
+                        <label for="img-input" class="icon-btn-float"><i class="mgc_camera_line"></i></label>
+                        <input type="file" id="img-input" name="image" onchange="this.form.submit()" hidden>
+                    </form>
+                </div>
+                <h2 class="user-name-title">{{auth()->user()->name}}</h2>
+                <span class="status-pill">Active Account</span>
             </div>
-            <form action="{{route('store.profileImg')}}" method="POST" enctype="multipart/form-data" class="uploadFormImage">
-                @csrf
-                @method('PUT')
-                <input type="file" name="image" class="inputFile">
-                <button type="submit" class="adminButton">Upload</button>
-            </form>
-            <div class="userProfileInfo">
-                <div class="userNameValue">Your UserName:</div>
-                {{auth()->user()->name}}
-            </div>
-            <div class="userProfileInfo">
-                <div class="userEmailValue">Your email:</div>
-                {{auth()->user()->email}}
-            </div>
-            <div class="userProfileInfo">
-                <div class="userEmailValue">Created at:</div>
-                {{auth()->user()->created_at}}
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-label">Email</span>
+                    <span class="stat-value">{{auth()->user()->email}}</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Joined</span>
+                    <span class="stat-value">{{auth()->user()->created_at->format('d M, Y')}}</span>
+                </div>
             </div>
         </div>
-        <div class="userUpdate">
-            <form class="userUpdateForm" action="{{route('password.dashboard.update', auth()->user()->id)}}" method="POST">
-                <div class="formTitle">Change your password</div>
+
+        <div class="luxury-card">
+            <h3 class="card-header-text">Security Settings</h3>
+            <form class="premium-form" action="{{route('password.dashboard.update', auth()->user()->id)}}" method="POST">
                 @csrf
                 @method('PUT')
-                <label class="formLabel" for="userName" style="font-size: 20px">Old Password</label>
-                <input class="formInputProfile" type="password" name="oldPassword" style="width: 100%; height: 45px">
-                <label class="formLabel" for="userName" style="font-size: 20px">New Password</label>
-                <input class="formInputProfile" type="password" name="newPassword" style="width: 100%; height: 45px">
-                <label class="formLabel" for="userName" style="font-size: 20px">Confirm New Password</label>
-                <input class="formInputProfile" type="password" name="confirmNewPassword" style="width: 100%; height: 45px">
-                <button class="adminButton" type="submit" style="font-size: 20px">Update</button>
+
+                <div class="field-stack">
+                    <div class="input-wrapper">
+                        <label>Current Password</label>
+                        <input type="password" name="oldPassword" placeholder="••••••••">
+                    </div>
+
+                    <div class="input-grid-mobile">
+                        <div class="input-wrapper">
+                            <label>New Password</label>
+                            <input type="password" name="newPassword" placeholder="Min. 8 characters">
+                        </div>
+                        <div class="input-wrapper">
+                            <label>Confirm Password</label>
+                            <input type="password" name="confirmNewPassword" placeholder="Repeat password">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="glow-button">Update Credentials</button>
             </form>
         </div>
     </div>

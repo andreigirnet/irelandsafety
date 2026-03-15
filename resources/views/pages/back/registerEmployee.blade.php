@@ -1,119 +1,74 @@
 @extends('layouts.vertical', ['title' => 'Dashboard', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('content')
-    @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-    <div class="registerEmployeeWrapper">
-        @if (session('registered'))
-            <div class="modalRegisterComplete" id="modalRegisterEmployer">
-                <div class="modalTitle">You have registered successfully your employee.</div>
-                <div class="modalText">
-                    <p>We have emailed your login details, allowing you to access our website and take the course at your convenience.
-                        <br><br>
-                        Please check your spam or junk mail folder, just in case. If you'd like to send the course to your employee, please click the link below.
-                        (<a href="https://irish-manualhandling.com/packages">https://irish-manualhandling.com/packages</a>).
-                        <br><br>
-                        To proceed, ensure you have purchased the course(s). If not, visit the homepage, make the necessary purchase, and then proceed to send it to your employees.
-                    </p>
-                </div>
-                <div class="adminButton" style="display: flex; align-items: center; justify-content: center; margin-top: 20px; width: auto; padding: 20px" id="understoodButton">UNDERSTOOD</div>
-            </div>
-        @endif
-        <div class="leftRegisterEmployee">
-            <div class="stepsCircle">
-                <div class="stepsContainer">
-                    <div class="stepsCircleTitle">STEP 1- Register The Employee</div>
-                    <div class="circle-progress first-circle" data-aos="fade-right">
-                        <div class="circle-nr">1</div>
-                        <svg viewBox="0 0 36 36" class="circular-chart orange">
-                            <path class="circle-bg"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            <path class="circle"
-                                  stroke-dasharray="25, 100"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
+    <div class="profile-dashboard centered-onboarding">
+        <div class="onboarding-header">
+            <h2 class="user-name-title">Register Your Team</h2>
+            <p class="stat-label">Follow the steps below to onboard your employees</p>
+        </div>
 
-                        </svg>
-                    </div>
-                </div>
+        <div class="horizontal-stepper">
+            <div class="h-step active">
+                <div class="h-step-icon">1</div>
+                <span>Register</span>
             </div>
-
-            <div class="stepsCircle">
-                <div class="stepsContainer">
-                    <div class="stepsCircleTitle">STEP 2- Check Your Dashboard</div>
-                    <div class="circle-progress first-circle" data-aos="fade-right">
-                        <div class="circle-nr">2</div>
-                        <svg viewBox="0 0 36 36" class="circular-chart orange">
-                            <path class="circle-bg"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            <path class="circle"
-                                  stroke-dasharray="75, 100"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                        </svg>
-                    </div>
-                </div>
+            <div class="h-step-line"></div>
+            <div class="h-step active">
+                <div class="h-step-icon">2</div>
+                <span>Dashboard</span>
             </div>
-
-            <div class="stepsCircle">
-                <div class="stepsContainer">
-                    <div class="stepsCircleTitle">STEP 3- Send Him The Course Link</div>
-                    <div class="circle-progress first-circle" data-aos="fade-right">
-                        <div class="circle-nr">3</div>
-                        <svg viewBox="0 0 36 36" class="circular-chart orange">
-                            <path class="circle-bg"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                            <path class="circle"
-                                  stroke-dasharray="100, 100"
-                                  d="M18 2.0845
-                                         a 15.9155 15.9155 0 0 1 0 31.831
-                                         a 15.9155 15.9155 0 0 1 0 -31.831"
-                            />
-                        </svg>
-                    </div>
-                </div>
+            <div class="h-step-line"></div>
+            <div class="h-step active">
+                <div class="h-step-icon">3</div>
+                <span>Share</span>
             </div>
         </div>
-        <div class="rightRegisterEmployee">
-            <div class="adminHomePageTitle" style="font-size: 36px">Register Your Employees</div>
-            <div class="adminHomePageDescription" style="font-size: 18px">Register Your Employees by adding their details in the form</div>
-            <form action="{{route('register.employee.store')}}" method="POST" class="registerEmployeeForm">
+
+        <div class="luxury-card jumbo-form-card">
+            <form action="{{route('register.employee.store')}}" method="POST" class="premium-form-stack">
                 @csrf
-                <label for="userNameEmployee" class="formLabel" style="font-size: 20px">Employee Full Name</label>
-                <input type="text" id="userNameEmployee" name="name" class="formInputProfile">
+                <div class="input-grid-mobile">
+                    <div class="input-wrapper">
+                        <label>EMPLOYEE FULL NAME</label>
+                        <input type="text" name="name" placeholder="e.g. John Doe" required>
+                    </div>
 
-                <label for="userEmailEmployee" class="formLabel" style="font-size: 20px">Employee Email</label>
-                <input type="email" id="userEmailEmployee" name="email" class="formInputProfile">
+                    <div class="input-wrapper">
+                        <label>EMAIL ADDRESS</label>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </div>
 
-                <label for="userEmailPhone" class="formLabel" style="font-size: 20px">Employee Phone Number</label>
-                <input type="text" id="userEmailPhone" name="phone" class="formInputProfile">
+                <div class="input-wrapper">
+                    <label>PHONE NUMBER (OPTIONAL)</label>
+                    <input type="text" name="phone" placeholder="+353 00 000 0000">
+                </div>
 
-                <button type="submit" class="adminButton" id="showModalRegister" style="font-size: 20px; margin-top: 27px">Add</button>
+                <button type="submit" class="glow-button jumbo-btn">
+                    Register Employee
+                </button>
             </form>
-            <div id="errorDiv">
-                @if ($errors->any())
+            @if ($errors->any())
+                <div class="error-box">
                     @foreach ($errors->all() as $error)
-                        <div>*{{$error}}</div>
+                        <p><i class="mgc_error_line"></i> {{ $error }}</p>
                     @endforeach
-                @endif
-            </div>
+                </div>
+            @endif
         </div>
     </div>
-    <script src="{{asset('js/showModalRegisterEmployee.js')}}"></script>
+    @if (session('registered'))
+        <div class="luxury-overlay">
+            <div class="luxury-card modal-popup">
+                <div class="success-icon-animate">Checkmark</div>
+                <h3>Registration Complete!</h3>
+                <p>Login details have been dispatched to the employee's email.</p>
+                <a href="{{route('dashboard.employer')}}"><button class="glow-button" id="understoodButton">Continue</button></a>
+            </div>
+        </div>
+        @endif
+    </div>
 @endsection
-
 @section('script')
     @vite(['resources/js/pages/dashboard.js'])
 @endsection

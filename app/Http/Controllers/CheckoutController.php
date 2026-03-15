@@ -62,7 +62,7 @@ class CheckoutController extends Controller
         Stripe::setApiKey(env('STRIPE_SECRET'));
         $json_str = file_get_contents('php://input');
         $json_obj = json_decode($json_str);
-        $amountToInt = round($this->cart->getTotal() * 100, 0, PHP_ROUND_HALF_UP);
+        $amountToInt = round($request->cartTotal * 100, 0, PHP_ROUND_HALF_UP);
         $intent = null;
         try {
             if (isset($json_obj->payment_method_id)) {
@@ -112,19 +112,20 @@ class CheckoutController extends Controller
                 'payment_intent_client_secret' => $intent->client_secret
             ]);
         } else if ($intent->status == 'succeeded') {
-            $cartItems = $this->cart->getDetails()->items;
+            $cartItems = json_decode($request->cart_items, true);
 
             $orderTitles = '';
             foreach ($cartItems as $cartItem) {
-                $orderTitles .= $cartItem->title . ', ';
+                $orderTitles .= $cartItem['title'] . ', ';
             }
+
             $orderTitles = rtrim($orderTitles, ', ');
 
             Order::create([
                 'user_id' => auth()->user()->id,
                 'product_name' => $orderTitles,
-                'quantity' => $this->cart->sumItemsQuantity(),
-                'paid' => $this->cart->getTotal(),
+                'quantity' => $request->cartQty,
+                'paid' => $request->cartTotal,
                 'charge_id' => $intent->id,
                 'invoice_id' => $intent->id,
                 'address' => $request->address,
@@ -134,17 +135,23 @@ class CheckoutController extends Controller
                 'status' => 'paid',
             ]);
 
+            $cartItems = json_decode($request->cart_items, true);
+
             foreach ($cartItems as $cartItem) {
-                for ($i = 0; $i < $cartItem->quantity; $i++) {
+
+                for ($i = 0; $i < $cartItem['quantity']; $i++) {
+
                     $package = new Package();
-                    $package->product_id = $cartItem->id;
+                    $package->product_id = $cartItem['id'];
                     $package->user_id = auth()->user()->id;
-                    $package->course_name = $cartItem->title; // Adjust property names based on your actual data structure
+                    $package->course_name = $cartItem['title'];
                     $package->status = "purchased";
                     $package->save();
+
                 }
+
             }
-            $this->cart->clearItems();
+//            $this->cart->clearItems();
 
             Mail::to(auth()->user()->email)->send(new ConfirmPaymentMail());
 

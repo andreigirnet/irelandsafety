@@ -1,52 +1,72 @@
 @extends('layouts.vertical', ['title' => 'Dashboard', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('content')
-    @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
+    <div class="profile-dashboard">
+        <div class="dashboard-header-flex">
+            <div>
+                <a href="{{route('dashboard.employer')}}" class="back-link">
+                    <i class="mgc_arrow_left_line"></i> Back to Team
+                </a>
+                <h2 class="user-name-title" style="margin-top: 10px;">{{$employee->name}}'s Courses</h2>
+            </div>
+            <span class="status-pill">{{ count($employeePackages) }} Courses Found</span>
+        </div>
 
-    <div class="dashWrapper">
-        <div class="adminHomePageTitle">{{$employee->name}} courses</div>
         @if(count($employeePackages))
-            <table class="styled-table">
-                <thead>
-                <tr>
-                    {{--                    <th class="hiddenRows">Action</th>--}}
-                    <th class="hiddenRows">Package ID</th>
-                    <th>Course Name</th>
-                    <th class="hiddenRows">Status</th>
-                    <th>Created at</th>
-                    <th>Certificate</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($employeePackages as $package)
+            <div class="luxury-card no-padding overflow-hidden">
+                <table class="exclusive-table">
+                    <thead>
                     <tr>
-                        {{--                        <td class="hiddenRows actionRow">--}}
-                        {{--                            <form action="{{route('delete.employer', $employee->id)}}" method="POST"> @csrf @method('DELETE')<button class="submitDeleteOrder"><img class="deleteFormOrders" src="{{asset('images/icons/bin.png')}}" alt=""></button></form>--}}
-                        {{--                            <a href="{{route('employer.employee', $employee->id)}}" class="editLink"><img src="{{asset('images/icons/info.png')}}" alt=""></a>--}}
-                        {{--                            --}}{{--                                <a href="{{route('employer.info', $employee->employee)}}" class="editLink"><img src="{{asset('images/icons/info.png')}}" alt=""></a>--}}
-                        {{--                        </td>--}}
-                        <td class="hiddenRows blackText">{{$package->id}}</td>
-                        <td class="blackText">{{$package->course_name}}</td>
-                        <td class="hiddenRows blackText">{{$package->status}}</td>
-                        <td class="hiddenRows blackText">{{$package->created_at}}</td>
-                        @if($package->certificate_id)
-                            <td><a href="{{route('certificate.download', $package->certificate_id)}}"><img class="invoiceLink" src="{{asset('images/icons/pdf.png')}}" alt=""></a></td>
-                        @else
-                            <td>-</td>
-                        @endif
+                        <th class="hiddenRows">Package ID</th>
+                        <th>Course Name</th>
+                        <th class="hiddenRows">Status</th>
+                        <th class="hiddenRows">Enrolled Date</th>
+                        <th class="text-right">Certificate</th>
                     </tr>
-                @endforeach
-                {{--        <tr class="active-row">--}}
-                {{--            <td>Melissa</td>--}}
-                {{--            <td>5150</td>--}}
-                {{--        </tr>--}}
-                {{--        <!-- and so on... -->--}}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    @foreach($employeePackages as $package)
+                        <tr>
+                            <td class="hiddenRows">
+                                <span class="id-badge">#{{$package->id}}</span>
+                            </td>
+                            <td>
+                                <div class="course-info-cell">
+                                    <div class="course-icon" style="background: #eef2ff; color: #4f46e5;">📘</div>
+                                    <div class="course-name-text">{{$package->course_name}}</div>
+                                </div>
+                            </td>
+                            <td class="hiddenRows">
+                                    <span class="status-indicator {{ $package->status === 'completed' ? 'status-active' : 'status-completed' }}">
+                                        {{ ucfirst($package->status) }}
+                                    </span>
+                            </td>
+                            <td class="hiddenRows">
+                                <div class="stat-value" style="font-size: 14px; color: #64748b;">
+                                    {{ \Carbon\Carbon::parse($package->created_at)->format('d M, Y') }}
+                                </div>
+                            </td>
+                            <td class="text-right">
+                                @if($package->certificate_id)
+                                    <a href="{{route('certificate.download', $package->certificate_id)}}" class="cert-link">
+                                        <img class="pdf-icon" src="{{asset('images/icons/pdf.png')}}" alt="PDF">
+                                        <span class="hiddenRows">Download</span>
+                                    </a>
+                                @else
+                                    <span class="id-badge" style="background: transparent; border: 1px dashed #e2e8f0;">In Progress</span>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         @else
-            <div class="shareError">
-                <div class="textAdmin">{{$employee->name}} has no courses</div>
-                <a href="{{route('dashboard.employer')}}"><div class="buttonLink" style="font-weight: 600">Go to dashboard</div></a>
+            <div class="empty-state luxury-card">
+                <div class="empty-icon">📂</div>
+                <h3>No Courses Assigned</h3>
+                <p>{{$employee->name}} hasn't started any training yet.</p>
+                <a href="{{route('dashboard.employer')}}" class="glow-button small-width" style="max-width: 250px; margin: 20px auto;">Assign a Course</a>
             </div>
         @endif
     </div>

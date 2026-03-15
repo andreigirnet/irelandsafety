@@ -2,7 +2,6 @@
 <div class="navbar-custom">
     <div class="topbar container-fluid">
         <div class="d-flex align-items-center gap-1">
-
             <!-- Topbar Brand Logo -->
             <div class="logo-topbar">
                 <!-- Logo light -->
@@ -27,12 +26,11 @@
             </div>
 
             <!-- Sidebar Menu Toggle Button -->
-            <button class="button-toggle-menu" style="display: flex;width: 164px; align-items: center; column-gap: 5px">
+            <button class="button-toggle-menu" style="display: flex; width: auto; align-items: center; column-gap: 5px">
                 <i class="ri-arrow-left-circle-fill desktopShowNav"></i>
                 <i class="ri-menu-unfold-fill mobileHideNav"></i>
                 <span id="hideText"> Hide the Taskbar</span>
             </button>
-
 
 
             <!-- Horizontal Menu Toggle Button -->
@@ -55,7 +53,20 @@
             </div> -->
         </div>
 
-        <ul class="topbar-menu d-flex align-items-center gap-3">
+        <ul class="topbar-menu d-flex align-items-center gap-1 gap-lg-3">
+            <a href="/cart">
+                <div class="mobileCartContainer">
+                    <div class="mobileCartCounter" x-data x-cloak>
+                        <template x-if="$store.cart.cartTotalQty() > 0">
+                            <div class="mobileCartItemCounter"
+                                 x-text="$store.cart.cartTotalQty()"
+                                 class="animate__animated animate__bounceIn">
+                            </div>
+                        </template>
+                    </div>
+                    <img src="{{asset('images/icons/cartSingle.png')}}" alt="">
+                </div>
+            </a>
             <li class="dropdown d-lg-none">
 {{--                <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button"--}}
 {{--                    aria-haspopup="false" aria-expanded="false">--}}

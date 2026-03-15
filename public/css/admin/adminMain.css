@@ -10,21 +10,606 @@
     --greenColor: #70bc40;
     font-family: 'PT Sans Narrow', sans-serif;
 }
-/*.logo img{*/
-/*    width: 125px;*/
-/*}*/
+/* --- Brand Intro Card Stylistics --- */
+
+.brand-intro-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fcfdfe 100%);
+    padding: 50px !important;
+    border-left: 6px solid #8b5cf6; /* A thick brand accent line */
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background pattern (optional) */
+.brand-intro-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+}
+
+.brand-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.brand-icon-glow {
+    width: 50px;
+    height: 50px;
+    background: #f5f3ff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.2);
+}
+
+.exclusive-pill {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+
+.brand-title {
+    margin-bottom: 20px;
+}
+.exclusive-icon{
+    font-size: 42px;
+}
+.gradient-text {
+    background: linear-gradient(to right, #1e293b, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.brand-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 850px;
+}
+
+.brand-description strong {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* --- Mobile Fix --- */
+@media (max-width: 768px) {
+    .brand-intro-card {
+        padding: 30px !important;
+        border-left: none;
+        border-top: 6px solid #8b5cf6;
+    }
+
+    .gradient-text {
+        font-size: 32px;
+    }
+
+    .brand-description {
+        font-size: 16px;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Service Card Stylistics */
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px !important;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 15px 30px -10px rgba(139, 92, 246, 0.15);
+}
+
+.service-icon-box {
+    width: 45px;
+    height: 45px;
+    background: #f5f3ff;
+    color: #8b5cf6;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.service-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- Approach Section --- */
+.approach-section {
+    padding: 50px !important;
+}
+
+.accent-line {
+    width: 60px;
+    height: 4px;
+    background: #8b5cf6;
+    border-radius: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.approach-text {
+    font-size: 16px;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.info-callout {
+    margin-top: 30px;
+    padding: 20px;
+    background: #eff6ff;
+    border-radius: 16px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    border: 1px solid #dbeafe;
+}
+
+.info-callout i {
+    font-size: 24px;
+    color: #3b82f6;
+}
+
+.info-callout p {
+    margin: 0;
+    font-size: 14px;
+    color: #1e40af;
+    font-weight: 500;
+}
+.centered-onboarding {
+    max-width: 900px !important; /* Forces a controlled width */
+    margin: 4rem auto !important;
+    text-align: center;
+}
+
+.onboarding-header {
+    margin-bottom: 40px;
+}
+
+/* --- Horizontal Stepper (Fixes the empty space) --- */
+.horizontal-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 15px;
+}
+
+.h-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+}
+
+.h-step-icon {
+    width: 45px;
+    height: 45px;
+    background: #f1f5f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #94a3b8;
+    border: 2px solid #e2e8f0;
+    font-size: 16px;
+}
+
+.h-step.active .h-step-icon {
+    background: #ffffff;
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.h-step span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+.h-step.active span { color: #8b5cf6; }
+
+.h-step-line {
+    flex: 0 1 60px;
+    height: 2px;
+    background: #e2e8f0;
+    margin-top: -20px; /* Aligns with icons */
+}
+
+/* --- The Jumbo Card Fix --- */
+.jumbo-form-card {
+    text-align: left;
+    padding: 50px !important;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05); /* Softer, deeper shadow */
+}
+
+.jumbo-btn {
+    padding: 22px !important;
+    font-size: 18px !important;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+}
+.dashboard-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Remove default padding for tables inside luxury cards */
+.no-padding { padding: 0 !important; }
+.overflow-hidden { overflow: hidden; }
+
+.exclusive-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+.exclusive-table th {
+    background: #f8fafc; /* Very light grey header */
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.exclusive-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.exclusive-table tr:last-child td {
+    border-bottom: none;
+}
+
+.exclusive-table tr:hover {
+    background: #fcfdff; /* Subtle highlight on row hover */
+}
+
+/* --- Course Info Cell --- */
+.course-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.course-icon {
+    width: 36px;
+    height: 36px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.course-name-text {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Status Indicators --- */
+.status-indicator {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-active { background: #dcfce7; color: #15803d; }
+.status-completed { background: #eff6ff; color: #1d4ed8; }
+
+/* --- Action Buttons (Small Versions) --- */
+.action-btn-group {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.btn-premium-sm, .btn-outline-sm, .btn-view-sm {
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-premium-sm {
+    background: #8b5cf6;
+    color: white;
+}
+
+.btn-outline-sm {
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.btn-view-sm {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.btn-premium-sm:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2); }
+
+/* --- Certificate Link --- */
+.cert-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.pdf-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* --- Empty State --- */
+.empty-state {
+    text-align: center;
+    padding: 60px !important;
+}
+
+.empty-icon { font-size: 50px; margin-bottom: 20px; }
+
+.text-right { text-align: right; }
+.profile-dashboard {
+    margin: 2rem auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Luxury Card Styling --- */
+.luxury-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* --- Avatar & Header Section --- */
+.avatar-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.avatar-ring {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
+    position: relative;
+    padding: 3px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    border-radius: 50%;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f8fafc;
+    border: 3px solid #ffffff;
+}
+
+/* Fixed Upload Button (Purple Circle with White Border) */
+.icon-btn-float {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: #8b5cf6;
+    color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.icon-btn-float:hover {
+    transform: scale(1.1);
+    background: #7c3aed;
+}
+
+.user-name-title {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 10px 0 5px;
+    letter-spacing: -0.5px;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* --- Info/Stats Row --- */
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 25px;
+    margin-top: 10px;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 18px;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* --- Form & Input Styling --- */
+.card-header-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+.input-wrapper {
+    margin-bottom: 20px;
+}
+
+.input-wrapper label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+/* The Fixed Input (High contrast, no muddy grey) */
+.input-wrapper input {
+    width: 100%;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: #1e293b;
+    font-size: 17px;
+    transition: all 0.2s ease;
+}
+
+.input-wrapper input::placeholder {
+    color: #94a3b8;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+/* --- The Premium Button --- */
+.glow-button {
+    width: 100%;
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.glow-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px -5px rgba(139, 92, 246, 0.4);
+    filter: brightness(1.1);
+}
 a{
     text-decoration: none;
 }
 .mobileHideNav{
     display: none;
 }
+.cartAlert{
+    position: fixed;
+    top: 10px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    border-radius: 12px;
+    border: none;
+}
+
 .mobileCartContainer{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background: #ffd200;
-    position: fixed;
+    /*position: fixed;*/
     bottom: 10px;
     left: 7px;
     display: flex;
@@ -37,8 +622,8 @@ a{
 }
 .mobileCartItemCounter{
     position: absolute;
-    top: -39px;
-    right: -50px;
+    top: -30px;
+    right: -58px;
     background: red;
     color: white;
     width: 25px;
@@ -428,6 +1013,9 @@ a{
     display: flex;
 }
 @media screen and (max-width: 1200px) and (min-width: 768px){
+    .gradient-text{
+        font-size: 21px;
+    }
    .side{
        display: none;
    }
@@ -455,8 +1043,33 @@ a{
     #hideText{
         display: none;
     }
+    .profile-dashboard {
+        padding: 15px;
+    }
+
+    .luxury-card {
+        padding: 25px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .input-grid-mobile {
+        display: flex;
+        flex-direction: column;
+    }
 }
 @media screen and (max-width: 767px) and (min-width: 250px){
+    .gradient-text{
+        font-size: 21px;
+    }
     .errorPhoto a{
         display: flex;
         align-items: center;
@@ -492,5 +1105,83 @@ a{
     }
     #stripeLogo{
         display: none;
+    }
+    .profile-dashboard {
+        padding: 15px;
+    }
+
+    .luxury-card {
+        padding: 25px;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .input-grid-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .exclusive-table thead {
+        display: none;
+    }
+
+    /* 2. Turn the table and rows into a stack */
+    .exclusive-table,
+    .exclusive-table tbody,
+    .exclusive-table tr,
+    .exclusive-table td {
+        display: block;
+        width: 100%;
+    }
+
+    /* 3. Style each row like a separate mini-card */
+    .exclusive-table tr {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 15px 0;
+        background: #ffffff;
+    }
+
+    /* 4. Adjust the cells to act as "Rows" inside the card */
+    .exclusive-table td {
+        text-align: left; /* Align everything left */
+        padding: 8px 20px;
+        border: none;
+        display: flex;
+        justify-content: space-between; /* Put label on left, value on right */
+        align-items: center;
+    }
+
+    /* 5. Force specific elements to take full width */
+    .exclusive-table td:first-child {
+        background: #f8fafc;
+        margin-bottom: 10px;
+        padding: 15px 20px;
+    }
+
+    /* 6. Fix for the "Order Reference" or "Course Name" */
+    .course-info-cell {
+        gap: 12px;
+    }
+
+    .course-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    /* 7. The "Action Group" (Download/Start) should be centered at the bottom */
+    .action-btn-group, .text-right {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
     }
 }
