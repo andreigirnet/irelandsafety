@@ -74,7 +74,7 @@
                 <div class="empty-icon">👥</div>
                 <h3>No Employees Registered</h3>
                 <p>Register your employees first to begin sharing and tracking courses.</p>
-                <a href="{{route('register.employee')}}" class="glow-button small-width" style="max-width: 280px; margin: 20px auto;">Register Employees Now</a>
+                <a href="{{route('register.employee')}}" class="glow-button small-width" style="max-width: 280px; margin: 20px auto;">Register Employees</a>
             </div>
         @endif
     </div>
