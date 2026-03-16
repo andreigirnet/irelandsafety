@@ -1,5 +1,5 @@
 <!-- Slider main container -->
-<div class="brandTitle" x-text="data.footer[8]">OUR VALUED CLIENTS</div>
+<div class="brandTitle">OUR VALUED CLIENTS</div>
 <div class="swiperBrand">
     <!-- Additional required wrapper -->
     <div id="swiper-button-prev"><img class="navArrow" src="{{asset("images/arrows/back.png")}}" alt=""></div>
