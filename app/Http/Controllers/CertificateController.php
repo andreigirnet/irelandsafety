@@ -13,8 +13,11 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class CertificateController extends Controller
@@ -69,47 +72,87 @@ class CertificateController extends Controller
      */
     public function store(Request $request, $packageId)
     {
-        $uniqueCertificateId = 'CERT' . rand(10000, 1000000);
-        $now                 = new \DateTime();
-        $now->add(new \DateInterval('P3Y'));
-        $date_three_years_ahead = $now->format('Y-m-d');
+        $userId = auth()->id(); // ✅ secure
+        $lockKey = "certificate_{$userId}_{$packageId}";
 
-        $certificateCreated = Certificate::create([
-            'user_id'         => $request->userId,
-            'package_id'      => $packageId,
-            'unique_id'       => $uniqueCertificateId,
-            'expiration_date' => $date_three_years_ahead
-        ]);
-        $holder = User::find($request->userId);
-        $certificateUrl = env('APP_URL') .'/certificate/' . $certificateCreated->id;
+        $lock = Cache::lock($lockKey, 30);
 
-        $options = new Options();
-        $options->set('isRemoteEnabled', true);
-        $dompdf = new Dompdf($options);
-        $dompdf->setPaper('letter', 'landscape');
-        $certificate = DB::select("SELECT *, certificates.created_at as valid_from FROM certificates JOIN packages ON certificates.package_id = packages.id WHERE certificates.id =" . $certificateCreated->id);
-        $package     = Package::find($certificate[0]->package_id);
-        $image       = $package->product_id;
-        $dompdf->loadHtml(view('pages.back.certificateAttach', compact('certificate', 'holder','image'))->render());
-        $dompdf->render();
-        $output = $dompdf->output();
-        $pdfFilePath = tempnam(sys_get_temp_dir(), 'pdf_');
-        file_put_contents($pdfFilePath, $output);
+        if (!$lock->get()) {
+            return back()->with('error', 'Certificate is already being generated. Please wait...');
+        }
 
-        // Attach the PDF file to the email
-        Mail::to($holder->email)->send(new CertificateMail($certificateUrl, $pdfFilePath));
+        try {
+            // ✅ Check if certificate already exists
+            $existingCertificate = Certificate::where('user_id', $userId)
+                ->where('package_id', $packageId)
+                ->first();
 
-        // Delete the temporary PDF file
-        unlink($pdfFilePath);
+            if ($existingCertificate) {
+                return redirect()->route('certificate.index')
+                    ->with('success', 'Certificate already generated.');
+            }
 
-        $packageToUpdate = Package::find($packageId);
-        $packageToUpdate->update([
-            'certificate_id' => $certificateCreated->id
-        ]);
-        if ($request->productId === 1) {
-            return redirect()->back()->with('success', 'Certificate Generated');
-        } else {
+            // ✅ Better unique ID
+            $uniqueCertificateId = 'CERT-' . Str::upper(Str::random(8));
+
+            $expirationDate = now()->addYears(3)->format('Y-m-d');
+
+            $certificateCreated = Certificate::create([
+                'user_id'         => $userId,
+                'package_id'      => $packageId,
+                'unique_id'       => $uniqueCertificateId,
+                'expiration_date' => $expirationDate
+            ]);
+
+            $holder = auth()->user();
+            $certificateUrl = config('app.url') . '/certificate/' . $certificateCreated->id;
+
+            // Generate PDF
+            $options = new \Dompdf\Options();
+            $options->set('isRemoteEnabled', true);
+
+            $dompdf = new \Dompdf\Dompdf($options);
+            $dompdf->setPaper('letter', 'landscape');
+
+            $certificate = DB::select("
+            SELECT *, certificates.created_at as valid_from
+            FROM certificates
+            JOIN packages ON certificates.package_id = packages.id
+            WHERE certificates.id = ?
+        ", [$certificateCreated->id]);
+
+            $package = Package::find($certificate[0]->package_id);
+            $image = $package->product_id;
+
+            $dompdf->loadHtml(
+                view('pages.back.certificateAttach', compact('certificate', 'holder', 'image'))->render()
+            );
+
+            $dompdf->render();
+            $output = $dompdf->output();
+
+            // ✅ Save instead of temp (optional but better)
+            $fileName = "certificates/{$userId}_{$packageId}.pdf";
+            Storage::put($fileName, $output);
+
+            // Send email
+            Mail::to($holder->email)->send(
+                new CertificateMail($certificateUrl, storage_path("app/{$fileName}"))
+            );
+
+            // Update package
+            Package::where('id', $packageId)->update([
+                'certificate_id' => $certificateCreated->id
+            ]);
+
+            if ($request->productId == 1) {
+                return back()->with('success', 'Certificate Generated');
+            }
+
             return redirect()->route('certificate.index')->with('success', 'Certificate Generated');
+
+        } finally {
+            $lock->release(); // 🔓 always release
         }
     }
 
