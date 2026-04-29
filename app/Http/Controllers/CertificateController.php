@@ -145,10 +145,6 @@ class CertificateController extends Controller
                 'certificate_id' => $certificateCreated->id
             ]);
 
-            if ($request->productId == 1) {
-                return back()->with('success', 'Certificate Generated');
-            }
-
             return redirect()->route('certificate.index')->with('success', 'Certificate Generated');
 
         } finally {

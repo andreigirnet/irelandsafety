@@ -28,7 +28,7 @@
             <div class="modalText">
                 Best regards
             </div>
-            <div class="adminButtonModal" style="display: flex; align-items: center; justify-content: center; margin-top: 20px" id="understoodButton">UNDERSTOOD</div>
+            <div class="adminButtonModal" style="display: flex; align-items: center; justify-content: center; margin-top: 20px; color:white" id="understoodButton">UNDERSTOOD</div>
         </div>
     @endif
     <div class="luxury-card brand-intro-card">
