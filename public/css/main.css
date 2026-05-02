@@ -303,6 +303,169 @@ a .navItem{
     --glass-bg: rgba(17, 22, 17, 0.75);
 }
 
+.mh-faq, .mh-faq * {
+    box-sizing: border-box; /* Crucial: Prevents padding from causing horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
+.mh-faq {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1a202c;
+    width: 100%;
+    overflow-x: hidden; /* Safety net for mobile */
+}
+
+.mh-faq-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- 2. HEADER & SEARCH --- */
+.mh-faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mh-faq-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #ffffff;
+    border: 1.5px solid #0056b3;
+    color: #0056b3;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.mh-faq-title {
+    font-size: 40px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.mh-faq-search-group {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.mh-faq-input {
+    width: 100%;
+    padding: 18px 24px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    font-size: 17px;
+    outline: none;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.mh-faq-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.1);
+}
+
+/* --- 3. FAQ ITEMS (THE CARDS) --- */
+.mh-faq-list {
+    margin-top: 40px;
+}
+
+.mh-faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+}
+
+.mh-faq-item:hover {
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+}
+
+.mh-faq-trigger {
+    width: 100%;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 20px;
+}
+
+.mh-faq-question {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1.4;
+    flex: 1; /* Allows text to grow and wrap */
+}
+
+/* --- 4. CONTENT & TEXT --- */
+.mh-faq-content {
+    padding: 0 30px 30px 30px;
+}
+
+.mh-faq-text {
+    color: #4a5568;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.mh-faq-text strong {
+    color: #0056b3;
+    font-weight: 700;
+}
+
+/* --- 5. THE PLUS ICON --- */
+.mh-faq-plus {
+    width: 40px;
+    height: 40px;
+    background: #eef5ff;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0; /* Important: Prevents icon from squishing on mobile */
+    transition: all 0.3s ease;
+}
+
+.mh-faq-plus::before, .mh-faq-plus::after {
+    content: '';
+    position: absolute;
+    background-color: #0056b3;
+}
+
+.mh-faq-plus::before {
+    width: 16px;
+    height: 2.5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mh-faq-plus::after {
+    width: 2.5px;
+    height: 16px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease;
+}
+
 .modern-nav {
     position: fixed;
     top: 10px;
@@ -415,4 +578,36 @@ a .navItem{
     #cpd, #rospa{
         display: none;
     }
+    .mh-faq {
+        padding: 40px 15px; /* Less padding on small screens */
+    }
+
+    .mh-faq-title {
+        font-size: 28px; /* Scales down title */
+    }
+
+    .mh-faq-trigger {
+        padding: 20px; /* Tighter padding for thumb-friendly clicks */
+    }
+
+    .mh-faq-question {
+        font-size: 17px; /* Clear but smaller on mobile */
+    }
+
+    .mh-faq-text {
+        font-size: 15px;
+    }
+
+    .mh-faq-plus {
+        width: 32px; /* Smaller icon on mobile */
+        height: 32px;
+    }
+
+    .mh-faq-plus::before { width: 12px; }
+    .mh-faq-plus::after { height: 12px; }
+
+    .mh-faq-content {
+        padding: 0 20px 20px 20px;
+    }
 }
+[x-cloak] { display: none !important; }

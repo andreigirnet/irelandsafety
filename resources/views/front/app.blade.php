@@ -82,5 +82,93 @@
     AOS.init();
 </script>
 <script src="{{asset('js/prevent.js')}}"></script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Health and Safety training a legal requirement for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, under the Safety, Health and Welfare at Work Act 2005, providing safety training is a fundamental legal obligation for all Irish employers. Employers must provide necessary instruction and training to ensure employee safety."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is a Health and Safety certificate valid for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While law varies by course, the industry standard and HSA best practice is that most safety certificates (such as Manual Handling or Fire Safety) remain valid for 3 years. High-risk certifications like First Aid Response (FAR) require a refresher every 2 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are online safety certificates recognized by Irish regulators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Online E-Learning safety courses are widely accepted for theory-based subjects. For practical skills, we utilize a Blended Learning model that combines online theory with a focused practical assessment to meet full HSA regulatory standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a workplace Risk Assessment and why do I need one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Risk Assessment identifies workplace hazards that could cause injury. Under the 2005 Act, every employer in Ireland must have a written Safety Statement based on these assessments to eliminate or control dangers effectively."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is responsible for the cost of health and safety training?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Legally, the employer is responsible for all costs associated with mandatory health and safety training. Section 25 of the 2005 Act specifies that training must be provided during paid working hours at no cost to the employee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the penalties for non-compliance with safety laws?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Penalties include summary fines up to €3,000 per offense or fines up to €3 million on indictment. Directors can face prison, and lack of training often leads to the voiding of insurance policies during injury claims."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many First Aiders does my company legally require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Determined by a First Aid Needs Assessment, low-risk offices typically need one First Aid Responder (FAR) per 50 employees. High-risk sites require higher coverage to ensure a responder is available at all times."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Fire Safety training mandatory for every member of staff?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every staff member must receive basic Fire Safety Awareness training upon induction. Businesses must also appoint and train Fire Wardens responsible for managing evacuations and fire checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is COSHH and do my employees require it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "COSHH (Control of Substances Hazardous to Health) training is required if staff handle chemicals, dusts, or fumes. It teaches how to read Safety Data Sheets (SDS) and use PPE correctly to prevent occupational illness."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does safety training include mental health and well-being?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Modern occupational health includes psychosocial risk management. Providing Mental Health First Aid and stress management is an essential part of a robust safety culture to reduce burnout and improve retention."
+          }
+        }
+      ]
+    }
+</script>
 </body>
 </html>

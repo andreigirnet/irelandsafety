@@ -614,5 +614,148 @@
             </div>
         </div>
     </section>
+    <section class="mh-faq" x-data="{ search: '' }">
+        <div class="mh-faq-wrapper">
+
+            <header class="mh-faq-header">
+                <span class="mh-faq-badge">National Safety Standards 2026</span>
+                <h2 class="mh-faq-title">Workplace Safety: Expert FAQs</h2>
+            </header>
+
+            <div class="mh-faq-list">
+
+                <!-- FAQ 1 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is health and safety training a legal requirement in ireland? hsa law'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">Is Health and Safety training a legal requirement for my business?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Yes, under the <strong>Safety, Health and Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong>HSA compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how long does a health and safety certificate last? expiry'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">How long is a Health and Safety certificate valid for?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            While the law does not always specify a hard expiry date for every course, the industry standard and <strong>HSA best practice</strong> is that most safety certificates (such as Manual Handling or Fire Safety) remain valid for <strong>3 years</strong>. However, high-risk industries or specific certifications like <strong>First Aid Response (FAR)</strong> require a refresher every 2 years. Keeping your staff’s <strong>safety certification</strong> up to date is critical for maintaining your insurance coverage and ensuring continuous workplace competency.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'are online safety courses legally recognized? hsa accepted'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">Are online safety certificates recognized by Irish regulators?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Absolutely. <strong>Online E-Learning safety courses</strong> are highly effective and widely accepted for theory-based subjects such as <i>Safety Awareness, DSE/Ergonomics, and Chemical Safety (COSHH)</i>. For courses that require a physical skill (like First Aid or Lift Truck operation), we utilize a <strong>Blended Learning</strong> model. This allows your team to complete the theoretical portion online at their own pace, followed by a brief, focused practical assessment to meet full regulatory standards.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what is a workplace risk assessment? safety statement'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">What is a workplace Risk Assessment and why do I need one?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            A <strong>Risk Assessment</strong> is a systematic examination of your workplace to identify anything that could cause injury or illness. Under the 2005 Act, every employer in Ireland must have a written <strong>Safety Statement</strong> based on these assessments. Our training programs teach your staff how to identify hazards, evaluate the level of risk, and implement the "General Principles of Prevention" to eliminate or control dangers effectively.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'who is responsible for paying for the training? employer duties'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">Who is responsible for the cost of health and safety training?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Legally, the <strong>employer is responsible</strong> for all costs associated with mandatory health and safety training. Section 25 of the Safety, Health and Welfare at Work Act 2005 specifies that training must be provided during paid working hours and must not result in any financial deduction or cost to the employee. Providing this training is a core "duty of care" that protects the business from litigation while ensuring a safe environment for everyone.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what happens if a business is not compliant? hsa fines'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">What are the penalties for non-compliance with safety laws?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Failing to provide <strong>HSA compliant training</strong> can result in catastrophic consequences for a business. Penalties include summary fines of up to €3,000 per offense or fines of up to €3 million on indictment. Furthermore, business owners or directors can face up to two years in prison. Beyond the court system, a lack of certified training usually leads to the <strong>voiding of insurance policies</strong>, leaving the company liable for massive personal injury settlement costs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how many first aiders does a business need? FAR responder'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">How many First Aiders does my company legally require?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            This is determined by your <strong>First Aid Needs Assessment</strong>, which looks at your headcount and risk profile. Generally, low-risk offices require at least one trained <strong>First Aid Responder (FAR)</strong> per 50 employees. However, high-risk sites (like manufacturing or construction) require more frequent coverage. It is vital to ensure that a trained responder is available during all shifts, including lunch breaks and overtime hours, to remain compliant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is fire safety training mandatory for everyone? warden'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">Is Fire Safety training mandatory for every member of staff?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Yes. Under the <strong>Fire Services Acts</strong>, every staff member must receive basic <strong>Fire Safety Awareness</strong> training upon induction and at regular intervals. This training covers evacuation procedures, emergency exit routes, and the location of fire-fighting equipment. Additionally, your business must appoint and train <strong>Fire Wardens</strong> who are responsible for managing evacuations and conducting regular workplace fire checks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what is coshh training? chemical safety hazardous'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">What is COSHH and do my employees require it?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            <strong>COSHH</strong> stands for the Control of Substances Hazardous to Health. If your employees handle chemicals, cleaners, dusts, fumes, or biological agents, they legally require COSHH training. This course teaches staff how to read <strong>Safety Data Sheets (SDS)</strong>, understand hazard symbols, and use Personal Protective Equipment (PPE) correctly to prevent long-term occupational illnesses such as dermatitis or respiratory issues.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'mental health wellbeing workplace safety psychosocial'.includes(search.toLowerCase())">
+                    <button class="mh-faq-trigger" @click="open = !open">
+                        <span class="mh-faq-question">Does safety training include mental health and well-being?</span>
+                        <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
+                    </button>
+                    <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
+                        <p class="mh-faq-text">
+                            Modern <strong>occupational health and safety</strong> now places a high priority on psychosocial risks. Employers have a legal duty to manage workplace stress just as they do physical hazards. Providing <strong>Mental Health First Aid</strong> and stress management training is now recognized as an essential part of a robust corporate safety culture. This training helps to identify early signs of burnout, reduce absenteeism, and improve overall employee retention and productivity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <script src="{{asset("js/counter.js")}}"></script>
 @endsection
