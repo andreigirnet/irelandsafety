@@ -618,7 +618,7 @@
         <div class="mh-faq-wrapper">
 
             <header class="mh-faq-header">
-                <span class="mh-faq-badge">National Safety Standards 2026</span>
+                <span class="mh-faq-badge">National Safety Standards</span>
                 <h2 class="mh-faq-title">Workplace Safety: Expert FAQs</h2>
             </header>
 
