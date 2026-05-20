@@ -17,20 +17,50 @@
         </div>
     </div>
 
-    <div id="statsCounter">
-        <div id="counterWrap">
-            <div class="counterContent">
-                <div class="counterNumbers" id="customersCounter"></div>
-                <div class="counterDescription" >CUSTOMERS</div>
+    <div class="bold-dark-section">
+        <div class="bold-dark-container">
+
+            <div class="bold-stat-item">
+                <div class="bold-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="bold-stat-data">
+                    <div class="bold-number" id="customersCounter">14,200</div>
+                    <div class="bold-label">Happy Customers</div>
+                </div>
             </div>
-            <div class="counterContent">
-                <div class="counterNumbers" id="certificatesCounter"></div>
-                <div class="counterDescription" >CERTIFICATE'S ISSUED</div>
+
+            <div class="bold-stat-item">
+                <div class="bold-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"/>
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                    </svg>
+                </div>
+                <div class="bold-stat-data">
+                    <div class="bold-number" id="certificatesCounter">8,450</div>
+                    <div class="bold-label">Certificates Issued</div>
+                </div>
             </div>
-            <div class="counterNumbers" class="counterContent">
-                <div id="instructorsCounter"></div>
-                <div class="counterDescription" >PASS RATE</div>
+
+            <div class="bold-stat-item">
+                <div class="bold-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                        <polyline points="16 7 22 7 22 13"/>
+                    </svg>
+                </div>
+                <div class="bold-stat-data">
+                    <div class="bold-number" id="instructorsCounter">99.4%</div>
+                    <div class="bold-label">Pass Rate</div>
+                </div>
             </div>
+
         </div>
     </div>
 
