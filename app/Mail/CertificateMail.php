@@ -22,7 +22,7 @@ class CertificateMail extends Mailable
     public function __construct($url,$pdfFilePath)
     {
         $this->url = $url;
-        $this->pdfFilePath = $pdfFilePath;
+//        $this->pdfFilePath = $pdfFilePath;
     }
 
     /**
@@ -31,7 +31,7 @@ class CertificateMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Here is your certificate, congratulations! 🎉',
+            subject: 'Congratulations you just passed the course! 🎉',
         );
     }
 
@@ -53,9 +53,9 @@ class CertificateMail extends Mailable
     public function attachments(): array
     {
         return [
-            Attachment::fromPath($this->pdfFilePath)
-                ->as('certificate.pdf')
-                ->withMime('application/pdf'),
+//            Attachment::fromPath($this->pdfFilePath)
+//                ->as('certificate.pdf')
+//                ->withMime('application/pdf'),
         ];
     }
 }

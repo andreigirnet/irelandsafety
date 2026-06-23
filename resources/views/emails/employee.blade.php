@@ -1,5 +1,5 @@
 <x-mail::message>
-# Your employer has registered you on the best platform for an Online Manual Handling Course 🎉 Here are your credentials:
+# Your employer has registered you on the best platform for an Health and Safety Course Course 🎉 Here are your credentials:
 
 Login: {{$email}} <br>
 Password: {{$password}}
