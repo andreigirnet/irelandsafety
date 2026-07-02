@@ -257,7 +257,7 @@
                         </div>
                     </div>
                     <div class="cpdRight">
-                        <img src="{{asset('images/certExample.png')}}" alt="">
+                        <img src="{{asset('images/certExample.webp')}}" alt="">
                     </div>
                 </div>
             </div>
