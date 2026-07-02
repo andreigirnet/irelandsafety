@@ -9,7 +9,7 @@
         <div class="mainBannerContent">
             <div class="mainBannerRight">
                 <h1 class="mainBannerTitle">HEALTH AND SAFETY COURSES IRELAND -<br> HEALTH AND SAFETY COURSES ONLINE</h1>
-                <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our CPD and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
+                <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our QQI and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
                 <a href="{{route('register')}}" class="modern-glow-btn">
                     GET CERTIFIED TODAY
                 </a>
@@ -223,7 +223,7 @@
                                     <img src="{{asset('images/icons/1.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  >Complete this CPD and ROSPA </div>
+                                    <div class="cpdItemTitle"  >Complete this QQI and ROSPA </div>
                                     <div class="cpdItemContent"  >Accredited Course to obtain your Official Certificate!</div>
                                 </div>
                             </div>
