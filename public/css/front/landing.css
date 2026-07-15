@@ -74,8 +74,8 @@
 .mainBannerTitle{
     color: white;
     font-weight: bold;
-    width: 40%;
-    font-size: 45px;
+    width: 55%;
+    font-size: 50px;
     text-align: center;
 }
 #googleIcon{
@@ -104,7 +104,7 @@
     color: white;
     opacity: 0.8;
     width: 40%;
-    font-size: 24px;
+    font-size: 27px;
     text-align: center;
 }
 
@@ -1775,6 +1775,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        font-size: 40px;
+        margin-top: 30px;
     }
     .mainBannerDescription{
         display: flex;

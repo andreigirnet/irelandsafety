@@ -556,7 +556,7 @@ a .navItem{
 
 /* Brand styling */
 .brand img {
-    height: 45px;
+    height: 55px;
     transition: transform 0.3s ease;
 }
 
@@ -574,7 +574,7 @@ a .navItem{
     color: var(--text-white);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
     opacity: 0.85;
 }
@@ -613,6 +613,12 @@ a .navItem{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px){
+    .mainBannerTitle{
+        font-size: 45px;
+    }
+    .mainBannerDescription{
+     font-size: 24px;
+    }
     .modern-nav{
         display: none;
     }
