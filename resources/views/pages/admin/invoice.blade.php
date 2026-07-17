@@ -71,10 +71,11 @@
                 <h3 style="margin-left: 50px">Ireland</h3>
                 <h3 style="margin-left: 40px">Ireland Safety Course</h3>
                 <pre>
-                    www.irelandsafetycourse.ie
-                    13 Kinahan StreetArbour HillStoneybatter
-                    Dublin 7D07
-                    E2N6
+                    www.ireland-safetycourse.com
+                    IRLTECHSAFETY LIMITED
+                    51 Bracken Road
+                    Dublin
+                    D18 CV48
                     Ireland
                 </pre>
             </td>

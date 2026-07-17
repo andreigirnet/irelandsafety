@@ -41,9 +41,9 @@
                         </div> <div class="col-6">
                             <h6 class="fs-14">Training Provider</h6>
                             <address>
-                                <b>Ireland Safety Course</b><br>
-                                22 Grand Canal Dock<br>
-                                Dublin 2, D02 H210<br>
+                                <b>IRLTECHSAFETY LIMITED</b><br>
+                                51 Bracken Road<br>
+                                Dublin, D18 CV48<br>
                                 Email: info@irelandsafetycourse.ie
                             </address>
                         </div> </div>

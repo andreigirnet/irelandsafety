@@ -31,11 +31,11 @@
 
                     <div class="ct-detail-text">
                         <strong>Email Us:</strong><br>
-                        <a href="mailto:info@manualhandlingireland.com" style="color: #2563eb; text-decoration: none;">info@ireland-safetycurse.com</a>
+                        <a href="mailto:info@ireland-safetycourse.com" style="color: #2563eb; text-decoration: none;">info@ireland-safetycourse.com</a>
                     </div>
 
                     <div class="ct-address-box">
-                        13 Kinahan Street, Arbour Hill, Stoneybatter, Dublin 7, D07 E2N6, Ireland
+                        51 Bracken Road, D18 CV48, Ireland
                     </div>
                 </div>
 
