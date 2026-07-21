@@ -545,7 +545,184 @@
     margin: 10px 0 5px;
     letter-spacing: -0.5px;
 }
+.certificateText {
+    font-size: 20px;
+    color: #1a202c; /* Slightly darker for better readability */
+    font-weight: 700; /* Bold makes it grab attention */
+    letter-spacing: -0.2px; /* Tightens the look for a modern feel */
+    line-height: 1.4;
+    margin: 10px 0;
+}
+.course-instruction-card {
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+}
 
+.intro-box {
+    background: #f0f7ff;
+    padding: 12px;
+    border-radius: 8px;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 17px;
+}
+
+.step-num {
+    background: #00a86b;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.btn-certificate {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    height: 61px;
+    font-size: 17px;
+}
+
+.btn-certificate:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-certificate:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.formButtonFinal{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* Simple Spinner animation */
+.spinner {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.checklist-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.checklist-box ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.checklist-box li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.support-note {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.completion-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.icon-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background-color: #00a86b;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+}
+.congratsMessage{
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #008f5a;
+}
+
+.helper-text {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-top: 20px;
+}
+
+.footer-note hr {
+    border: 0;
+    border-top: 1px solid #edf2f7;
+    margin: 15px 0;
+}
 .status-pill {
     display: inline-block;
     padding: 4px 12px;
@@ -1081,6 +1258,9 @@ a{
     display: flex;
 }
 @media screen and (max-width: 1200px) and (min-width: 768px){
+    .btn-certificate{
+        width: 50%;
+    }
     .gradient-text{
         font-size: 21px;
     }
@@ -1135,6 +1315,9 @@ a{
     }
 }
 @media screen and (max-width: 767px) and (min-width: 250px){
+    .btn-certificate{
+        width: 50%;
+    }
     .gradient-text{
         font-size: 21px;
     }

@@ -8,12 +8,83 @@
     --mainWidth: 1178px;
     font-family: 'Montserrat', sans-serif;
 }
-.bold-dark-section {
-    background-color: #0b0f19;
-    padding: 60px 24px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+.video-camera-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e6f7ed; /* Matching the light green background in your image */
+    border-radius: 8px;
 }
 
+.video-camera-icon svg {
+    width: 16px;
+    height: 16px;
+}
+.check-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #e6f7ed; /* The specific light green background */
+    border-radius: 8px;  /* Matches the rounded corners in your image */
+}
+.bold-dark-section {
+    background:
+        linear-gradient(90deg,
+        #01070e 0%,
+        #06243d 50%,
+        #01070e 100%
+        );
+    padding: 37px 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.certification-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb; /* Very subtle grey border */
+    margin-bottom: 15px;
+}
+.shield-tick-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2fcf6; /* Light green background */
+    padding: 5px;
+    border-left: 5px solid #00a86b; /* The thick green vertical line */
+    color: #004d30; /* Dark green text */
+    font-weight: 600;
+    border-radius: 0 4px 4px 0;
+}
+
+.info-bar .icon {
+    font-size: 1.2rem;
+}
+.cert-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #d1d1d1; /* Thin light border */
+    padding: 4px 14px;
+    border-radius: 50px; /* Fully rounded capsules */
+    font-size: 0.85rem;
+    font-weight: 700; /* Bolder text to match image */
+    color: #555;      /* Dark grey text */
+    text-transform: uppercase; /* Matching the capitalization in your UI */
+    letter-spacing: 0.2px;
+}
 
 /* Row wrapper */
 .bold-dark-container {

@@ -43,9 +43,15 @@
    .hiddenRows{
        display: none;
    }
+    .dashWrapper{
+        margin-top: 0;
+    }
 }
 @media screen and (max-width: 767px) and (min-width: 250px){
     .hiddenRows{
         display: none;
+    }
+    .dashWrapper{
+        margin-top: 0;
     }
 }

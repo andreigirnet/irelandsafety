@@ -503,18 +503,89 @@
                         <video autoplay muted controls class="practicalVideo" id="practiceVideo">
                             <source src="{{asset('video/practical.mp4')}}" type="video/mp4">
                         </video>
-                        <strong>Congratulations! You have passed the test successfully.</strong>
-                        Please press on the button saying "Download Certificate" and get your certificate straight away by email, please check your spam and junk mail just in case to find it.
-                        <br><br>
-                        Remember, you can access our website anytime by using your personal password & email address and download the certificate or review the course content if you wish so.
-                        <br><br>
-                        Please do get in touch if we can be of any further assistance!<br><br>
-                        Best regards<br>
-                        <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === false" style="margin-top: 20px">
+                        <strong class="congratsMessage">Congratulations! You have passed the test successfully.</strong>
+                        <div class="course-instruction-card">
+                            <h3>How to Complete Your Assessment</h3>
+
+                            <div class="intro-box">
+                                <strong>Two options</strong> for self-assessment to earn your 3-year certificate.
+                            </div>
+
+                            <div class="steps-grid">
+                                <div class="step">
+                                    <span class="step-num">1</span>
+                                    <p>Watch the <strong>video demonstration</strong> on our website.</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-num">2</span>
+                                    <p>Record yourself lifting/carrying a load (home or work environment, no PPE required).</p>
+                                </div>
+                                <div class="step">
+                                    <span class="step-num">3</span>
+                                    <p>Send your video via WhatsApp with your <strong>Name</strong> and <strong>Email</strong> to <strong>+353 {{config('app.telephone')}}</strong> for instructor evaluation.</p>
+                                </div>
+                            </div>
+
+                            <div class="checklist-box">
+                                <h4>Core Steps to Perform:</h4>
+                                <ul>
+                                    <li>Assess the area &amp; the load</li>
+                                    <li>Stable base (feet shoulder-width apart)</li>
+                                    <li>Bend knees &amp; keep back straight</li>
+                                    <li>Use a firm palm grip</li>
+                                    <li>Hold load close to body</li>
+                                    <li>Pivot with feet (don't twist your torso!)</li>
+                                </ul>
+                            </div>
+
+                            <div class="support-note">
+                                <em>*Move load from floor to surface and back. Need help? Our team responds promptly during business hours.</em>
+                            </div>
+                        </div>
+{{--                        <div class="completion-card">--}}
+{{--                            <div class="icon-header">--}}
+{{--                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">--}}
+{{--                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>--}}
+{{--                                    <polyline points="7 10 12 15 17 10"></polyline>--}}
+{{--                                    <line x1="12" y1="15" x2="12" y2="3"></line>--}}
+{{--                                </svg>--}}
+{{--                                <h4>Ready to Download?</h4>--}}
+{{--                            </div>--}}
+
+{{--                            <button class="download-btn">Download Certificate</button>--}}
+
+{{--                            <p class="helper-text">--}}
+{{--                                Check your <strong>spam or junk folder</strong> if you don't see it in your inbox immediately.--}}
+{{--                            </p>--}}
+
+{{--                            <div class="footer-note">--}}
+{{--                                <p>Access your training portal anytime using your email and password to review course content or download files again.</p>--}}
+{{--                                <hr>--}}
+{{--                                <p>Need help? <strong>Please get in touch!</strong></p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+                        <form
+                            x-data="{ isSubmitting: false }"
+                            x-bind:action="`/certificate/create/${packageId}`"
+                            method="POST"
+                            x-show="showProgressBar === false"
+                            @submit="isSubmitting = true"
+                            class="formButtonFinal"
+                        >
                             @csrf
                             <input type="hidden" name="userId" value="{{auth()->user()->id}}">
-                            <input type="hidden" name="productId"  x-bind:value="productId">
-                            <button type="submit" class="downCertificate">Get Certificate</button>
+                            <input type="hidden" name="productId" x-bind:value="productId">
+
+                            <button
+                                type="submit"
+                                class="btn-certificate"
+                                x-bind:disabled="isSubmitting"
+                            >
+                                <!-- Loading Spinner -->
+                                <div x-show="isSubmitting" class="spinner"></div>
+
+                                <span x-text="isSubmitting ? 'Generating...' : 'Get Certificate'"></span>
+                            </button>
                         </form>
                     </div>
                 </template>
@@ -526,11 +597,28 @@
                             You are one step away from your certificate. Please watch the final video that provides a demonstration with brief information on how to wear a harness, front, side and back to secure yourself while working at heights.
                             <br><br>
                             Remember :all the information covered by this training it's for your safety first. You have 3 years free access to your course content and feel free to get back and review anytime you need it.
-                            <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === false" style="margin-top: 20px">
+                            <form
+                                x-data="{ isSubmitting: false }"
+                                x-bind:action="`/certificate/create/${packageId}`"
+                                method="POST"
+                                x-show="showProgressBar === false"
+                                @submit="isSubmitting = true"
+                                class="formButtonFinal"
+                            >
                                 @csrf
                                 <input type="hidden" name="userId" value="{{auth()->user()->id}}">
-                                <input type="hidden" name="productId"  x-bind:value="productId">
-                                <button type="submit" class="downCertificate">Get Certificate</button>
+                                <input type="hidden" name="productId" x-bind:value="productId">
+
+                                <button
+                                    type="submit"
+                                    class="btn-certificate"
+                                    x-bind:disabled="isSubmitting"
+                                >
+                                    <!-- Loading Spinner -->
+                                    <div x-show="isSubmitting" class="spinner"></div>
+
+                                    <span x-text="isSubmitting ? 'Generating...' : 'Get Certificate'"></span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -545,11 +633,28 @@
                         Please do get in touch if we can be of any further assistance!<br><br>
                         Best regards<br>
 
-                        <form x-bind:action="`/certificate/create/${packageId}`" method="POST" x-show="showProgressBar === false'"  style="margin-top: 20px">
+                        <form
+                            x-data="{ isSubmitting: false }"
+                            x-bind:action="`/certificate/create/${packageId}`"
+                            method="POST"
+                            x-show="showProgressBar === false"
+                            @submit="isSubmitting = true"
+                            class="formButtonFinal"
+                        >
                             @csrf
                             <input type="hidden" name="userId" value="{{auth()->user()->id}}">
-                            <input type="hidden" name="productId"  x-bind:value="productId">
-                            <button type="submit" class="downCertificate">Download Certificate</button>
+                            <input type="hidden" name="productId" x-bind:value="productId">
+
+                            <button
+                                type="submit"
+                                class="btn-certificate"
+                                x-bind:disabled="isSubmitting"
+                            >
+                                <!-- Loading Spinner -->
+                                <div x-show="isSubmitting" class="spinner"></div>
+
+                                <span x-text="isSubmitting ? 'Generating...' : 'Get Certificate'"></span>
+                            </button>
                         </form>
                     </div>
                 </template>
@@ -604,20 +709,38 @@
             <div class="navButtons">
                 <div class="navButton"  x-show="showNav" @click="prevSlide">⬅️Previous</div>
                 <template x-if="tryAgainButton">
-                    <div class="tryAgainDiv">
-                        <div class="answers">
-                            <div class="answersDiv">
-                                <h2>Correct Answers-</h2>
-                                <div x-text="correctAnswersCount" style="font-size: 20px"></div>
+                    <div class="test-result-card">
+                        <div class="result-header">
+                            <div class="result-icon-wrapper">
+                                <svg class="fail-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                                </svg>
                             </div>
-                            <div class="answersDiv">
-                                <h2>Wrong Answers-</h2>
-                                <div x-text="wrongAnswersCount" style="font-size: 20px"></div>
+                            <div class="result-title-group">
+                                <h2>Assessment Result</h2>
+                                <p class="fail-message">Almost there! Review your progress and try again to pass.</p>
                             </div>
-
                         </div>
-                        <div class="tryAgain">Please try Again you dit not pass:</div>
-                        <div class="tryAgainButton" @click="resetTest">Try Again The Test</div>
+
+                        <div class="score-stats-grid">
+                            <div class="stat-card correct">
+                                <span class="stat-label">Correct Answers</span>
+                                <div class="stat-value" x-text="correctAnswersCount">0</div>
+                            </div>
+                            <div class="stat-card wrong">
+                                <span class="stat-label">Wrong Answers</span>
+                                <div class="stat-value" x-text="wrongAnswersCount">0</div>
+                            </div>
+                        </div>
+
+                        <button class="retry-button" @click="resetTest">
+                            <span>Retake Assessment</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.66-5.66"></path>
+                            </svg>
+                        </button>
                     </div>
                 </template>
                 <button class="navButton" x-show="showNav" @click="nextSlide" >Next➡️</button>

@@ -303,6 +303,11 @@
 .titleText{
     font-size: 45px;
     font-weight: 600;
+    background: #201857;
+    background: linear-gradient(to right, #201857 36%, #236CB1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 .product-title{
     font-size: 45px;
@@ -599,6 +604,9 @@
     justify-content: flex-start;
     column-gap: 10px;
     font-size: 19px;
+}
+.product-icons img{
+    width: 25px;
 }
 .product-info-icons{
     display: flex;
@@ -1670,7 +1678,88 @@
 .languageText{
     width: 50%;
 }
+.trust-badges-column{
+    display: none;
+}
 @media only screen and (max-width: 1200px) {
+    .trust-badges-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+        font-family: system-ui, -apple-system, sans-serif;
+        padding: 20px 0;
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 20px;
+        /* Warm confidence palette: Deep amber/bronze dark tones with luxurious warmth */
+        background: linear-gradient(135deg, #2c1d11 0%, #1f140c 100%);
+        border-radius: 16px;
+        border: 1px solid rgba(245, 158, 11, 0.15);
+        box-shadow: 0 10px 30px -10px rgba(44, 29, 17, 0.5);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Warm amber/gold center spotlight gradient */
+    .trust-badge::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.12) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .trust-badge:hover {
+        transform: translateY(-3px);
+        border-color: rgba(245, 158, 11, 0.4);
+        box-shadow: 0 14px 36px -10px rgba(245, 158, 11, 0.25);
+    }
+
+    .badge-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: rgba(245, 158, 11, 0.12);
+        color: #fbbf24;
+        border-radius: 12px;
+        flex-shrink: 0;
+        transition: background 0.3s ease;
+    }
+
+    .trust-badge:hover .badge-icon {
+        background: rgba(245, 158, 11, 0.22);
+    }
+
+    .badge-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .badge-number {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #fffbeb;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+    }
+
+    .badge-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #d1d5db;
+        letter-spacing: 0.01em;
+    }
     .modern-glow-btn{
         font-size: 19px;
     }
@@ -1779,7 +1868,7 @@
         margin-top: 30px;
     }
     .mainBannerDescription{
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -1856,6 +1945,7 @@
     }
     .mainBannerDescription{
         width: 300px;
+        display: none;
     }
     .benefitLeftRight{
         width: 307px;

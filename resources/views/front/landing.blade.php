@@ -9,6 +9,38 @@
         <div class="mainBannerContent">
             <div class="mainBannerRight">
                 <h1 class="mainBannerTitle">HEALTH AND SAFETY COURSES IRELAND -<br> HEALTH AND SAFETY COURSES ONLINE</h1>
+                <div class="trust-badges-column">
+
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-number">4.9 / 5</span>
+                            <span class="badge-label">QQI & RoSPA Approved</span>
+                        </div>
+                    </div>
+
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-number">Instant</span>
+                            <span class="badge-label">Digital Certificates</span>
+                        </div>
+                    </div>
+
+                    <div class="trust-badge">
+                        <div class="badge-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-number">24/7</span>
+                            <span class="badge-label">Learn at Your Pace</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our QQI and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
                 <a href="{{route('register')}}" class="modern-glow-btn">
                     GET CERTIFIED TODAY
@@ -65,7 +97,7 @@
     </div>
 
     <div class="title" data-aos="fade-up">
-        <div class="titleText" >Exlplore our Health and Safety Courses</div>
+        <div class="titleText" >Explore our Health and Safety Courses</div>
         <div class="borderTitle"></div>
         <img src="{{asset("images/products/saleOver.png")}}" id="overImgDash" alt="">
     </div>
@@ -78,10 +110,46 @@
                         <img src="{{asset('images/productAdd/'.$product->image)}}" alt="" class="adminProductImage">
                         <div class="adminProductBottom">
                             <div class="adminProductName">{{$product->name}}</div>
-                            @if (!in_array($product->id, [13, 14, 15, 16]))
-                                <div style="color: #397b21; font-weight: bold">e-Learning Course</div>
+{{--                            @if (!in_array($product->id, [13, 14, 15, 16]))--}}
+{{--                                <div style="color: #397b21; font-weight: bold">e-Learning Course</div>--}}
+{{--                            @endif--}}
+                            @if($product->id == 1)
+                                <div class="info-bar">
+                                    <div class="video-camera-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M23 7l-7 5 7 5V7z"></path>
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                        </svg>
+                                    </div>
+                                    <span class="text">Theory + Practical part included</span>
+                                </div>
+                            @else
+                                <div class="info-bar">
+                                    <div class="check-badge">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6L9 17l-5-5"/>
+                                        </svg>
+                                    </div>
+                                    <span class="text">Accredited · Instant Certificate</span>
+                                </div>
                             @endif
-                            <hr>
+                            <div class="certification-wrapper">
+                                <!-- Using a span with a specific icon character or font-awesome class -->
+
+                                <span class="shield-tick-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#00a86b">
+                                  <!-- Shield shape -->
+                                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <!-- Tick mark -->
+                                  <path fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
+                                </svg>
+                              </span>
+                                <div class="cert-tags">
+                                    <span class="tag">QQI</span>
+                                    <span class="tag">CPD</span>
+                                    <span class="tag">RoSPA</span>
+                                </div>
+                            </div>
                             <div class="product-info-icons">
                                 @if($product->id == 14)
                                     <div class="product-icons">
@@ -100,7 +168,7 @@
                                 </div>
                                 <div class="product-icons">
                                     <img src="images/icons/money.png" alt="">
-                                    <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 1.31)}} €</del> <span style="color: red; font-size: 20px">{{$product->price}} €</span></div>
+                                    <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 2.31)}} €</del> <span style="color: red; font-size: 25px">{{$product->price}} €</span></div>
                                 </div>
                             </div>
                             @if($product->status == 0)

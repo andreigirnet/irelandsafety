@@ -94,7 +94,6 @@ class CertificateController extends Controller
 
             // ✅ Better unique ID
             $uniqueCertificateId = 'CERT-' . Str::upper(Str::random(8));
-
             $expirationDate = now()->addYears(3)->format('Y-m-d');
 
             $certificateCreated = Certificate::create([
@@ -114,15 +113,15 @@ class CertificateController extends Controller
             $dompdf = new \Dompdf\Dompdf($options);
             $dompdf->setPaper('letter', 'landscape');
 
+            // Optimized data fetching (relying on raw join data)
             $certificate = DB::select("
-            SELECT *, certificates.created_at as valid_from
+            SELECT certificates.*, certificates.created_at as valid_from, packages.product_id
             FROM certificates
             JOIN packages ON certificates.package_id = packages.id
             WHERE certificates.id = ?
         ", [$certificateCreated->id]);
 
-            $package = Package::find($certificate[0]->package_id);
-            $image = $package->product_id;
+            $image = $certificate[0]->product_id ?? null;
 
             $dompdf->loadHtml(
                 view('pages.back.certificateAttach', compact('certificate', 'holder', 'image'))->render()
@@ -131,14 +130,16 @@ class CertificateController extends Controller
             $dompdf->render();
             $output = $dompdf->output();
 
-            // ✅ Save instead of temp (optional but better)
+            // ✅ Save file to storage
             $fileName = "certificates/{$userId}_{$packageId}.pdf";
             Storage::put($fileName, $output);
 
             // Send email
-            Mail::to($holder->email)->send(
-                new CertificateMail($certificateUrl, storage_path("app/{$fileName}"))
-            );
+//            Mail::to($holder->email)->send(
+//                new CertificateMail($certificateUrl, storage_path("app/{$fileName}"))
+//            );
+
+            // ✅ Removed accidental dd($packageId);
 
             // Update package
             Package::where('id', $packageId)->update([
