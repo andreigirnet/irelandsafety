@@ -36,6 +36,21 @@ class CertificateController extends Controller
         return view('pages.back.certificate')->with('certificates', $certificates);
     }
 
+    public function getApiCertificates(Request $request)
+    {
+        $certificates = DB::table('certificates')
+            ->select('*', 'certificates.created_at as valid_from', 'certificates.id as id')
+            ->join('packages', 'certificates.package_id', '=', 'packages.id')
+            ->where('certificates.user_id', $request->user()->id)
+            ->orderByDesc('valid_from')
+            ->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $certificates
+        ]);
+    }
+
     public function getAllCertificates(Request $request){
         $certificates = DB::select("SELECT *, certificates.user_id as user_id, (SELECT email FROM users WHERE id=user_id) as email, (SELECT name FROM users WHERE id=user_id) as holderName FROM certificates ORDER BY created_at DESC");
         $page = $request->input('page', 1);
@@ -172,6 +187,28 @@ class CertificateController extends Controller
         $pdf->setPaper('a4', 'landscape');
 
         return $pdf->download('certificate.pdf');
+    }
+
+    public function getApiCertificateDownload(Request $request, $id)
+    {
+        $certificate = DB::select("SELECT *, certificates.created_at as valid_from FROM certificates JOIN packages ON certificates.package_id = packages.id WHERE certificates.id = ? AND certificates.user_id = ?", [$id, $request->user()->id]);
+
+        if (empty($certificate)) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Certificate not found or unauthorized'
+            ], 404);
+        }
+
+        $holder  = User::find($certificate[0]->user_id);
+        $package = Package::find($certificate[0]->package_id);
+        $image   = $package->product_id;
+
+        $data    = ['certificate' => $certificate, 'holder' => $holder, 'image' => $image];
+        $pdf     = Pdf::loadView('pages.back.generateCertificate', $data);
+        $pdf->setPaper('a4', 'landscape');
+
+        return $pdf->output();
     }
 
     /**

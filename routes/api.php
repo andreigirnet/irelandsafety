@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\PackageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,3 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/courses', [CourseController::class, 'index']);
+
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::middleware('auth:sanctum')->get('/mobile-packages', [PackageController::class, 'getApiPackages']);
+
+Route::middleware('auth:sanctum')->get('/certificates', [CertificateController::class, 'getApiCertificates']);
+
+Route::middleware('auth:sanctum')->get('/certificates/{id}/download', [CertificateController::class, 'getApiCertificateDownload']);

@@ -22,6 +22,37 @@ class PackageController extends Controller
         return view('pages.back.package')->with('packages', $packages);
     }
 
+    public function getApiPackages(Request $request)
+    {
+        $packages = Package::latest()
+            ->where('user_id', auth()->user()->id)
+            ->get();
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $packages
+        ]);
+    }
+
+    public function showCourseDetails(Request $request, $id)
+    {
+        $package = Package::where('id', $id)
+            ->where('user_id', $request->user()->id)
+            ->first();
+
+        if (!$package) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Course not found or unauthorized'
+            ], 404);
+        }
+
+        return response()->json([
+            'status' => 'success',
+            'data' => $package
+        ]);
+    }
+
     public function share($id)
     {
         $employeesToShare = DB::select('SELECT * FROM users JOIN company_employee ON users.id = company_employee.employee WHERE company_employee.company=' . auth()->user()->id);
