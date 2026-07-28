@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CourseController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PackageController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -56,3 +57,10 @@ Route::get('/images/{path}', function ($path) {
 
     return response()->file($fullPath);
 })->where('path', '.*');
+
+Route::post('/certificate/create/{packageId}', [CertificateController::class, 'apiStore']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/orders', [OrderController::class, 'getOrdersApi']);
+    Route::get('/invoice/download/{id}', [OrderController::class, 'downloadInvoiceApi'])->name('invoice.download');
+});

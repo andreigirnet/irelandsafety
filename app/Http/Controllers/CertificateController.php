@@ -168,6 +168,104 @@ class CertificateController extends Controller
         }
     }
 
+    public function apiStore(Request $request, $packageId)
+    {
+        $userId = $request->input('userId');
+
+        if (!$userId) {
+            return response()->json([
+                'success' => false,
+                'message' => 'User ID is missing from request payload.'
+            ], 422);
+        }
+
+        $lockKey = "certificate_{$userId}_{$packageId}";
+        $lock = Cache::lock($lockKey, 30);
+
+        if (!$lock->get()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Certificate is already being generated. Please wait...'
+            ], 429);
+        }
+
+        try {
+            $existingCertificate = Certificate::where('user_id', $userId)
+                ->where('package_id', $packageId)
+                ->first();
+
+            if ($existingCertificate) {
+                // ✅ Update package status and link certificate if already exists
+                Package::where('id', $packageId)->update([
+                    'certificate_id' => $existingCertificate->id,
+                    'status' => 'theory' // Update status to theory/passed
+                ]);
+
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Certificate already generated.',
+                    'certificate_id' => $existingCertificate->id,
+                    'already_exists' => true
+                ], 200);
+            }
+
+            $uniqueCertificateId = 'CERT-' . Str::upper(Str::random(8));
+            $expirationDate = now()->addYears(3)->format('Y-m-d');
+
+            $certificateCreated = Certificate::create([
+                'user_id'         => $userId,
+                'package_id'      => $packageId,
+                'unique_id'       => $uniqueCertificateId,
+                'expiration_date' => $expirationDate
+            ]);
+
+            $holder = \App\Models\User::find($userId);
+            $certificateUrl = config('app.url') . '/certificate/' . $certificateCreated->id;
+
+            $options = new \Dompdf\Options();
+            $options->set('isRemoteEnabled', true);
+
+            $dompdf = new \Dompdf\Dompdf($options);
+            $dompdf->setPaper('letter', 'landscape');
+
+            $certificate = DB::select("
+                SELECT certificates.*, certificates.created_at as valid_from, packages.product_id
+                FROM certificates
+                JOIN packages ON certificates.package_id = packages.id
+                WHERE certificates.id = ?
+            ", [$certificateCreated->id]);
+
+            $image = $certificate[0]->product_id ?? null;
+
+            $dompdf->loadHtml(
+                view('pages.back.certificateAttach', compact('certificate', 'holder', 'image'))->render()
+            );
+
+            $dompdf->render();
+            $output = $dompdf->output();
+
+            $fileName = "certificates/{$userId}_{$packageId}.pdf";
+            Storage::put($fileName, $output);
+
+            // ✅ Update package status to 'theory' and save certificate reference
+            Package::where('id', $packageId)->update([
+                'certificate_id' => $certificateCreated->id,
+                'status' => 'theory'
+            ]);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Certificate Generated Successfully',
+                'certificate_id' => $certificateCreated->id,
+                'certificate_url' => $certificateUrl,
+                'already_exists' => false
+            ], 200);
+
+        } finally {
+            $lock->release();
+        }
+    }
+
     //Downloand certificate
     public function certificateDownload($id)
     {

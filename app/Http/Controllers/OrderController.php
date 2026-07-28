@@ -4,14 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use App\Http\Controllers\Controller;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Sanctum\PersonalAccessToken;
 use Stripe\Invoice;
 use Stripe\Stripe;
+use App\Models\User;
 
 class OrderController extends Controller
 {
@@ -117,5 +121,39 @@ class OrderController extends Controller
     {
         DB::statement("DELETE FROM orders WHERE id=".$id);
         return redirect(route('orders.index'))->with('success','Order has been removed');
+    }
+
+    public function getOrdersApi(Request $request)
+    {
+        $orders = Order::where('user_id', Auth::id())
+            ->latest()
+            ->get();
+
+        return response()->json([
+            'success' => true,
+            'orders' => $orders
+        ]);
+    }
+
+    public function downloadInvoiceApi(Request $request, $id)
+    {
+        $order = Order::find($id);
+
+        if (!$order) {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
+
+        // Match your certificate approach by fetching as an array of objects
+        $user = DB::select("SELECT * FROM users WHERE id = ?", [$order->user_id]);
+
+        $data = [
+            'order' => $order,
+            'user'  => $user // This makes $user[0]->name work on line 56
+        ];
+
+        $pdf = Pdf::loadView('pages.admin.invoice', $data);
+        $pdf->setPaper('a4', 'portrait');
+
+        return $pdf->output();
     }
 }
