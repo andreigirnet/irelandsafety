@@ -37,6 +37,11 @@
                     <div class="ct-address-box">
                         51 Bracken Road, D18 CV48, Ireland
                     </div>
+
+                    <div class="ct-detail-text" style="grid-column: 1 / -1; margin-top: 15px; border-top: 1px solid #e5e7eb; padding-top: 15px;">
+                        <strong>Company Name:</strong> PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED<br>
+{{--                        <strong>Company Registration Number:</strong> 822301--}}
+                    </div>
                 </div>
 
             </div>

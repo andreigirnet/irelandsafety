@@ -166,6 +166,149 @@ class CheckoutController extends Controller
         }
     }
 
+    public function processMobileStripePayment(Request $request)
+    {
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        // Support both raw JSON input body and standard Laravel request payloads
+        $json_str = file_get_contents('php://input');
+        $json_obj = json_decode($json_str);
+
+        // Safely extract properties handling both JSON payload and standard form request data
+        $paymentMethodId = $json_obj->payment_method_id ?? $request->input('payment_method_id');
+        $paymentIntentId = $json_obj->payment_intent_id ?? $request->input('payment_intent_id');
+        $cartTotal = $request->cartTotal ?? $json_obj->cartTotal ?? 0;
+
+        $amountToInt = round($cartTotal * 100, 0, PHP_ROUND_HALF_UP);
+        $intent = null;
+
+        // Get the authenticated user safely
+        $user = auth()->user();
+        if (!$user) {
+            return response()->json(['error' => 'Unauthorized user'], 401);
+        }
+
+        try {
+            if (!empty($paymentMethodId)) {
+                // Create the Customer profile
+                $customer = \Stripe\Customer::create([
+                    'email' => $user->email,
+                    'description' => 'Mobile App Customer',
+                    'metadata' => [
+                        'name' => $user->name,
+                    ],
+                ]);
+
+                // Create the PaymentIntent without conflicting manual parameters
+                $intent = \Stripe\PaymentIntent::create([
+                    'payment_method' => $paymentMethodId,
+                    'amount' => $amountToInt,
+                    'currency' => 'eur',
+                    'confirm' => true,
+                    'statement_descriptor' => 'IrelandSafetyCourse',
+                    'customer' => $customer->id,
+                    'description' => 'Payment made by ' . $user->email,
+                    'return_url' => url('/payment/success'),
+                    'automatic_payment_methods' => [
+                        'enabled' => true,
+                        'allow_redirects' => 'never'
+                    ]
+                ]);
+            }
+
+            if (!empty($paymentIntentId)) {
+                $intent = \Stripe\PaymentIntent::retrieve($paymentIntentId);
+                $intent->confirm();
+            }
+
+            return $this->finalizeMobileOrderResponse($intent, $request);
+
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage()
+            ], 400);
+        }
+    }
+
+    public function finalizeMobileOrderResponse($intent, Request $request)
+    {
+        $user = auth()->user();
+
+        if ($intent->status == 'requires_action' && optional($intent->next_action)->type == 'redirect_to_url') {
+            return response()->json([
+                'requires_action' => true,
+                'payment_intent_client_secret' => $intent->client_secret
+            ]);
+        }
+        else if ($intent->status == 'succeeded') {
+            // Decode cart items from request payload safely
+            $json_str = file_get_contents('php://input');
+            $json_obj = json_decode($json_str);
+            $cartItemsRaw = $request->cart_items ?? ($json_obj->cart_items ?? '[]');
+            $cartItems = is_string($cartItemsRaw) ? json_decode($cartItemsRaw, true) : $cartItemsRaw;
+
+            $orderTitles = '';
+            if (is_array($cartItems)) {
+                foreach ($cartItems as $cartItem) {
+                    $orderTitles .= ($cartItem['title'] ?? 'Course') . ', ';
+                }
+            }
+            $orderTitles = rtrim($orderTitles, ', ');
+
+            // Create the main Order record preserving all your tracking requirements
+            Order::create([
+                'user_id' => $user->id,
+                'product_name' => $orderTitles,
+                'quantity' => $request->cartQty ?? ($json_obj->cartQty ?? 1),
+                'paid' => $request->cartTotal ?? ($json_obj->cartTotal ?? 0),
+                'charge_id' => $intent->id,
+                'invoice_id' => $intent->id,
+                'address' => $request->address ?? ($json_obj->address ?? ''),
+                'city' => $request->city ?? ($json_obj->city ?? ''),
+                'county' => $request->county ?? ($json_obj->county ?? ''),
+                'country' => $request->country ?? ($json_obj->country ?? ''),
+                'status' => 'paid',
+            ]);
+
+            // Generate specific package records per item quantity
+            if (is_array($cartItems)) {
+                foreach ($cartItems as $cartItem) {
+                    $quantity = $cartItem['quantity'] ?? 1;
+                    for ($i = 0; $i < $quantity; $i++) {
+                        $package = new Package();
+                        $package->product_id = $cartItem['id'] ?? 1;
+                        $package->user_id = $user->id;
+                        $package->course_name = $cartItem['title'] ?? 'Course';
+                        $package->status = "purchased";
+                        $package->save();
+                    }
+                }
+            }
+
+            // Send confirmation email safely
+            try {
+//                Mail::to($user->email)->send(new ConfirmPaymentMail());
+            } catch (\Exception $mailEx) {
+                // Log mailing error without crashing payment completion
+            }
+
+            if ($request->hasSession()) {
+                $request->session()->flash('success', 'Payment has been received successfully');
+            }
+
+            return response()->json([
+                "success" => true,
+                "message" => "Payment processed and order generated successfully."
+            ]);
+        }
+        else {
+            return response()->json([
+                'success' => false,
+                'error' => 'Invalid PaymentIntent status: ' . $intent->status
+            ], 500);
+        }
+    }
     /**
      * Display the specified resource.
      */
