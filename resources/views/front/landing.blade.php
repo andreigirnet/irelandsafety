@@ -159,7 +159,7 @@
                                 @else
                                     <div class="product-icons">
                                         <img src="images/icons/back-in-time.png" alt="">
-                                        <div>Duration: {{$product->durationTraining}} hours</div>
+                                        <div>Duration: {{$product->durationTraining}} minutes</div>
                                     </div>
                                 @endif
                                 <div class="product-icons">

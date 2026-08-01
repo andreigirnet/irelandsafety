@@ -92,7 +92,7 @@
                             @else
                                 <div class="product-icons-back">
                                     <img src="images/icons/back-in-time.png" alt="">
-                                    <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Duration: <span style="font-weight: 500">{{$product->durationTraining}} hours</span></div>
+                                    <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Duration: <span style="font-weight: 500">{{$product->durationTraining}} minutes</span></div>
                                 </div>
                             @endif
                             <div class="product-icons-back">
