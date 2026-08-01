@@ -13,7 +13,7 @@
     @if (session('created'))
         <div class="modalRegisterComplete" id="modalRegisterEmployer">
             <div class="modalTitle">Hi there</div>
-            <p>Its <a href="{{route('home')}}">IrelandSafetyCourse.com</a> Training Centre here.</p>
+            <p>Its <a href="{{route('home')}}">IrelandSafetyCourse.com</a> Training Centre here. LIMITED CRO REGISTERED - Operating under Irish law</p>
             <div class="modalText">
                 <div class="modalInnerText">
                     If you require any further assistance or information, please don't hesitate to reach out to us via the chat feature on our website.
@@ -39,7 +39,7 @@
                 <span class="gradient-text">{{env('APP_NAME')}}</span>
             </h2>
             <p class="brand-description">
-                Ireland’s <strong>Leader</strong> in accessible health and safety materials. We offer compliant online training and exceptional service to a global clientele via our seamless digital platform. <strong>Best Prices</strong> on market guarantee
+                IrelandSafetyCourse  <strong>LIMITED CRO REGISTERED - Operating under Irish law </strong>. Leader in accessible health and safety materials. We offer compliant online training and exceptional service to a global clientele via our seamless digital platform. <strong>Best Prices</strong> on market guarantee
             </p>
         </div>
     </div>
