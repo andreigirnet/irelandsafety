@@ -9,14 +9,35 @@
         .main-form-section { flex: 1; background: #ffffff; border-radius: 24px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
         .side-summary-section { width: 420px; position: sticky; top: 110px; }
 
-        /* Input Styling */
-        .custom-input-group { margin-bottom: 20px; }
-        .custom-input-group label { font-weight: 700; color: #334155; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; display: block; }
-        .custom-field { width: 100%; padding: 14px 18px; border-radius: 12px; border: 2px solid #f1f5f9; background: #f8fafc; transition: all 0.3s ease; font-weight: 500; }
-        .custom-field:focus { border-color: #6366f1; background: #fff; outline: none; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
+        /* Unified High-End Input Styling */
+        .custom-input-group { margin-bottom: 22px; width: 100%; }
+        .custom-input-group label { font-weight: 700; color: #334155; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: block; }
 
-        /* Stripe Card Element Box */
-        #card-element { padding: 16px; border-radius: 12px; border: 2px solid #f1f5f9; background: #f8fafc; margin-bottom: 10px; }
+        .custom-field {
+            width: 100% !important;
+            height: 52px !important;
+            padding: 0 18px !important;
+            border-radius: 12px !important;
+            border: 2px solid #cbd5e1 !important;
+            background: #f8fafc !important;
+            transition: all 0.2s ease !important;
+            font-weight: 500 !important;
+            font-size: 15px !important;
+            color: #0f172a !important;
+            box-sizing: border-box !important;
+            outline: none !important;
+        }
+
+        .custom-field::placeholder { color: #94a3b8 !important; }
+
+        .custom-field:focus {
+            border-color: #6366f1 !important;
+            background: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12) !important;
+        }
+
+        /* Stripe Card Element Box (Completely untouched structure per request) */
+        #card-element { padding: 14px 16px; border-radius: 12px; border: 2px solid #cbd5e1; background: #f8fafc; margin-bottom: 10px; }
 
         /* Summary Card */
         .glass-summary { background: #0f172a; color: #fff; border-radius: 28px; padding: 35px; box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25); }
@@ -75,13 +96,13 @@
                         </div>
                     </div>
 
-                    <div class="custom-input-group mb-5">
+                    <div class="custom-input-group mb-4">
                         <label>Country</label>
                         <input type="text" class="custom-field" id="country" name="country" placeholder="e.g. Ireland" required>
                     </div>
 
-                    <div class="pt-4 border-top">
-                        <label class="mb-3" style="font-weight: 800; font-size: 15px; color: #1e293b;">Credit or Debit Card</label>
+                    <div class="pt-3 border-top">
+                        <label class="mb-2" style="font-weight: 700; font-size: 12px; color: #334155; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Credit or Debit Card</label>
                         <div id="card-element"></div>
                         <div id="card-errors" class="text-danger small mt-2" role="alert"></div>
                     </div>
