@@ -20,6 +20,7 @@ use Spatie\Sitemap\Tags\Url;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 

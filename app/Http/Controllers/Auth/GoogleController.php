@@ -43,4 +43,5 @@ class GoogleController extends Controller
 
         return redirect()->intended('/home');
     }
+
 }

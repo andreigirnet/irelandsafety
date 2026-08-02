@@ -39,7 +39,7 @@
             timer: null,
 
             init() {
-                fetch("{{ asset('data/feedback.json') }}")
+                fetch("/data/feedback.json")
                     .then(res => res.json())
                     .then(data => {
                         this.feedbacks = data;
