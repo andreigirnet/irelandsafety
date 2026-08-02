@@ -11,24 +11,40 @@
         <strong>Item</strong> added to the cart
     </div>
     @if (session('created'))
-        <div class="modalRegisterComplete" id="modalRegisterEmployer">
-            <div class="modalTitle">Hi there</div>
-            <p>Its <a href="{{route('home')}}">IrelandSafetyCourse.com</a> Training Centre here. LIMITED CRO REGISTERED - Operating under Irish law</p>
-            <div class="modalText">
-                <div class="modalInnerText">
-                    If you require any further assistance or information, please don't hesitate to reach out to us via the chat feature on our website.
-                    <br><br>
-                    To access the course, you can follow the steps outlined on our website once you're logged in, or return at any time later by using the email we've just sent you containing your login details (password & email). Do check your spam/junk folder, just in case.
-                    <br><br>
-                    Upon successful processing of your payment, you'll be able to choose the language for your training (English / Polish / Spanish / Russian / Romanian / Ukrainian).
-                    <br><br>
-                    Our customer support is available from 10 am to 7-8 pm every day, including weekends.
+        <div x-data="{ open: true }" x-show="open" class="isc-modal-overlay" id="modalRegisterEmployer" x-cloak>
+            <div class="isc-modal-container">
+                <div class="isc-modal-accent-bar"></div>
+                <div class="isc-modal-content-wrap">
+                    <div class="isc-modal-header-row">
+                        <div>
+                            <div class="isc-modal-title">Hi there! 👋</div>
+                            <p class="isc-modal-subtitle">It's <a href="{{route('home')}}">IrelandSafetyCourse.com</a> Training Centre here.</p>
+                        </div>
+                        <div class="isc-modal-cro-pill">
+                            <svg class="isc-modal-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>LIMITED CRO REGISTERED • Operating under Irish law</span>
+                        </div>
+                    </div>
+
+                    <div class="isc-modal-text-box">
+                        <div class="isc-modal-inner-text">
+                            <p>If you require any further assistance or information, please don't hesitate to reach out to us via the chat feature on our website.</p>
+                            <p>To access the course, follow the steps outlined on our website once logged in, or return anytime via the email we just sent you with your login details. <strong>Do check your spam/junk folder</strong>, just in case.</p>
+                            <p>Upon successful payment processing, you can select your training language: <strong>English, Polish, Spanish, Russian, Romanian, or Ukrainian</strong>.</p>
+                            <p class="isc-modal-hours">🕒 Customer support available <strong>10:00 AM – 7:00/8:00 PM</strong> daily, including weekends.</p>
+                        </div>
+                    </div>
+
+                    <div class="isc-modal-footer-flex">
+                        <div class="isc-modal-signature">
+                            <p>Best regards,</p>
+                            <p class="isc-modal-team">The Ireland Safety Course Team</p>
+                        </div>
+                        <!-- Fixed using $el.closest('.isc-modal-overlay').remove() to guarantee instant removal upon dynamic injection -->
+                        <button type="button" @click="$el.closest('.isc-modal-overlay').remove()" class="adminButtonModal" id="understoodButton">UNDERSTOOD</button>
+                    </div>
                 </div>
             </div>
-            <div class="modalText">
-                Best regards
-            </div>
-            <div class="adminButtonModal" style="display: flex; align-items: center; justify-content: center; margin-top: 20px; color:white" id="understoodButton">UNDERSTOOD</div>
         </div>
     @endif
     <div class="luxury-card brand-intro-card">
@@ -79,10 +95,43 @@
                     <img src="{{asset('images/productAdd/'.$product->image)}}" alt="" class="adminProductImageBack">
                     <div class="adminProductBottomBack">
                         <div class="adminProductNameBack">{{$product->name}}</div>
-                        @if (!in_array($product->id, [13, 14, 15, 16]))
-                            <div style="color: #397b21; font-weight: bold" class="elearning">e-Learning Course</div>
+                        @if($product->id == 1)
+                            <div class="info-bar">
+                                <div class="video-camera-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M23 7l-7 5 7 5V7z"></path>
+                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                                    </svg>
+                                </div>
+                                <span class="text">Theory + Practical part included</span>
+                            </div>
+                        @else
+                            <div class="info-bar">
+                                <div class="check-badge">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 6L9 17l-5-5"/>
+                                    </svg>
+                                </div>
+                                <span class="text">Accredited · Instant Certificate</span>
+                            </div>
                         @endif
-                        <hr style="border: 1px solid gray; opacity: 0.8">
+                        <div class="certification-wrapper">
+                            <!-- Using a span with a specific icon character or font-awesome class -->
+
+                            <span class="shield-tick-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#00a86b">
+                                  <!-- Shield shape -->
+                                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <!-- Tick mark -->
+                                  <path fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
+                                </svg>
+                              </span>
+                            <div class="cert-tags">
+                                <span class="tag">QQI</span>
+                                <span class="tag">CPD</span>
+                                <span class="tag">RoSPA</span>
+                            </div>
+                        </div>
                         <div class="product-info-icons">
                             @if($product->id == 14)
                                 <div class="product-icons-back">
@@ -101,7 +150,7 @@
                             </div>
                             <div class="product-icons-back">
                                 <img src="images/icons/money.png" alt="">
-                                <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 2.31)}} €</del> <span style="color: red; font-size: 20px">{{$product->price}} €</span></div>
+                                <div style="font-weight: bold"><del style="color: gray; font-size:18px">{{round($product->price * 2.31)}} €</del> <span style="color: red; font-size: 30px">{{$product->price}} €</span></div>
                             </div>
                         </div>
                         <div x-data="{}">

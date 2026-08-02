@@ -61,10 +61,10 @@
 <body>
 <body x-data="app()">
 
-@include("frontIncludes/hamburger")
-@include("frontIncludes/responsiveNav")
+{{--@include("frontIncludes/hamburger")--}}
+{{--@include("frontIncludes/responsiveNav")--}}
 @include("frontIncludes/frontNav")
-{{--@include("frontIncludes/subNav")--}}
+@include("frontIncludes/subNav")
 {{--@include("frontIncludes/subNavMobile")--}}
 
 @yield('content')
@@ -90,7 +90,7 @@
 <script>
     AOS.init();
 </script>
-<script src="{{asset('js/prevent.js')}}"></script>
+{{--<script src="{{asset('js/prevent.js')}}"></script>--}}
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",

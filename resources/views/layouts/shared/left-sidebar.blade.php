@@ -7,7 +7,7 @@
             <img src="/images/logo/whiteLoginLogo.png" alt="logo" style="height: 50px">
         </span>
         <span class="logo-sm">
-            <img src="/images/logo/whiteLoginLogo.png" alt="small logo" style="height: 30px">
+            <img src="/images/logo/smallLogo.webp" alt="small logo" style="height: 30px">
         </span>
     </a>
 

@@ -10,6 +10,234 @@
     --greenColor: #70bc40;
     font-family: 'PT Sans Narrow', sans-serif;
 }
+.certification-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ebebeb; /* Very subtle grey border */
+    margin-bottom: 15px;
+}
+.shield-tick-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f2fcf6; /* Light green background */
+    padding: 5px;
+    border-left: 5px solid #00a86b; /* The thick green vertical line */
+    color: #004d30; /* Dark green text */
+    font-weight: 600;
+    border-radius: 0 4px 4px 0;
+}
+
+.info-bar .icon {
+    font-size: 1.2rem;
+}
+.cert-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #d1d1d1; /* Thin light border */
+    padding: 4px 14px;
+    border-radius: 50px; /* Fully rounded capsules */
+    font-size: 0.85rem;
+    font-weight: 700; /* Bolder text to match image */
+    color: #555;      /* Dark grey text */
+    text-transform: uppercase; /* Matching the capitalization in your UI */
+    letter-spacing: 0.2px;
+}
+
+[x-cloak] { display: none !important; }
+
+.isc-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(15, 23, 42, 0.65) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999999 !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+}
+
+.isc-modal-container {
+    background: #ffffff !important;
+    width: 100% !important;
+    max-width: 820px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    border-radius: 20px !important;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3), 0 8px 24px rgba(15, 23, 42, 0.15) !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    box-sizing: border-box !important;
+    border: 1px solid #f1f5f9 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1000000 !important;
+}
+
+.isc-modal-accent-bar {
+    height: 8px !important;
+    width: 100% !important;
+    background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%) !important;
+}
+
+.isc-modal-content-wrap {
+    padding: 40px 48px !important;
+}
+
+.isc-modal-header-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    margin-bottom: 28px !important;
+}
+
+.isc-modal-title {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 0 0 6px 0 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.isc-modal-subtitle {
+    font-size: 17px !important;
+    color: #64748b !important;
+    margin: 0 !important;
+}
+
+.isc-modal-subtitle a {
+    color: #0284c7 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+.isc-modal-cro-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: #f0fdf4 !important;
+    color: #166534 !important;
+    border: 1px solid #bbf7d0 !important;
+    padding: 8px 14px !important;
+    border-radius: 10px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.isc-modal-shield {
+    width: 16px !important;
+    height: 16px !important;
+    color: #16a34a !important;
+    flex-shrink: 0 !important;
+}
+
+.isc-modal-text-box {
+    background: #f8fafc !important;
+    border-radius: 14px !important;
+    padding: 24px 28px !important;
+    border: 1px solid #e2e8f0 !important;
+    margin-bottom: 32px !important;
+}
+
+.isc-modal-inner-text {
+    font-size: 16px !important;
+    color: #334155 !important;
+    line-height: 1.7 !important;
+}
+
+.isc-modal-inner-text p {
+    margin: 0 0 16px 0 !important;
+}
+
+.isc-modal-inner-text p:last-child {
+    margin: 0 !important;
+}
+
+.isc-modal-hours {
+    color: #0369a1 !important;
+    background: #e0f2fe !important;
+    padding: 10px 16px !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    margin-top: 16px !important;
+}
+
+.isc-modal-footer-flex {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 24px !important;
+}
+
+.isc-modal-signature {
+    font-size: 16px !important;
+    color: #64748b !important;
+}
+
+.isc-modal-signature p {
+    margin: 0 !important;
+}
+
+.isc-modal-team {
+    font-weight: 600 !important;
+    color: #0f172a !important;
+    font-size: 17px !important;
+}
+
+.adminButtonModal {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important;
+    min-width: 220px !important;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    padding: 16px 32px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.3) !important;
+    transition: all 0.2s ease !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    flex-shrink: 0 !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 1000001 !important;
+}
+
+.adminButtonModal:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+.adminButtonModal:active {
+    transform: translateY(0) !important;
+}
+
+
 /* --- Brand Intro Card Stylistics --- */
 .exclusive-pagination {
     display: flex;
@@ -1309,9 +1537,76 @@ a{
         text-align: center;
     }
 
-    .input-grid-mobile {
-        display: flex;
-        flex-direction: column;
+    .isc-modal-overlay {
+        padding: 10px !important;
+        align-items: center !important;
+    }
+
+    .isc-modal-container {
+        width: 100% !important;
+        max-height: 95vh !important;
+        border-radius: 16px !important;
+    }
+
+    .isc-modal-content-wrap {
+        padding: 24px 20px !important;
+    }
+
+    .isc-modal-header-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .isc-modal-title {
+        font-size: 22px !important;
+    }
+
+    .isc-modal-subtitle {
+        font-size: 14px !important;
+    }
+
+    .isc-modal-cro-pill {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+
+    .isc-modal-text-box {
+        padding: 14px 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .isc-modal-inner-text {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    .isc-modal-hours {
+        font-size: 13px !important;
+    }
+
+    .isc-modal-footer-flex {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+    }
+
+    .isc-modal-signature {
+        font-size: 14px !important;
+    }
+
+    .isc-modal-team {
+        font-size: 15px !important;
+    }
+
+    .adminButtonModal {
+        width: 100% !important;
+        font-size: 15px !important;
+        padding: 14px 20px !important;
+        min-width: unset !important;
     }
 }
 @media screen and (max-width: 767px) and (min-width: 250px){
@@ -1434,5 +1729,76 @@ a{
         text-align: center;
         width: 100%;
         margin-top: 10px;
+    }
+    .isc-modal-overlay {
+        padding: 10px !important;
+        align-items: center !important;
+    }
+
+    .isc-modal-container {
+        width: 100% !important;
+        max-height: 95vh !important;
+        border-radius: 16px !important;
+    }
+
+    .isc-modal-content-wrap {
+        padding: 24px 20px !important;
+    }
+
+    .isc-modal-header-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .isc-modal-title {
+        font-size: 22px !important;
+    }
+
+    .isc-modal-subtitle {
+        font-size: 14px !important;
+    }
+
+    .isc-modal-cro-pill {
+        font-size: 11px !important;
+        padding: 6px 10px !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
+    }
+
+    .isc-modal-text-box {
+        padding: 14px 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .isc-modal-inner-text {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+
+    .isc-modal-hours {
+        font-size: 13px !important;
+    }
+
+    .isc-modal-footer-flex {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+    }
+
+    .isc-modal-signature {
+        font-size: 14px !important;
+    }
+
+    .isc-modal-team {
+        font-size: 15px !important;
+    }
+
+    .adminButtonModal {
+        width: 100% !important;
+        font-size: 15px !important;
+        padding: 14px 20px !important;
+        min-width: unset !important;
     }
 }

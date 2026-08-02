@@ -41,13 +41,10 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex flex-column h-100">
-                                    <div class="auth-brand p-4">
-{{--                                        <a href="" class="logo-light">--}}
-{{--                                            <img src="/images/login/whiteLoginLogo.png" alt="logo" height="70">--}}
-{{--                                        </a>--}}
-{{--                                        <a href="" class="logo-dark">--}}
-{{--                                            <img src="/images/login/darkLoginLogo.png" alt="dark logo" height="70">--}}
-{{--                                        </a>--}}
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                                        <!-- Logo -->
+                                        <img src="/images/logo/logoLight.webp" alt="logo" height="100">
+
                                     </div>
                                     <div class="p-4">
                                         <h4 class="fs-20">Forgot Password?</h4>

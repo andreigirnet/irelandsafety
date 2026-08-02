@@ -12,7 +12,7 @@
         "jackiedo/cart": "^3.0",
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.3",
-        "laravel/socialite": "^5.11",
+        "laravel/socialite": "^5.29",
         "laravel/tinker": "^2.8",
         "spatie/browsershot": "*",
         "spatie/laravel-sitemap": "*",

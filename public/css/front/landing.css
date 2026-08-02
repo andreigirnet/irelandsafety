@@ -11,6 +11,7 @@
     background-size: cover;
     overflow: hidden;
 }
+
 .gifImage{
     position: absolute;
     width: 200px;
@@ -327,11 +328,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 84px 0;
+    padding: 50px 0;
 }
 .productWrapper {
     display: flex;
-    margin: 50px 0;
     border-radius: 7px 7px 7px 7px;
 }
 .bulkContainer{

@@ -10,7 +10,7 @@
                         <img src="{{asset('images/login/registerLogin.jpg')}}" alt="logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{asset('images/login/smallLogo.png')}}" style="width: 80px" alt="small logo">
+                        <img src="{{asset('images/logo/smallLogo.webp')}}" style="width: 80px" alt="small logo">
                     </span>
                 </span>
 
@@ -20,7 +20,7 @@
                         <img src="images/login/registerLogin.jpg" alt="dark logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{asset('images/login/smallLogo.png')}}"  style="width: 50px; height: 40px" alt="small logo">
+                        <img src="{{asset('images/logo/smallLogo.webp')}}"  style="width: 50px; height: 40px" alt="small logo">
                     </span>
                 </span>
             </div>

@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\SocialiteController;
 use App\Models\Blog;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RoutingController;
 use App\Models\Product;
+use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
 /*
@@ -18,6 +20,9 @@ use Spatie\Sitemap\Tags\Url;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
     Route::get('/alert', function(){
         return view("ui.alerts");
     });
@@ -212,10 +217,6 @@ Route::group(['middleware'=>'auth'], function () {
 
 Route::get('/inv', function(){return view("pages.invoice");});
 Route::get('/buttons', function(){return view("ui.grid");});
-
-use App\Http\Controllers\SocialiteController;
-use Spatie\Sitemap\Sitemap;
-use Spatie\Sitemap\SitemapGenerator;
 
 Route::get('/login/google', [SocialiteController::class, 'redirectToGoogle'])->name('google');
 Route::get('/login/google/callback', [SocialiteController::class, 'handleGoogleCallback']);
