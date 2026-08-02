@@ -90,7 +90,7 @@
 <script>
     AOS.init();
 </script>
-<script src="{{asset('js/prevent.js')}}"></script>
+{{--<script src="{{asset('js/prevent.js')}}"></script>--}}
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
