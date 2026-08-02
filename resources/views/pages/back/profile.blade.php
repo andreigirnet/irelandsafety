@@ -25,11 +25,11 @@
             <div class="stats-row">
                 <div class="stat-item">
                     <span class="stat-label">Email</span>
-                    <span class="stat-value">{{auth()->user()->email}}</span>
+                    <span class="text-avg">{{auth()->user()->email}}</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-label">Joined</span>
-                    <span class="stat-value">{{auth()->user()->created_at->format('d M, Y')}}</span>
+                    <span class="text-avg">{{auth()->user()->created_at->format('d M, Y')}}</span>
                 </div>
             </div>
         </div>

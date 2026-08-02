@@ -193,6 +193,10 @@
 .stat-card.wrong .stat-value {
     color: #f87171;
 }
+.text-avg{
+    font-size: 20px;
+    color: black;
+}
 
 .stat-value {
     font-size: 1.75rem;
