@@ -118,7 +118,7 @@ class CertificateController extends Controller
                 'expiration_date' => $expirationDate
             ]);
 
-            $holder = auth()->user();
+            $holder =  $user = User::findOrFail($request->userId);
             $certificateUrl = config('app.url') . '/certificate/' . $certificateCreated->id;
 
             // Generate PDF
@@ -172,7 +172,6 @@ class CertificateController extends Controller
         try {
             $certificate = Certificate::findOrFail($certificateId);
             $user = User::findOrFail($certificate->user_id);
-
             $certificateUrl = config('app.url') . '/certificate/' . $certificate->id;
             $fileName = "certificates/{$user->id}_{$certificate->package_id}.pdf";
             $filePath = storage_path("app/{$fileName}");
@@ -182,7 +181,7 @@ class CertificateController extends Controller
                 return back()->with('error', 'PDF file not found on the server. Please download or regenerate it first.');
             }
 
-            // Send the email
+//             Send the email
             Mail::to($user->email)->send(
                 new CertificateMail($certificateUrl, $filePath)
             );
