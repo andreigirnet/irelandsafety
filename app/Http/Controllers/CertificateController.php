@@ -87,7 +87,7 @@ class CertificateController extends Controller
      */
     public function store(Request $request, $packageId)
     {
-        $userId = auth()->id(); // ✅ secure
+        $userId = $request->userId;  // ✅ secure
         $lockKey = "certificate_{$userId}_{$packageId}";
 
         $lock = Cache::lock($lockKey, 30);
@@ -165,6 +165,32 @@ class CertificateController extends Controller
 
         } finally {
             $lock->release(); // 🔓 always release
+        }
+    }
+    public function emailCertificate($certificateId)
+    {
+        try {
+            $certificate = Certificate::findOrFail($certificateId);
+            $user = User::findOrFail($certificate->user_id);
+
+            $certificateUrl = config('app.url') . '/certificate/' . $certificate->id;
+            $fileName = "certificates/{$user->id}_{$certificate->package_id}.pdf";
+            $filePath = storage_path("app/{$fileName}");
+
+            // Check if the PDF file exists before trying to send it
+            if (!file_exists($filePath)) {
+                return back()->with('error', 'PDF file not found on the server. Please download or regenerate it first.');
+            }
+
+            // Send the email
+            Mail::to($user->email)->send(
+                new CertificateMail($certificateUrl, $filePath)
+            );
+
+            return back()->with('success', 'Certificate successfully emailed to ' . $user->email);
+
+        } catch (\Exception $e) {
+            return back()->with('error', 'Failed to send email: ' . $e->getMessage());
         }
     }
 
