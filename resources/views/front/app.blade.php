@@ -70,12 +70,13 @@
 @yield('content')
 
 
-<script>
-    window.replainSettings = { id: '4ca76446-067f-4bd3-bf12-f8cdcd962c13' };
-    (function(u){var s=document.createElement('script');s.async=true;s.src=u;
-        var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
-    })('https://widget.replain.cc/dist/client.js');
-</script>
+{{--<script>--}}
+{{--    window.replainSettings = { id: '4ca76446-067f-4bd3-bf12-f8cdcd962c13' };--}}
+{{--    (function(u){var s=document.createElement('script');s.async=true;s.src=u;--}}
+{{--        var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);--}}
+{{--    })('https://widget.replain.cc/dist/client.js');--}}
+{{--</script>--}}
+<script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=FCKWCyQL7PYg"></script>
 @include("frontIncludes/registerInclude")
 @include("frontIncludes/footer")
 @include("frontIncludes/brandSwiper")
