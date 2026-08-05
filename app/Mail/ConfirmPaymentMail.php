@@ -27,7 +27,7 @@ class ConfirmPaymentMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Welcome to Irish-ManualHandling✅',
+            subject: 'Welcome to Irealnd Safety Course✅',
         );
     }
 
