@@ -91,12 +91,13 @@
     <!-- end container -->
 </div>
 <!-- end page -->
-<script>
-    window.replainSettings = { id: '026d1438-5b42-4350-b663-dcd99f150913' };
-    (function(u){var s=document.createElement('script');s.async=true;s.src=u;
-        var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);
-    })('https://widget.replain.cc/dist/client.js');
-</script>
+{{--<script>--}}
+{{--    window.replainSettings = { id: '026d1438-5b42-4350-b663-dcd99f150913' };--}}
+{{--    (function(u){var s=document.createElement('script');s.async=true;s.src=u;--}}
+{{--        var x=document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);--}}
+{{--    })('https://widget.replain.cc/dist/client.js');--}}
+{{--</script>--}}
+<script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=FCKWCyQL7PYg"></script>
 
 @include('layouts.shared/footer-scripts')
 
