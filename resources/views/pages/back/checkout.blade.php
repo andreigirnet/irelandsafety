@@ -199,4 +199,10 @@
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
     </style>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        window.stripeKey = "{{ env('STRIPE_KEY') }}";
+    </script>
+
+    <script src="{{ asset('js/stripe.js') }}"></script>
 @endsection
