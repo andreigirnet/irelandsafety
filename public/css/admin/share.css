@@ -18,6 +18,170 @@
     font-size: 20px;
     opacity: 0.8;
 }
+.pkg-share-wrapper {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+    color: #0f172a;
+}
+
+.pkg-share-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+/* Card Styling */
+.pkg-share-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Highlighted Package Info */
+.pkg-share-highlight {
+    background-color: #f8fafc;
+    border-left: 4px solid #4f46e5;
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.pkg-share-highlight div {
+    color: #0f172a;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* Form & Inputs */
+.pkg-share-select-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #0f172a;
+}
+
+.pkg-share-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pkg-share-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    box-sizing: border-box;
+}
+
+.pkg-share-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Customizing the native multiple select */
+select#pkg-share-select-box {
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem !important;
+    font-family: inherit;
+    background-color: #ffffff;
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.02);
+}
+
+select#pkg-share-select-box option {
+    padding: 0.75rem 1rem;
+    margin-bottom: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+select#pkg-share-select-box option:checked {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Error/Message States */
+.pkg-share-message {
+    background-color: #fef2f2;
+    color: #ef4444;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-left: 4px solid #ef4444;
+}
+
+/* Primary Button */
+.pkg-share-submit-btn {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    align-self: flex-start;
+}
+
+.pkg-share-submit-btn:hover {
+    background-color: #4338ca;
+}
+
+.pkg-share-submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Empty State */
+.pkg-share-empty-state {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: #f8fafc;
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+}
+
+.pkg-share-empty-text {
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.pkg-share-empty-btn {
+    display: inline-block;
+    background-color: #4f46e5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.pkg-share-empty-btn:hover {
+    background-color: #4338ca;
+    color: white;
+}
 .textShare div{
     font-weight: bold;
 }

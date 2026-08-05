@@ -2,7 +2,8 @@
 
 @section('content')
     @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Dashboard'])
-    <div class="dashWrapper" x-data="{
+
+    <div class="pkg-share-wrapper" x-data="{
         query:'',
         showResult: false,
         showMessage: false,
@@ -41,44 +42,49 @@
             }
         }
     }">
-        <div class="adminHomePageTitle">Share a package</div>
-        <div class="shareContainer">
-            <div class="textShare">Package to Share:
-                <div>#{{$packageToShare[0]->id}}-{{$packageToShare[0]->course_name}}</div>
+        <div class="pkg-share-title">Share a package</div>
+        <div class="pkg-share-container">
+            <div class="pkg-share-highlight">Package to Share:
+                <div>#{{$packageToShare[0]->id}} - {{$packageToShare[0]->course_name}}</div>
             </div>
+
             @if($employeesToShare)
-                <div class="selectContainer">
-                    <div class="selectTitle">Type the email to search the employee</div>
-                    <form action="{{route('package.share.store',$packageToShare[0]->id)}}" method="POST" class="formShare" id="formShare">
+                <div>
+                    <div class="pkg-share-select-title">Type the email to search the employee</div>
+                    <form action="{{route('package.share.store',$packageToShare[0]->id)}}" method="POST" class="pkg-share-form" id="pkg-share-form-id">
                         @csrf
                         @method('POST')
-                        <input type="text" class="formInputShare" x-model="query" x-on:keyup.debounce.500ms="getUsers" placeholder="Type the email of the user">
-                        <select x-show="showResult" name="shareToEmployee" id="shareTo" @change="checkIfSelected" style="height: 200px;width: 100%" x-model="selectedEmployee" multiple>
-                            <template x-for="user in users" >
-                                <option  x-text="user.email" :value="user.id" class="textShare"></option>
+                        <input type="text" class="pkg-share-input" x-model="query" x-on:keyup.debounce.500ms="getUsers" placeholder="Type the email of the user...">
+
+                        <!-- Added :key="user.id" to the template to prevent Alpine.js duplication bugs -->
+                        <select x-show="showResult" name="shareToEmployee" id="pkg-share-select-box" @change="checkIfSelected" style="height: 200px; width: 100%;" x-model="selectedEmployee" multiple>
+                            <template x-for="user in users" :key="user.id">
+                                <!-- Display Name + Email instead of just Email -->
+                                <option x-text="user.name + ' (' + user.email + ')'" :value="user.id"></option>
                             </template>
                         </select>
-                        <div class="shareMesage" x-text="message" x-show="showMessage"></div>
-                        <button class="adminButton" type="submit" x-show="showSubmitButton" id="shareSubmit">Share</button>
+
+                        <div class="pkg-share-message" x-text="message" x-show="showMessage"></div>
+                        <button class="pkg-share-submit-btn" type="submit" x-show="showSubmitButton" id="pkg-share-submit-id">Share Package</button>
                     </form>
                 </div>
             @else
-                <div class="shareError">
-                    <div class="textAdmin">Please register some employees in order to be able to share a course</div>
-                    <a href="{{route('register.employee')}}"><div class="buttonLink">Register employees</div></a>
+                <div class="pkg-share-empty-state">
+                    <div class="pkg-share-empty-text">Please register some employees in order to be able to share a course</div>
+                    <a href="{{route('register.employee')}}" style="text-decoration: none;"><div class="pkg-share-empty-btn">Register employees</div></a>
                 </div>
             @endif
         </div>
     </div>
 
     <script>
-        document.getElementById('formShare').addEventListener('keydown', function(event) {
+        document.getElementById('pkg-share-form-id').addEventListener('keydown', function(event) {
             if (event.keyCode === 13) {
-                event.preventDefault(); // prevent the "enter" key event
+                event.preventDefault();
             }
         });
     </script>
-    <script src="//unpkg.com/alpinejs" defer></script>
+
 @endsection
 
 @section('script')
