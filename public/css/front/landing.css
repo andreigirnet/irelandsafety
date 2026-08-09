@@ -829,6 +829,7 @@
 .cpdFlex{
     margin-top: 30px;
     display: flex;
+    column-gap: 20px;
 }
 .trustContainer{
     display: flex;
