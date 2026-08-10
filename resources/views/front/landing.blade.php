@@ -124,13 +124,13 @@
                                     <span class="feature-desc">Theory + Practical part included</span>
                                 </div>
                             @else
-                                <div class="info-bar">
-                                    <div class="check-badge">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="accredited-feature-bar">
+                                    <div class="accredited-icon-box">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 6L9 17l-5-5"/>
                                         </svg>
                                     </div>
-                                    <span class="text">Accredited · Instant Certificate</span>
+                                    <span class="accredited-text">Accredited · Instant Certificate</span>
                                 </div>
                             @endif
                             <div class="certification-wrapper">
