@@ -74,9 +74,11 @@
     justify-content: center;
     column-gap: 15px;
 }
-.adminProductName{
+.adminProductName {
     font-size: 19px;
-    font-weight: bold;
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.3px;
 }
 .adminProductNameBack{
     font-size: 15px;
@@ -88,6 +90,86 @@
 }
 .blackText{
     color: black;
+}
+.custom-course-feature-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+    border: 1px solid #bbf7d0;
+    padding: 5px 5px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.certification-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease;
+}
+
+.certification-wrapper:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+}
+
+.cert-tags {
+    display: flex;
+    gap: 6px;
+}
+
+.tag {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+}
+.shield-tick-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #ecfdf5;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(5, 150, 105, 0.15);
+    transition: transform 0.2s ease;
+}
+
+.certification-wrapper:hover .shield-tick-icon {
+    transform: scale(1.1);
+}
+
+.custom-course-feature-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.15);
+}
+
+.feature-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #059669;
+    color: #ffffff;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.3);
+}
+
+.feature-desc {
+    font-size: 14px;
+    font-weight: 800;
+    color: #064e3b;
+    letter-spacing: -0.2px;
 }
 .product-icons-back{
     font-size: 14px;
@@ -109,6 +191,7 @@
     border-radius: 4px; /* Rounded corners */
     cursor: pointer;
 }
+
 .buttonProductAdminAddBack{
     background-color: #4CAF50; /* Green background color */
     color: white; /* White text color */

@@ -114,14 +114,14 @@
 {{--                                <div style="color: #397b21; font-weight: bold">e-Learning Course</div>--}}
 {{--                            @endif--}}
                             @if($product->id == 1)
-                                <div class="info-bar">
-                                    <div class="video-camera-icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="custom-course-feature-box">
+                                    <div class="feature-icon-wrapper">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M23 7l-7 5 7 5V7z"></path>
                                             <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                                         </svg>
                                     </div>
-                                    <span class="text">Theory + Practical part included</span>
+                                    <span class="feature-desc">Theory + Practical part included</span>
                                 </div>
                             @else
                                 <div class="info-bar">
@@ -134,21 +134,17 @@
                                 </div>
                             @endif
                             <div class="certification-wrapper">
-                                <!-- Using a span with a specific icon character or font-awesome class -->
-
-                                <span class="shield-tick-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#00a86b">
-                                  <!-- Shield shape -->
-                                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                    <!-- Tick mark -->
-                                  <path fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
-                                </svg>
-                              </span>
                                 <div class="cert-tags">
                                     <span class="tag">QQI</span>
                                     <span class="tag">CPD</span>
                                     <span class="tag">RoSPA</span>
                                 </div>
+                                <span class="shield-tick-icon" title="Verified & Certified">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#059669"/>
+                                    <path stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
+                                </svg>
+                            </span>
                             </div>
                             <div class="product-info-icons">
                                 @if($product->id == 14)
@@ -266,7 +262,7 @@
     <div class="trustContainer">
         <div class="innerTrust">
             <div class="trustLeft">
-                <img src="{{asset('images/trust.png')}}" alt="">
+                <img src="{{asset('images/trust.webp')}}" alt="">
             </div>
             <div class="trustRight">
                 <div class="trustTitle" >Acredited Health and Safety Courses You Can Trust</div>

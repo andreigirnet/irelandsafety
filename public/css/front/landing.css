@@ -604,6 +604,7 @@
     justify-content: flex-start;
     column-gap: 10px;
     font-size: 19px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .product-icons img{
     width: 25px;
@@ -1867,12 +1868,14 @@
         text-align: center;
         font-size: 40px;
         margin-top: 30px;
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     .mainBannerDescription{
         display: none;
         justify-content: center;
         align-items: center;
         text-align: center;
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     #customerReviewWrap{
         width: 300px;
@@ -1943,6 +1946,8 @@
     }
     .mainBannerTitle{
         width: 300px;
+        font-size: 30px;
+        margin-top: 0;
     }
     .mainBannerDescription{
         width: 300px;
