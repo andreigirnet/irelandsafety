@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\Blog;
@@ -135,9 +136,7 @@ Route::group(['middleware'=>'auth'], function () {
 
     Route::post('/payment', [App\Http\Controllers\CheckoutController::class,'setPayment']);
 
-     Route::get('/payment/success', function(){
-            return view('pages.back.payment');
-        })->name('success.payment');
+    Route::get('/payment/success', [CheckoutController::class, 'paymentSuccess'])->name('payment.success');
 
     Route::put('/password/update/{id}', [App\Http\Controllers\ProfileController::class,'update'])->name('password.dashboard.update');
     Route::get('/search/employees', [App\Http\Controllers\UserController::class,'searchEmployees'])->name('user.search.employees');

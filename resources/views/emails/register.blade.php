@@ -27,7 +27,7 @@
 
     ### Need Help?
     If you require any additional information or further assistance, please reach out to us:
-    * **Email**: info@ireland-safetycourse.ie
+    * **Email**: info@ireland-safetycourse.com
     * **Support**: Use the **Online Chat** on our website or contact us directly via our **WhatsApp Chat**.
 
     Kind regards,

@@ -1077,39 +1077,59 @@ a{
     border: none;
 }
 
-.mobileCartContainer{
+.mobileCartContainer {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background: #ffd200;
-    /*position: fixed;*/
-    bottom: 10px;
-    left: 7px;
+    position: relative; /* Essential for positioning the badge correctly */
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2000;
+    box-shadow: 0 6px 16px rgba(255, 210, 0, 0.4); /* Glowing yellow-tinted shadow */
+    border: 2px solid #ffffff; /* Crisp white border makes it pop off the page */
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease;
 }
-.mobileCartCounter{
-    position: relative;
+
+/* Smooth pop/click effect when tapped */
+.mobileCartContainer:active {
+    transform: scale(0.92);
+    box-shadow: 0 2px 8px rgba(255, 210, 0, 0.3);
 }
-.mobileCartItemCounter{
+
+.mobileCartContainer img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    filter: brightness(0.1); /* Ensures your icon turns dark/black for high contrast against the yellow */
+}
+
+.mobileCartCounter {
+    position: static; /* Let the absolute positioning handle the badge from the main container */
+}
+
+.mobileCartItemCounter {
     position: absolute;
-    top: -30px;
-    right: -58px;
-    background: red;
-    color: white;
-    width: 25px;
-    height: 25px;
+    top: -2px;
+    right: -2px;
+    background: #EF4444; /* Vibrant modern red */
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    border: 2px solid #ffd200; /* Yellow ring border so it blends nicely with the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .mobileCartContainer img{
     width: 30px;
 }
+
 .formEdit{
     width: 80%;
 }

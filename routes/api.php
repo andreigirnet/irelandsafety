@@ -26,8 +26,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/mobile-checkout', [CheckoutController::class, 'processMobileStripePayment']);
+    Route::post('/mobile-checkout-complete', [CheckoutController::class, 'completeMobileCheckout']);
 });
-
 Route::get('/courses', [CourseController::class, 'index']);
 
 Route::post('/register', [AuthController::class, 'register']);

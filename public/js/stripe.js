@@ -76,37 +76,30 @@ const stripePaymentMethodHandler = async (result) => {
     }
 }
 
-const handleServerResponse = async (response) => {
-    if (response.error) {
-        const errorElement = document.getElementById('card-errors');
-        errorElement.innerHTML = response.error;
-        button.disabled = false;
-        button.style.opacity = '1';
-    } else if (response.requires_action) {
-        // Use Stripe.js to handle the required card action
-        const { error: errorAction, paymentIntent } =
-            await stripe.handleCardAction(response.payment_intent_client_secret);
 
-        if (errorAction) {
-            const errorElement = document.getElementById('card-errors');
-            errorElement.innerHTML = errorAction.message;
-            button.disabled = false;
-            button.style.opacity = '1';
-        } else {
-            // The card action has been handled
-            // The PaymentIntent can be confirmed again on the server
-            const serverResponse = await fetch('/payment', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ payment_intent_id: paymentIntent.id })
-            });
-            handleServerResponse(await serverResponse.json());
-        }
-    } else {
+const handleServerResponse = async (response) => {
+
+    if (response.error) {
+        document.getElementById('card-errors').textContent = response.error;
+        const button = document.getElementById('submit');
+        if (button) { button.disabled = false; button.style.opacity = '1'; }
+    }
+    else if (response.success) {
+        // 2. Clear local storage and redirect to Stripe's 3DS page
         localStorage.removeItem('cart');
-        if (window.Alpine && Alpine.store('cart')) {
-            Alpine.store('cart').items = [];
-        }
         window.location.href = '/payment/success';
     }
-}
+    else if (response.requires_action && response.redirect_url) {
+        // 👉 Clears cart and redirects the entire browser window straight to Stripe's hosted 3DS flow
+        const cart = localStorage.getItem('cart');
+
+        const redirectUrl = new URL(response.redirect_url);
+        redirectUrl.searchParams.set('cart', cart);
+
+        localStorage.removeItem('cart');
+
+        window.location.href = redirectUrl.toString();
+    }
+};
+
+

@@ -8,7 +8,7 @@
     <br> <br>
     You can also generate an invoice for your payment by navigating to your profile's sidebar menu on the left-hand side of the screen. Click on **Billing > Orders** and the generated PDF file will serve as your invoice.
     <br> <br>
-    For employers interested in registering a group for this course (such as staff members), please refer to our [FAQ](https://www.ireland-safetycourse.ie/faq) section for detailed information and steps regarding the process.
+    For employers interested in registering a group for this course (such as staff members), please refer to our [FAQ](https://www.ireland-safetycourse.com/faq) section for detailed information and steps regarding the process.
     <br> <br>
     If you've forgotten your password, please follow this [link](https://www.ireland-safetycourse.com/forgot-password) to reset it. Remember to check your email (including spam/junk folders) as you'll receive an instant password to regain access to our training platform and continue with your course.
     <br> <br>
