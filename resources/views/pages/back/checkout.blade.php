@@ -102,7 +102,6 @@
                     </div>
 
                     <div class="pt-3 border-top">
-                        <div id="express-checkout-element" class="mb-3"></div>
                         <label class="mb-2" style="font-weight: 700; font-size: 12px; color: #334155; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Credit or Debit Card</label>
                         <div id="card-element"></div>
                         <div id="card-errors" class="text-danger small mt-2" role="alert"></div>

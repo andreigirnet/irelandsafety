@@ -28,15 +28,6 @@ const form = document.getElementById('payment-form');
 const button = document.getElementById('submit')
 button.disabled = false;
 
-const expressCheckoutElement = elements.create('expressCheckout', {
-    buttonType: {
-        applePay: 'buy',
-        googlePay: 'buy'
-    },
-    buttonHeight: 50
-});
-
-expressCheckoutElement.mount('#express-checkout-element');
 form.addEventListener('submit', async (event) => {
     // We don't want to let default form submission happen here,
     // which would refresh the page.
@@ -111,50 +102,3 @@ const handleServerResponse = async (response) => {
         window.location.href = redirectUrl.toString();
     }
 };
-
-
-expressCheckoutElement.on('confirm', async (event) => {
-
-    const res = await fetch('/payment', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            wallet_payment: true,
-            address: document.getElementById('address').value,
-            county: document.getElementById('county').value,
-            city: document.getElementById('city').value,
-            country: document.getElementById('country').value,
-            cartTotal: document.getElementById('cartTotal').value,
-            cartQty: document.getElementById('cartQty').value,
-            cart_items: document.getElementById('cart_items').value,
-            userId: document.getElementById('userId').value
-        }),
-    });
-
-    const paymentResponse = await res.json();
-
-    if (paymentResponse.error) {
-        document.getElementById('card-errors').textContent =
-            paymentResponse.error;
-        return;
-    }
-
-    if (paymentResponse.client_secret) {
-
-        const result = await stripe.confirmPayment({
-            elements,
-            clientSecret: paymentResponse.client_secret,
-            confirmParams: {
-                return_url: window.location.origin + '/payment/success'
-            },
-            redirect: 'if_required'
-        });
-
-        if (result.error) {
-            document.getElementById('card-errors').textContent =
-                result.error.message;
-        }
-    }
-});
