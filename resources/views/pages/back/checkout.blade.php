@@ -56,12 +56,19 @@
             box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
         }
         .pay-button:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4); filter: brightness(1.1); }
-
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
         @media (max-width: 1100px) { .checkout-wrapper { flex-direction: column; } .side-summary-section { width: 100%; position: static; } }
     </style>
 
     @include('layouts.shared/page-title', ['sub_title' => 'Menu', 'page_title' => 'Secure Checkout'])
-
+    <div id="payment-loader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(5px); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; color: white;">
+        <div style="width: 50px; height: 50px; border: 4px solid rgba(255,255,255,0.2); border-top-color: #6366f1; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <div style="margin-top: 20px; font-weight: 700; font-size: 16px; letter-spacing: 0.05em;">Processing Secure Payment...</div>
+        <div style="margin-top: 6px; font-size: 12px; color: #94a3b8;">Please do not close this window.</div>
+    </div>
     <div class="container-fluid" x-data="checkoutApp()" x-cloak>
         <div class="checkout-wrapper">
 

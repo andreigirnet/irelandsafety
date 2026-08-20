@@ -6,6 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const stripe = Stripe(window.stripeKey);
 
+    // Helper to toggle loader screen
+    const toggleLoader = (show) => {
+        const loader = document.getElementById('payment-loader');
+        if (loader) {
+            loader.style.display = show ? 'flex' : 'none';
+        }
+    };
+
     // Grab dynamic amount from the hidden input
     const cartTotalInput = document.getElementById('cartTotal');
     const currentTotalValue = cartTotalInput ? parseFloat(cartTotalInput.value) || 25 : 25;
@@ -18,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currency: 'eur'
     });
 
-    // 2. Mount Express Checkout (Strictly Google Pay and Apple Pay)
+    // 2. Mount Express Checkout (Google Pay, Apple Pay, Revolut Pay)
     const expressContainer = document.getElementById('express-checkout-element');
     let expressCheckoutElement = null;
     if (expressContainer) {
@@ -31,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             paymentMethods: {
                 applePay: 'always',
                 googlePay: 'always',
+                revolutPay: 'always',
                 link: 'never',
                 paypal: 'never',
                 klarna: 'never',
@@ -40,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         expressCheckoutElement.mount('#express-checkout-element');
     }
 
-    // 3. Mount Standard Payment Element with clean layout options to remove unwanted side tabs
+    // 3. Mount Standard Payment Element with clean accordion layout
     const paymentContainer = document.getElementById('payment-element');
     if (paymentContainer) {
         const paymentElement = elements.create('payment', {
@@ -96,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // Show loading screen
+            toggleLoader(true);
+
             try {
                 const res = await fetch('/payment', {
                     method: 'POST',
@@ -109,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await res.json();
 
                 if (data.error) {
+                    toggleLoader(false);
                     if (errorElement) errorElement.textContent = data.error;
                     if (button) { button.disabled = false; button.style.opacity = '1'; }
                     return;
@@ -126,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (error) {
+                    toggleLoader(false);
                     if (errorElement) errorElement.textContent = error.message;
                     if (button) {
                         button.disabled = false;
@@ -134,17 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (err) {
                 console.error(err);
+                toggleLoader(false);
                 if (errorElement) errorElement.textContent = 'An unexpected network error occurred.';
                 if (button) { button.disabled = false; button.style.opacity = '1'; }
             }
         });
     }
 
-    // Express Checkout Confirmation Handler (Google Pay / Apple Pay)
+    // Express Checkout Confirmation Handler
     if (expressCheckoutElement) {
         expressCheckoutElement.on('confirm', async (event) => {
             const errorElement = document.getElementById('error-message');
             if (errorElement) errorElement.textContent = '';
+
+            // Show loading screen for wallets
+            toggleLoader(true);
 
             const res = await fetch('/payment', {
                 method: 'POST',
@@ -161,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const paymentResponse = await res.json();
 
             if (paymentResponse.error) {
+                toggleLoader(false);
                 if (errorElement) errorElement.textContent = paymentResponse.error;
                 return;
             }
@@ -178,6 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (result.error) {
+                    toggleLoader(false);
                     if (errorElement) errorElement.textContent = result.error.message;
                 } else {
                     localStorage.removeItem('cart');
