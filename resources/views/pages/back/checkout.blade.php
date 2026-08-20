@@ -102,13 +102,20 @@
                     </div>
 
                     <div class="pt-3 border-top">
+
+                        <div id="express-checkout-element"></div>
                         <label class="mb-2" style="font-weight: 700; font-size: 12px; color: #334155; text-transform: uppercase; letter-spacing: 0.05em; display: block;">Credit or Debit Card</label>
-                        <div id="card-element"></div>
-                        <div id="card-errors" class="text-danger small mt-2" role="alert"></div>
-                    </div>
+                        <!-- Card / Standard Payment Element Container -->
+                        <div id="payment-element"></div>
+
+                        <!-- Error message container -->
+                        <div id="error-message" style="color: #fa755a; margin-top: 15px;"></div>                    </div>
 
                     <div id="payment-message" class="hidden mt-3"></div>
                 </form>
+                <button type="submit" form="payment-form" id="submit" class="pay-button">
+                    Complete Payment
+                </button>
             </div>
 
             <aside class="side-summary-section">
@@ -163,10 +170,6 @@
                                 <small style="font-size: 10px; color: #64748b; text-transform: uppercase;">SECURE CHECKOUT</small>
                             </div>
                         </div>
-
-                        <button type="submit" form="payment-form" id="submit" class="pay-button mt-4">
-                            Complete Payment
-                        </button>
                     </div>
                 </div>
 
