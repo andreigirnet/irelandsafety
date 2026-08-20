@@ -26,35 +26,60 @@
 .info-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background-color: #f2fcf6; /* Light green background */
-    padding: 5px;
-    border-left: 5px solid #00a86b; /* The thick green vertical line */
-    color: #004d30; /* Dark green text */
-    font-weight: 600;
-    border-radius: 0 4px 4px 0;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.04) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 16px;
+    border-left: 4px solid #059669; /* Rich emerald vertical indicator */
+    border-top: 1px solid rgba(16, 185, 129, 0.15);
+    border-right: 1px solid rgba(16, 185, 129, 0.15);
+    border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+    color: #064e3b; /* Deep rich emerald text for maximum readability */
+    font-weight: 500;
+    font-size: 0.925rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.05);
+    transition: all 0.2s ease;
 }
+
 
 .info-bar .icon {
     font-size: 1.2rem;
 }
 .cert-tags {
     display: flex;
+    flex-wrap: wrap; /* Ensures tags don't break out of their container on mobile */
     gap: 8px;
+    align-items: center;
 }
 
 .tag {
-    background-color: #ffffff; /* White background */
-    border: 1px solid #d1d1d1; /* Thin light border */
-    padding: 4px 14px;
-    border-radius: 50px; /* Fully rounded capsules */
-    font-size: 0.85rem;
-    font-weight: 700; /* Bolder text to match image */
-    color: #555;      /* Dark grey text */
-    text-transform: uppercase; /* Matching the capitalization in your UI */
-    letter-spacing: 0.2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0; /* Softer, modern slate border instead of harsh grey */
+    padding: 6px 16px; /* Slightly more breathable padding */
+    border-radius: 50px;
+    font-size: 0.75rem; /* Slightly scaled down for uppercase elegance */
+    font-weight: 700;
+    color: #475569; /* Richer blue-grey (slate) looks much more premium than flat #555 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em; /* Wider tracking makes uppercase text highly readable */
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); /* Almost invisible shadow for depth */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Buttery smooth transitions */
+    cursor: default; /* Change to 'pointer' if users can click them */
 }
 
+/* Premium Hover State */
+.tag:hover {
+    background: #f8fafc; /* Very subtle off-white on hover */
+    border-color: #cbd5e1;
+    color: #0f172a; /* Text gets darker for better contrast */
+    transform: translateY(-1px); /* Gentle lift effect */
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+}
 [x-cloak] { display: none !important; }
 
 .isc-modal-overlay {
@@ -1471,7 +1496,54 @@ a{
     margin: 0;
     padding: 0;
 }
+.trustBadge{
+    display: none;
+    align-items: center;
+    column-gap: 10px;
+    background: #fff;
+    padding: 10px 18px 10px 14px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #169B62, #F2E6C9, #FF883E);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow:
+        -10px 10px 24px -6px rgba(22, 155, 98, 0.40),
+        10px 10px 24px -6px rgba(255, 136, 62, 0.40),
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
 
+.trustBadge__icon{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #F0FBF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 25px;
+}
+.trustBadge__icon i{
+    font-size: 19px;
+    color: #0F7A4D;
+}
+
+.trustBadge__text{
+    line-height: 1.25;
+}
+.trustBadge__eyebrow{
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #C6800A;
+}
+.trustBadge__label{
+    font-size: 15px;
+    font-weight: 700;
+    color: #046A38;
+}
 .pagination li {
     margin: 0 5px;
     padding: 5px 10px;
@@ -1639,6 +1711,7 @@ a{
     .btn-certificate {
         width: 100%;
     }
+    .trustBadge{display: flex}
 }
 @media screen and (max-width: 767px) and (min-width: 250px){
     .btn-certificate{
@@ -1843,4 +1916,5 @@ a{
     .btn-certificate {
         width: 100%;
     }
+    .trustBadge{display: flex}
 }

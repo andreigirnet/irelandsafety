@@ -7,33 +7,40 @@
         /* Global Background Tweak */
         .content-page { background-color: #f4f7fa; }
 
-        /* Main Container */
-        .cart-wrapper { display: flex; gap: 30px; padding: 20px 0; }
-
         /* Left Side: Items */
         .items-container { flex: 1; }
         .cart-item {
             background: #ffffff;
             border-radius: 16px;
             padding: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: flex;
             align-items: center;
-            column-gap: 20px;
-            border: 1px solid rgba(0,0,0,0.03);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
+            gap: 20px;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
             transition: all 0.3s ease;
+            position: relative;
         }
-        .cart-item:hover {
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
-            transform: translateY(-2px);
+
+        .cart-wrapper {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .cart-sidebar {
+            width: 400px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
         }
 
         .item-image-placeholder {
             width: 80px; height: 80px; border-radius: 12px;
             background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
             display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 30px; margin-right: 20px;
+            color: white; font-size: 30px; margin-right: 0;
+            flex-shrink: 0;
         }
 
         .item-main-info { flex: 1; }
@@ -42,9 +49,9 @@
 
         /* Quantity Pill */
         .qty-pill {
-            display: flex; align-items: center;
+            display: flex; align-items: center; justify-content: space-between;
             background: #f8fafc; border: 1px solid #e2e8f0;
-            border-radius: 99px; padding: 6px 16px; margin: 0 30px;
+            border-radius: 99px; padding: 6px 16px; margin: 0 20px;
         }
         .qty-btn {
             background: none; border: none; font-size: 18px; font-weight: bold;
@@ -53,8 +60,7 @@
         .qty-btn:hover { color: #6366f1; }
         .qty-num { width: 30px; text-align: center; border: none; background: none; font-weight: 700; color: #1e293b; }
 
-        /* Right Side: Sidebar */
-        .cart-sidebar { width: 400px; position: sticky; top: 100px; height: fit-content; }
+        /* Right Side: Sidebar Summary */
         .summary-glass {
             background: #ffffff;
             border-radius: 24px;
@@ -96,49 +102,76 @@
         }
         .delete-circle:hover { background: #ffe4e6; transform: rotate(90deg); }
 
-        @media (max-width: 1100px) {
-            .cart-wrapper { flex-direction: column; }
-            .cart-sidebar { width: 100%; }
-            .cart-item {
-                flex-direction: column; /* Stack image, info, and qty vertically */
-                align-items: flex-start;
-                padding: 16px;
-                position: relative;
+        /* Mobile Responsive Optimizations (Screens under 768px) */
+        @media (max-width: 768px) {
+            .cart-wrapper{
+                flex-direction: column;
+                column-gap: 0;
+            }
+            .cart-sidebar {
+                width: 100% !important;
+                position: static !important;
             }
 
+            .cart-item {
+                flex-direction: row;
+                align-items: center;
+                padding: 14px;
+                gap: 12px;
+                border-radius: 12px;
+            }
+
+            .item-image-placeholder,
             .item-image-wrapper {
-                width: 100% !important; /* Full width image on mobile */
-                height: 160px !important; /* Taller image for better look */
-                margin-bottom: 15px;
+                width: 64px !important;
+                height: 64px !important;
+                min-width: 64px !important;
+                font-size: 20px !important;
+                border-radius: 10px !important;
+                margin-right: 0 !important;
             }
 
             .item-main-info {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-
-            .qty-pill {
-                margin: 0 !important; /* Remove the large side margins */
-                width: 100%;
-                justify-content:间-between;
-                padding: 10px 20px;
-            }
-
-            .delete-circle {
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                background: rgba(255, 255, 255, 0.9); /* Float it over the image */
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                flex: 1;
+                margin-bottom: 0 !important;
             }
 
             .item-title {
-                font-size: 16px;
+                font-size: 14px !important;
+                font-weight: 600;
+                color: #0f172a;
+                line-height: 1.25;
+                margin-bottom: 2px;
             }
+
+            .item-meta {
+                font-size: 11px !important;
+            }
+
             .qty-pill {
-                margin: 10px 0 !important; /* Reset side margins */
-                width: 140px; /* Fixed width so it doesn't stretch weirdly */
-                order: 3; /* Position it below the text */
+                width: auto !important;
+                margin: 0 !important;
+                padding: 2px 8px !important;
+            }
+
+            .qty-btn {
+                font-size: 14px !important;
+                padding: 0 6px !important;
+            }
+
+            .qty-num {
+                width: 20px !important;
+                font-size: 13px !important;
+            }
+
+            .delete-circle {
+                width: 32px !important;
+                height: 32px !important;
+                background: #fff1f2 !important;
+                color: #e11d48 !important;
+                box-shadow: none !important;
+                position: static !important;
+                flex-shrink: 0;
             }
         }
     </style>

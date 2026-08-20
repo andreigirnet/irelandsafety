@@ -87,7 +87,8 @@
 {{--            <a href="{{route('certificate.download', $certificateId[0]->id)}}" class="homeDownloadButton">Downloand Certificate</a>--}}
 {{--        @endif--}}
 {{--    </div>--}}
-        <img src="{{asset("images/products/saleOver.png")}}" class="overImgDashBack" alt="" style="border-radius: 10px">
+{{--        <img src="{{asset("images/products/saleOver.png")}}" class="overImgDashBack" alt="" style="border-radius: 10px">--}}
+
         <div class="adminProductsBack">
             @foreach($products as $product)
                 @if($product->status == 0)
@@ -103,7 +104,7 @@
                                         <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
                                     </svg>
                                 </div>
-                                <span class="text">Theory + Practical part included</span>
+                                <span class="text">Theory + Practical part</span>
                             </div>
                         @else
                             <div class="info-bar">
@@ -182,9 +183,18 @@
                 </div>
                 @endif
             @endforeach
+
         </div>
         <div style=" bottom: 30px;" id="stripeLogo"><img src="{{asset('images/brands/stripe.webp')}}" alt="" style="width: 235px"></div>
-
+    <div class="trustBadge">
+        <div class="trustBadge__icon">
+            🍀
+        </div>
+        <div class="trustBadge__text">
+            <div class="trustBadge__eyebrow">Nr.1 rated</div>
+            <div class="trustBadge__label">Irish Safety Provider</div>
+        </div>
+    </div>
 </div>
 <script src="{{asset('js/showModalRegisterEmployee.js')}}"></script>
 @endsection
