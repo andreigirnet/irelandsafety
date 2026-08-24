@@ -20,7 +20,12 @@
     <meta property="og:description" content="Complete your CPD-certified safety training online. Manual Handling, Fire Safety, First Aid & more. Instant certificate included.">
     <meta property="og:image:alt" content="Ireland Safety Course - Accredited Online Training">
     <meta property="og:image" content="https://www.irelandsafetycourse.com/images/metaImage.png">
-    <link rel = "icon" href ="{{asset('images/logo/flavicons.ico')}}" type = "image/x-icon">
+    <link rel = "icon" href ="{{asset('/favicon.ico')}}" type = "image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,14 +55,7 @@
 
 
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18160580545"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'AW-18160580545');
-</script>
 <body>
 <body x-data="app()">
 
