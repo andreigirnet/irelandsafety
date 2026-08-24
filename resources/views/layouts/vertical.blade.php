@@ -35,6 +35,17 @@
     </style>
 
 </head>
+<!-- Event snippet for Achiziție (4) conversion page -->
+<script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18160580545/6SpECL3G9OYcEMHv0dND',
+        'value': 30.0,
+        'currency': 'EUR',
+        'transaction_id': ''
+        // 'new_customer': true /* calculate dynamically, populate with true/false */,
+    });
+</script>
+<body>
     <!-- Begin page -->
     <div class="wrapper">
 
@@ -117,6 +128,6 @@
 
     <script src="{{asset('js/prevent.js')}}"></script>
 
-</body>
+
 
 </html>
