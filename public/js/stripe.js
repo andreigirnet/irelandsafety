@@ -155,13 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Express Checkout Confirmation Handler
     if (expressCheckoutElement) {
         expressCheckoutElement.on('confirm', async (event) => {
             const errorElement = document.getElementById('error-message');
             if (errorElement) errorElement.textContent = '';
 
-            // Show loading screen for wallets
             toggleLoader(true);
 
             const res = await fetch('/payment', {
@@ -201,7 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (errorElement) errorElement.textContent = result.error.message;
                 } else {
                     localStorage.removeItem('cart');
-                    window.location.href = window.location.origin + '/payment/success';
+
+                    // FIX: Grab the Payment Intent ID and append it to the success URL
+                    const paymentIntentId = result.paymentIntent ? result.paymentIntent.id : '';
+                    window.location.href = window.location.origin + '/payment/success?payment_intent=' + paymentIntentId;
                 }
             }
         });
