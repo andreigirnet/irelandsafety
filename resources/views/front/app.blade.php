@@ -64,15 +64,6 @@
 </head>
 
 <body x-data="app()">
-<script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-18160580545/6SpECL3G9OYcEMHv0dND',
-        'value': 30.0,
-        'currency': 'EUR',
-        'transaction_id': ''
-        // 'new_customer': true /* calculate dynamically, populate with true/false */,
-    });
-</script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4X9SGX6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
