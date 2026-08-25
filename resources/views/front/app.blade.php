@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- Title --}}
-    <title>Online Safety Courses Ireland | CPD Certified Training from €25 - {{ config('app.name') }}</title>
+    <title>Online Safety Courses Ireland | CPD Certified Training from €30 - {{ config('app.name') }}</title>
     {{-- Meta description --}}
     <meta name="description" content="25€ CPD-certified online safety courses in Ireland. Manual Handling, Fire Safety, First Aid & more. Instant certificate. Fully compliant training.">
     <meta name="keywords" content="Manual Handling Courses Online, Best Manual Handling Training Ireland, Manual Handling Certification & Courses, Manual Handling Instructor Certification, Expert Manual Handling Assessment, Compliance with Manual Handling Regulations, Safety in Manual Handling Techniques, Ergonomic Lifting Practices, Efficient Load Handling Methods, Preventing Manual Handling Injuries, Top-Rated Manual Handling Practices in Ireland, Manual Handling Guidelines and Certification, Advanced Manual Handling Training Solutions, Certified Manual Handling Programs, Affordable Manual Handling Certification in Ireland, Professional Manual Handling Courses">
@@ -62,6 +62,8 @@
 
 
 </head>
+
+<body x-data="app()">
 <script>
     gtag('event', 'conversion', {
         'send_to': 'AW-18160580545/6SpECL3G9OYcEMHv0dND',
@@ -71,8 +73,6 @@
         // 'new_customer': true /* calculate dynamically, populate with true/false */,
     });
 </script>
-
-<body x-data="app()">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4X9SGX6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
