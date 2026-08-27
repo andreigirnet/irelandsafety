@@ -344,185 +344,185 @@
     {{--        </div>--}}
     {{--    </div>--}}
 
-    <div id="customersReviews">
-        <div id="customerReviewWrap">
+{{--    <div id="customersReviews">--}}
+{{--        <div id="customerReviewWrap">--}}
 
-            <div class="premium-review-card" data-aos="fade-up">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-1.png')}}" alt="John Weasley">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">John Weasley</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">24 minutes ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "The online Health And Safety Course Online provided by ireland-safetycourse was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-1.png')}}" alt="John Weasley">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">John Weasley</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">24 minutes ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "The online Health And Safety Course Online provided by ireland-safetycourse was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-2.png')}}" alt="Mary Andrews">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">Mary Andrews</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">2 hours ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "I found the course from Ireland Safety Course to be informative and well-structured. The convenience of online learning coupled with their engaging content made the whole experience worthwhile."
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="100">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-2.png')}}" alt="Mary Andrews">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">Mary Andrews</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">2 hours ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "I found the course from Ireland Safety Course to be informative and well-structured. The convenience of online learning coupled with their engaging content made the whole experience worthwhile."--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-3.png')}}" alt="Choe Lee">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">Choe Lee</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">7 hours ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "The Health And Safety Course Online exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="200">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-3.png')}}" alt="Choe Lee">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">Choe Lee</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">7 hours ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "The Health And Safety Course Online exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-4.png')}}" alt="Markus Low">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">Markus Low</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">10 hours ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "I appreciated the flexibility of being able to complete the training at my own pace. The material was presented in a way that was easy to understand for our entire team."
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="300">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-4.png')}}" alt="Markus Low">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">Markus Low</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">10 hours ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "I appreciated the flexibility of being able to complete the training at my own pace. The material was presented in a way that was easy to understand for our entire team."--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-5.png')}}" alt="Vanessa Spills">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">Vanessa Spills</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">15 hours ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "Obtaining my Manual Handling certificate was a breeze. The course content was relevant and the assessments were fair. Very pleased with the overall experience."
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="400">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-5.png')}}" alt="Vanessa Spills">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">Vanessa Spills</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">15 hours ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "Obtaining my Manual Handling certificate was a breeze. The course content was relevant and the assessments were fair. Very pleased with the overall experience."--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="premium-review-top">
-                    <div class="premium-review-header">
-                        <div class="premium-avatar-container">
-                            <img src="{{asset('images/avatars/av-6.png')}}" alt="Angela Jedrynska">
-                        </div>
-                        <div class="premium-reviewer-identity">
-                            <div class="premium-name-row">
-                                <span class="premium-reviewer-name">Angela Jedrynska</span>
-                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>
-                            </div>
-                            <div class="premium-rating-line">
-                                <div class="premium-stars-group">
-                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">
-                                </div>
-                                <span class="premium-timestamp">1 day ago</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="premium-review-body">
-                        "The online platform made it convenient for me to access the training from anywhere. The practical demonstrations were beneficial and highly professional."
-                    </div>
-                </div>
-                <div class="premium-review-footer">
-                    <span class="premium-posted-label">Verified Review</span>
-                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">
-                </div>
-            </div>
+{{--            <div class="premium-review-card" data-aos="fade-up" data-aos-delay="100">--}}
+{{--                <div class="premium-review-top">--}}
+{{--                    <div class="premium-review-header">--}}
+{{--                        <div class="premium-avatar-container">--}}
+{{--                            <img src="{{asset('images/avatars/av-6.png')}}" alt="Angela Jedrynska">--}}
+{{--                        </div>--}}
+{{--                        <div class="premium-reviewer-identity">--}}
+{{--                            <div class="premium-name-row">--}}
+{{--                                <span class="premium-reviewer-name">Angela Jedrynska</span>--}}
+{{--                                <div class="premium-verified-badge"><img src="{{asset('images/icons/check.png')}}" alt="Verified"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="premium-rating-line">--}}
+{{--                                <div class="premium-stars-group">--}}
+{{--                                    <img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}"><img src="{{asset('images/icons/star.png')}}">--}}
+{{--                                </div>--}}
+{{--                                <span class="premium-timestamp">1 day ago</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="premium-review-body">--}}
+{{--                        "The online platform made it convenient for me to access the training from anywhere. The practical demonstrations were beneficial and highly professional."--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="premium-review-footer">--}}
+{{--                    <span class="premium-posted-label">Verified Review</span>--}}
+{{--                    <img src="{{asset('images/logo/google.png')}}" class="premium-google-logo" alt="Google">--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        </div>
-    </div>
+{{--        </div>--}}
+{{--    </div>--}}
 
 
     {{--    <div class="title" data-aos="fade-up">--}}

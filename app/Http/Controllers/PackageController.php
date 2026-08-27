@@ -16,11 +16,16 @@ class PackageController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index( Request $request)
-    {
-        $packages = Package::latest()->where('user_id',auth()->user()->id)->paginate(10);
-        return view('pages.back.package')->with('packages', $packages);
-    }
+    public function index(Request $request)
+{
+    // Fix: Order by created_at desc, then fallback to id desc for absolute stability
+    $packages = Package::where('user_id', auth()->user()->id)
+        ->orderBy('created_at', 'desc')
+        ->orderBy('id', 'desc')
+        ->paginate(10);
+
+    return view('pages.back.package')->with('packages', $packages);
+}
 
     public function getApiPackages(Request $request)
     {
