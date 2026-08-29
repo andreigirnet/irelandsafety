@@ -294,6 +294,115 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+.main-footer {
+    background-color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 1px solid #eee;
+    color: #002b5c; /* Dark Navy from the image */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #0056b3; /* Professional blue */
+    font-size: 18px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: #002b5c;
+    transform: translateX(5px);
+}
+
+/* Buyer Protection Column */
+.buyer-protection .protection-text {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.stripe-badge {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid #635bff3d;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: #635bff0a;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #635bff;
+}
+
+.stripe-logo {
+    margin-left: 5px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.payment-methods-title {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.payment-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-icons img {
+    width: 50px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.payment-icons img:hover {
+    filter: grayscale(0%);
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #f1f1f1;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #999;
+}
 .logoradius{
     border-radius: 10px;
 }

@@ -101,8 +101,8 @@
         <div class="borderTitle"></div>
         <img src="{{asset("images/products/saleOver.png")}}" id="overImgDash" alt="">
     </div>
-    <div class="productSection">
-        <div class="productWrapper">
+    <div class="productSection" id="courses">
+        <div class="productWrapper" >
             <div class="adminProducts">
                 @foreach($products as $product)
                     @if($product->status == 0)
@@ -297,7 +297,7 @@
                                 </div>
                                 <div class="cpdContent">
                                     <div class="cpdItemTitle"  >Certify Your Skills</div>
-                                    <div class="cpdItemContent"  >An Ireland Safety Training Diploma/Certificate, accredited by CPD and ROSPA, validates the skills you have acquired.</div>
+                                    <div class="cpdItemContent"  >An Ireland Safety Course Diploma/Certificate, accredited by CPD and ROSPA, validates the skills you have acquired.</div>
                                 </div>
                             </div>
                             <div class="cpdItem">

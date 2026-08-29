@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Irish-ManualHandling'),
+    'name' => env('APP_NAME', 'IrelandSafetyCourse'),
 
     /*
     |--------------------------------------------------------------------------

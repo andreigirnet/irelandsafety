@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\GoogleController;
 use App\Http\Controllers\CertificateController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SocialiteController;
 use App\Models\Blog;
@@ -39,10 +40,16 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
     Route::get('/team', function(){return view("front.teamTraining");})->name('front.team');
     Route::get('/contact', function(){return view("front.contact");})->name('front.contact');
     Route::get('/faq', function(){return view("front.faq");})->name('front.faq');
-    Route::get('/consulting', function(){return view("front.consulting");})->name('front.consulting');
+//    Route::get('/consulting', function(){return view("front.consulting");})->name('front.consulting');
     Route::get('/verify/certificate', function(){return view("front.verify");})->name('front.verify');
     Route::get('/cookies', function(){return view("front.cookies");})->name('front.cookies');
-    Route::get('/product/{product:slug}/info', [App\Http\Controllers\ProductController::class, 'show'])->name('front.product');
+    Route::get('/accreditations', function(){return view("front.accreditation");})->name('front.accreditation');
+    Route::get('/privacy', function(){return view("front.privacy");})->name('front.privacy');
+    Route::post('/privacy/data-removal', [PrivacyController::class, 'handleDataRemoval'])->name('privacy.data-removal.submit');
+    Route::get('/refund', function(){return view("front.refund");})->name('front.refund');
+
+
+Route::get('/product/{product:slug}/info', [App\Http\Controllers\ProductController::class, 'show'])->name('front.product');
     Route::get('/infoPdf', function(){
       $path = "pdf/info.pdf";
       return response()->download($path, 'info.pdf');
