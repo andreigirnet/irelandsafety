@@ -32,6 +32,6 @@
 </div>
 <div class="copyright">
     <p style="color: white; font-size: 18px">
-        Copyright © 2026 PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED 822301 Ltd | 51 Bracken Road, D18 CV48, Ireland | Email: info@Ireland-SafetyCourse.com
+        Copyright © 2026 Ireland Safety Course Operated by: PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED 822301 Ltd | Address: 51 Bracken Road, D18 CV48, Ireland | Email: info@Ireland-SafetyCourse.com
     </p>
 </div>
