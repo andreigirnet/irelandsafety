@@ -228,7 +228,7 @@
                     <div class="compliance-links">
                         <a href="/terms">Terms of Service</a>
                         <a href="/privacy">Privacy Policy</a>
-                        <a href="/refund-policy">Refund Policy</a>
+                        <a href="/refund">Refund Policy</a>
                     </div>
                 </section>
             </div>
