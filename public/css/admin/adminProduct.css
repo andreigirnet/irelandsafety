@@ -1,6 +1,6 @@
 .adminProducts{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     row-gap: 50px;
     column-gap: 50px;
     padding-bottom: 50px;

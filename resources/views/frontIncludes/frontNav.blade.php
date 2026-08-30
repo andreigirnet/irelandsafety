@@ -7,9 +7,7 @@
             </svg>
         </button>
 
-        <a href="{{route('frontHome')}}" class="brand">
-            <img src="{{asset('images/logo/logomain.webp')}}" alt="Ireland Safety Course" class="logoradius">
-        </a>
+
 
         <div class="nav-links">
             <a href="{{route('home')}}">HOME</a>
@@ -19,7 +17,10 @@
             {{--            <a href="{{route('front.blog')}}"></a>--}}
             <a href="{{route('front.contact')}}">CONTACT</a>
         </div>
-
+        <a href="{{route('frontHome')}}" class="brand">
+            <img src="{{asset('images/logo/logoLanding.png')}}" alt="Ireland Safety Course" class="logoradius">
+            <div>Ireland Safety Course</div>
+        </a>
         <div class="nav-utils">
             <div class="nav-auth-buttons">
                 @auth

@@ -47,6 +47,7 @@
                 </a>
             </div>
         </div>
+
     </div>
 
     <div class="bold-dark-section">
