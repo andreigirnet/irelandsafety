@@ -32,6 +32,6 @@
 </div>
 <div class="copyright">
     <p style="color: white; font-size: 18px">
-        Copyright © 2026 IrelandSafetyCourse.com | Safety Ireland Course Ltd | Email: info@IrelandSafetyCourse.com
+        Copyright © 2026 IrelandSafetyCourse.com | PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED 822301 Ltd | Email: info@IrelandSafetyCourse.com
     </p>
 </div>
