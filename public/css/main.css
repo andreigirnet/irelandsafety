@@ -24,7 +24,16 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
+.brand div {
+    white-space: nowrap;
+}
+.brand img {
+    flex-shrink: 0;
+}
+
 .nav-wrapper {
     max-width: 100%;
     margin: 0 auto;
