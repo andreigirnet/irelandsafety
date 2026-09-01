@@ -165,7 +165,9 @@
                                 </div>
                                 <div class="product-icons">
                                     <img src="images/icons/money.png" alt="">
-                                    <div style="font-weight: bold"><del style="color: gray">{{round($product->price * 2.31)}} €</del> <span style="color: red; font-size: 25px">{{$product->price}} €</span></div>
+                                    <div style="font-weight: bold">
+{{--                                        <del style="color: gray">{{round($product->price * 2.31)}} €</del> --}}
+                                        <span style="color: green; font-size: 25px">{{$product->price}} €</span></div>
                                 </div>
                             </div>
                             @if($product->status == 0)

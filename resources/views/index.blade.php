@@ -151,7 +151,9 @@
                             </div>
                             <div class="product-icons-back">
                                 <img src="images/icons/money.png" alt="">
-                                <div style="font-weight: bold"><del style="color: gray; font-size:18px">{{round($product->price * 2.31)}} €</del> <span style="color: red; font-size: 30px">{{$product->price}} €</span></div>
+                                <div style="font-weight: bold">
+{{--                                    <del style="color: gray; font-size:18px">{{round($product->price * 2.31)}} €</del>--}}
+                                    <span style="color: red; font-size: 30px">{{$product->price}} €</span></div>
                             </div>
                         </div>
                         <div x-data="{}">

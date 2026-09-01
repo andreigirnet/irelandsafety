@@ -24,7 +24,7 @@
         <div class="nav-utils">
             <div class="nav-auth-buttons">
                 @auth
-                    <a href="{{ route('home') }}" class="cta-dashboard">HOME</a>
+                    <a href="/" class="cta-dashboard">HOME</a>
                 @else
                     <a href="{{ route('login') }}" class="cta-login">LOGIN</a>
                     <a href="{{ route('register') }}" class="cta-register">REGISTER</a>

@@ -98,12 +98,10 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="checkbox-signup" name="terms" style="width: 1.2em; height: 1.2em; margin-top: 0.2em;" required>
-                                            <label class="form-check-label text-secondary ms-1" for="checkbox-signup" style="font-size: 15px;">
-                                                I accept <a href="{{ route('terms') }}" class="text-decoration-underline" style="color: #1E4D2B; font-weight: 600;">Terms and Conditions</a>
-                                            </label>
-                                        </div>
+                                        <label class="form-check-label text-secondary ms-1" style="font-size: 12px;">
+                                            By submitting this form, you acknowledge our
+                                            <a href="{{ route('front.privacy') }}">Privacy Policy</a>.
+                                        </label>
                                     </div>
 
                                     <div class="d-grid">

@@ -58,6 +58,13 @@
                     </div>
                 </div>
 
+                <div class="mb-3">
+                    <label class="form-check-label text-secondary ms-1" style="font-size: 12px;">
+                        By submitting this form, you acknowledge our
+                        <a href="{{ route('front.privacy') }}">Privacy Policy</a>.
+                    </label>
+                </div>
+
                 <button type="submit" class="glow-button">Update Credentials</button>
             </form>
         </div>

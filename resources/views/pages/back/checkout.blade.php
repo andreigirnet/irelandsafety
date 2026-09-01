@@ -54,6 +54,7 @@
             color: white; border: none; padding: 18px; border-radius: 16px;
             font-weight: 800; font-size: 17px; cursor: pointer; transition: all 0.3s ease;
             box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+            margin-top: 30px;
         }
         .pay-button:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4); filter: brightness(1.1); }
         @keyframes spin {
@@ -120,6 +121,14 @@
 
                     <div id="payment-message" class="hidden mt-3"></div>
                 </form>
+
+                <div class="mb-3">
+                    <label class="form-check-label text-secondary ms-1" style="font-size: 12px;">
+                        By submitting this form, you acknowledge our
+                        <a href="{{ route('front.privacy') }}">Privacy Policy</a>.
+                    </label>
+                </div>
+
                 <button type="submit" form="payment-form" id="submit" class="pay-button">
                     Complete Payment
                 </button>

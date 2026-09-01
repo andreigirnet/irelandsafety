@@ -82,13 +82,18 @@
                                         <input class="form-control form-control-lg" style="font-size: 16px; padding: 12px 16px;" type="password" name="password" id="password" placeholder="Enter your password" required>
                                     </div>
 
-                                    <div class="mb-4">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="checkbox-signin" name="remember" style="width: 1.2em; height: 1.2em; margin-top: 0.2em;">
-                                            <label class="form-check-label text-secondary ms-1" for="checkbox-signin" style="font-size: 15px;">Remember this device</label>
-                                        </div>
+{{--                                    <div class="mb-3">--}}
+{{--                                        <div class="form-check">--}}
+{{--                                            <input type="checkbox" class="form-check-input" id="checkbox-signin" name="remember" style="width: 1.2em; height: 1.2em; margin-top: 0.2em;">--}}
+{{--                                            <label class="form-check-label text-secondary ms-1" for="checkbox-signin" style="font-size: 15px;">Remember this device</label>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+                                    <div class="mb-3">
+                                        <label class="form-check-label text-secondary ms-1" style="font-size: 12px;">
+                                            By submitting this form, you acknowledge our
+                                            <a href="{{ route('front.privacy') }}">Privacy Policy</a>.
+                                        </label>
                                     </div>
-
                                     <div class="d-grid">
                                         <button class="btn py-3 text-white fw-bold" type="submit" style="background-color: #1E4D2B; border-radius: 8px; font-size: 17px; transition: opacity 0.2s;">
                                             <i class="ri-login-circle-fill me-1"></i> Sign In
