@@ -91,7 +91,7 @@
                             <span class="fq-question-text">Are the instructors certified professionals?</span>
                             <svg class="fq-icon-chevron" :class="open ? 'fq-rotate' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="fq-accordion-content" x-show="open" x-transition>Yes, every instructor is a CMIOSH member (Institution of Occupational Safety and Health) and holds NFQ Level 6 qualifications, ensuring your training meets all Irish HSA legal requirements.</div>
+                        <div class="fq-accordion-content" x-show="open" x-transition>Yes, every instructor is a certified instructor and holds NFQ Level 6 qualifications, ensuring your training meets all Irish HSA legal requirements.</div>
                     </div>
                     <div class="fq-accordion-item" x-data="{ open: false }">
                         <button class="fq-accordion-trigger" @click="open = !open">

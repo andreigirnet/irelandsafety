@@ -49,7 +49,7 @@
                     </div>
                     <div class="cns-service-item">
                         <img src="{{asset('images/icons/right-arrow.png')}}" class="cns-icon-arrow" alt="Service indicator icon">
-                        <div class="cns-service-label">Drafting workplace health and safety policies</div>
+                        <div class="cns-service-label">Drafting workplace workplace and safety policies</div>
                     </div>
                     <div class="cns-service-item">
                         <img src="{{asset('images/icons/right-arrow.png')}}" class="cns-icon-arrow" alt="Service indicator icon">

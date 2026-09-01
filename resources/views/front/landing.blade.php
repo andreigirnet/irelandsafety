@@ -8,7 +8,7 @@
         <div class="opacityLayer"></div>
         <div class="mainBannerContent">
             <div class="mainBannerRight">
-                <h1 class="mainBannerTitle">HEALTH AND SAFETY COURSES IRELAND -<br> HEALTH AND SAFETY COURSES ONLINE</h1>
+                <h1 class="mainBannerTitle">WORKPLACE SAFETY COURSES IRELAND -<br> WORKPLACE SAFETY COURSES ONLINE</h1>
                 <div class="trust-badges-column">
 
                     <div class="trust-badge">
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mainBannerDescription" >Certified health and safety courses and health and safety training online trusted by 350,000+ professionals across Ireland and Europe. Our QQI and RoSPA approved health and safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your health and safety training at your own pace on any device and receive your certificate instantly.</div>
+                <div class="mainBannerDescription" >Certified Workplace safety courses and Workplace safety training online trusted by 350,000+ professionals across Ireland and Europe. Our QQI and RoSPA approved Workplace safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your Workplace safety training at your own pace on any device and receive your certificate instantly.</div>
                 <a href="{{route('register')}}" class="modern-glow-btn">
                     GET CERTIFIED TODAY
                 </a>
@@ -98,7 +98,7 @@
     </div>
 
     <div class="title" data-aos="fade-up">
-        <div class="titleText" >Explore our Health and Safety Courses</div>
+        <div class="titleText" >Explore our Workplace Safety Courses</div>
         <div class="borderTitle"></div>
         <img src="{{asset("images/products/saleOver.png")}}" id="overImgDash" alt="">
     </div>
@@ -131,7 +131,7 @@
                                             <path d="M20 6L9 17l-5-5"/>
                                         </svg>
                                     </div>
-                                    <span class="accredited-text">Accredited · Instant Certificate</span>
+                                    <span class="accredited-text">Online Training · Instant Certificate</span>
                                 </div>
                             @endif
                             <div class="certification-wrapper">
@@ -201,7 +201,7 @@
 
     <div class="langTitle" data-aos="fade-up">
         <div class="languageText"  >
-            At Ireland Safety Course, our QQI-accredited health and safety courses and online health and safety training programs are designed to be simple, engaging, and accessible for learners of all nationalities. Each safety course online includes clear videos, illustrative graphics, straightforward images, and easy-to-read content to ensure every step is simple to follow. Our health and safety courses fully comply with HSA and HSE standards, align with European Union legislation, and provide recognized certification trusted across Ireland, the UK, Europe, and beyond. Discover our safety courses online and begin your health and safety training today.
+            At Ireland Safety Course, our QQI-accredited Workplace safety courses and online Workplace safety training programs are designed to be simple, engaging, and accessible for learners of all nationalities. Each safety course online includes clear videos, illustrative graphics, straightforward images, and easy-to-read content to ensure every step is simple to follow. Our Workplace safety courses fully comply with HSA and HSE standards, align with European Union legislation, and provide recognized certification trusted across Ireland, the UK, Europe, and beyond. Discover our safety courses online and begin your Workplace safety training today.
         </div>
         <div class="languagesSection">
             <img src="{{asset('images/flags/en.png')}}" alt="">
@@ -219,7 +219,7 @@
             <div class="premium-info-wing">
                 <header class="premium-info-header">
                     <h2 class="premium-main-title" >
-                        How Our Health and Safety Courses Work: 4 Easy Steps
+                        How Our Workplace Safety Courses Work: 4 Easy Steps
                     </h2>
                     <div class="premium-divider"></div>
                 </header>
@@ -262,26 +262,12 @@
         </div>
     </section>
 
-    <div class="trustContainer">
-        <div class="innerTrust">
-            <div class="trustLeft">
-                <img src="{{asset('images/trust.webp')}}" alt="">
-            </div>
-            <div class="trustRight">
-                <div class="trustTitle" >Acredited Health and Safety Courses You Can Trust</div>
-                <div class="trustContent">
-                    <div >Ireland Safety Course is a legally registered Irish company, fully compliant with national regulations. Every Ireland Safety Course we provide meets HSA standards, holds QQI accreditation, and is aligned with European legislation.</div>
-                    <br><br>
-                    <div >All our health and safety courses are independently approved by leading professional bodies, giving you recognised, high quality training that employers trust across Ireland, the UK, and Europe. Choose safety courses online with confidence.</div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div class="cpdContainer">
         <div class="cpdInner">
             <div class="paddingCpd">
-                <h2 class="cpdTitle" >Get Your Health And Safety Certificate Today</h2>
+                <h2 class="cpdTitle" >Get Your Workplace Safety Certificate Today</h2>
                 <div class="cpdFlex">
                     <div class="cpdLeft">
                         <div class="cpdItems">
@@ -332,7 +318,7 @@
     </div>
 
     <div class="title" data-aos="fade-up" style="margin-bottom: 25px;">
-        <div class="titleText sizeTextMobile" >What Our Customers Say</div>
+{{--        <div class="titleText sizeTextMobile" >What Our Customers Say</div>--}}
         <div class="borderTitle"></div>
     </div>
 
@@ -370,7 +356,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                    <div class="premium-review-body">--}}
-{{--                        "The online Health And Safety Course Online provided by ireland-safetycourse was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."--}}
+{{--                        "The online Workplace Safety Course Online provided by ireland-safetycourse was comprehensive yet easy to follow. The certification process was smooth, and the practical tips were immensely helpful."--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--                <div class="premium-review-footer">--}}
@@ -428,7 +414,7 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
 {{--                    <div class="premium-review-body">--}}
-{{--                        "The Health And Safety Course Online exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"--}}
+{{--                        "The Workplace Safety Course Online exceeded my expectations. The modules were clear and concise, and the quizzes helped reinforce key concepts. Highly recommended for anyone seeking certification!"--}}
 {{--                    </div>--}}
 {{--                </div>--}}
 {{--                <div class="premium-review-footer">--}}
@@ -544,7 +530,7 @@
             <div class="imh-content-grid">
                 <div class="imh-main-text">
                     <p class="imh-lead-para" >
-                        Welcome to IrelandSafety-Course.com, your premier destination for top-notch online Health And Safety Course Online in Ireland...
+                        Welcome to IrelandSafety-Course.com, your premier destination for top-notch online Workplace Safety Course Online in Ireland...
                     </p>
                     <p class="imh-body-para" >
                         At Ireland Safety Course, we take immense pride in the integrity and excellence of our safety training services...
@@ -597,7 +583,7 @@
                     <div class="exclusive-icon-box" style="border-color: #e60b31;">
                         <img src="{{asset('images/logo/home.svg')}}" alt="Home">
                     </div>
-                    <h3 class="exclusive-title" >FLEXIBLE HEALTH AND SAFETY COURSE</h3>
+                    <h3 class="exclusive-title" >FLEXIBLE Workplace SAFETY COURSE</h3>
                     <p class="exclusive-text" >Complete your training online at a time and location that fits your lifestyle.</p>
                 </div>
 
@@ -613,13 +599,13 @@
                     <div class="exclusive-icon-box" style="border-color: #345cb3;">
                         <img src="{{asset('images/logo/wallet.svg')}}" alt="Wallet">
                     </div>
-                    <h3 class="exclusive-title" >AFFORDABLE HEALTH AND SAFETY COURSE ONLINE</h3>
+                    <h3 class="exclusive-title" >AFFORDABLE Workplace SAFETY COURSE ONLINE</h3>
                     <p class="exclusive-text" >Online education removes the overhead expenses of traditional classroom settings.</p>
                 </div>
             </div>
 
             <div class="exclusive-hero-center" data-aos="zoom-in">
-                <img src="{{asset('images/indian.png')}}" class="indianimage" alt="Health and Safety Training">
+                <img src="{{asset('images/indian.png')}}" class="indianimage" alt="Workplace Safety Training">
             </div>
 
             <div class="exclusive-col" data-aos="fade-up" data-aos-delay="100">
@@ -627,7 +613,7 @@
                     <div class="exclusive-icon-box" style="border-color: #f49c12;">
                         <img src="{{asset('images/logo/download.svg')}}" alt="Download">
                     </div>
-                    <h3 class="exclusive-title" >INSTANT HEALTH AND SAFETY CERTIFICATE</h3>
+                    <h3 class="exclusive-title" >INSTANT Workplace SAFETY CERTIFICATE</h3>
                     <p class="exclusive-text" >Finish your modules and download your accredited certificate immediately upon completion.</p>
                 </div>
 
@@ -636,7 +622,7 @@
                         <img src="{{asset('images/logo/internet.svg')}}" alt="Global">
                     </div>
                     <h3 class="exclusive-title" >MAXIMIZE EFFICIENCY</h3>
-                    <p class="exclusive-text" >Skip the commute and work through your health and safety course at the speed that is right for you.</p>
+                    <p class="exclusive-text" >Skip the commute and work through your Workplace safety course at the speed that is right for you.</p>
                 </div>
 
                 <div class="exclusive-card">
@@ -644,7 +630,7 @@
                         <img src="{{asset('images/logo/high-quality.svg')}}" alt="Quality">
                     </div>
                     <h3 class="exclusive-title" >RECOGNISED QUALIFICATIONS</h3>
-                    <p class="exclusive-text" >Our digital learning is a cost-effective alternative to earn your official health and safety certificate.</p>
+                    <p class="exclusive-text" >Our digital learning is a cost-effective alternative to earn your official Workplace safety certificate.</p>
                 </div>
             </div>
 
@@ -652,7 +638,7 @@
     </section>
 
     <div class="title spaceTop" data-aos="fade-up" >
-        <div class="titleText sizeTextMobile" >Expert Online Health And Safety Course Online | ireland-safetycourse.com</div>
+        <div class="titleText sizeTextMobile" >Expert Online Workplace Safety Course Online | ireland-safetycourse.com</div>
         <div class="borderTitle"></div>
     </div>
 
@@ -722,22 +708,22 @@
             <div class="mh-faq-list">
 
                 <!-- FAQ 1 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is health and safety training a legal requirement in ireland? hsa law'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is Workplace safety training a legal requirement in ireland? hsa law'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">Is Health and Safety training a legal requirement for my business?</span>
+                        <span class="mh-faq-question">Is Workplace Safety training a legal requirement for my business?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Yes, under the <strong>Safety, Health and Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong>HSA compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
+                            Yes, under the <strong>Safety, Workplace Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong>HSA compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how long does a health and safety certificate last? expiry'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how long does a Workplace safety certificate last? expiry'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">How long is a Health and Safety certificate valid for?</span>
+                        <span class="mh-faq-question">How long is a Workplace Safety certificate valid for?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
@@ -776,12 +762,12 @@
                 <!-- FAQ 5 -->
                 <div class="mh-faq-item" x-data="{ open: false }" x-show="'who is responsible for paying for the training? employer duties'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">Who is responsible for the cost of health and safety training?</span>
+                        <span class="mh-faq-question">Who is responsible for the cost of Workplace safety training?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Legally, the <strong>employer is responsible</strong> for all costs associated with mandatory health and safety training. Section 25 of the Safety, Health and Welfare at Work Act 2005 specifies that training must be provided during paid working hours and must not result in any financial deduction or cost to the employee. Providing this training is a core "duty of care" that protects the business from litigation while ensuring a safe environment for everyone.
+                            Legally, the <strong>employer is responsible</strong> for all costs associated with mandatory Workplace safety training. Section 25 of the Safety, Workplace Welfare at Work Act 2005 specifies that training must be provided during paid working hours and must not result in any financial deduction or cost to the employee. Providing this training is a core "duty of care" that protects the business from litigation while ensuring a safe environment for everyone.
                         </p>
                     </div>
                 </div>
@@ -841,12 +827,12 @@
                 <!-- FAQ 10 -->
                 <div class="mh-faq-item" x-data="{ open: false }" x-show="'mental health wellbeing workplace safety psychosocial'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">Does safety training include mental health and well-being?</span>
+                        <span class="mh-faq-question">Does safety training include mental Workplace well-being?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Modern <strong>occupational health and safety</strong> now places a high priority on psychosocial risks. Employers have a legal duty to manage workplace stress just as they do physical hazards. Providing <strong>Mental Health First Aid</strong> and stress management training is now recognized as an essential part of a robust corporate safety culture. This training helps to identify early signs of burnout, reduce absenteeism, and improve overall employee retention and productivity.
+                            Modern <strong>occupational Workplace safety</strong> now places a high priority on psychosocial risks. Employers have a legal duty to manage workplace stress just as they do physical hazards. Providing <strong>Mental Health First Aid</strong> and stress management training is now recognized as an essential part of a robust corporate safety culture. This training helps to identify early signs of burnout, reduce absenteeism, and improve overall employee retention and productivity.
                         </p>
                     </div>
                 </div>
