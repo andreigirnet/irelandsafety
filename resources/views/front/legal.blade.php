@@ -11,7 +11,7 @@
                 </div>
                 <h1 class="enterprise-main-title">Legal Information & Disclosures</h1>
                 <p class="enterprise-lead-text">
-                    Official terms, governance policies, and statutory compliance framework for <span class="highlight-domain">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</span> via ireland-safetycourse.ie.
+                    Official terms, governance policies, and statutory compliance framework for <span class="highlight-domain">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</span> via ireland-safetycourse.com.
                 </p>
             </div>
 
@@ -86,7 +86,7 @@
                     </div>
                     <h3 class="bento-title">Educational Scope & Terms</h3>
                     <p class="bento-desc mb-3">
-                        We function exclusively as a digital educational provider offering standardized safety modules, ergonomic training content, and professional development programs via ireland-safetycourse.ie.
+                        We function exclusively as a digital educational provider offering standardized safety modules, ergonomic training content, and professional development programs via ireland-safetycourse.com.
                     </p>
                     <div class="address-box-modern">
                         All users agree that course completion grants a digital certificate of training participation, verifying that the user has completed our self-paced online curriculum and passed the integrated testing framework.
@@ -104,7 +104,7 @@
                         All transactions processed through our platform are billed in Euros (EUR) and are fully itemized prior to checkout.
                     </p>
                     <div class="address-box-modern">
-                        Upon successful digital payment processing, automated credentials are issued instantly granting immediate access. Refund requests are evaluated case-by-case before course completion. Contact us at <a href="mailto:info@ireland-safetycourse.ie" style="color:#2563eb; font-weight:600; text-decoration:none;">info@ireland-safetycourse.ie</a> or via live chat.
+                        Upon successful digital payment processing, automated credentials are issued instantly granting immediate access. Refund requests are evaluated case-by-case before course completion. Contact us at <a href="mailto:info@ireland-safetycourse.com" style="color:#2563eb; font-weight:600; text-decoration:none;">info@ireland-safetycourse.com</a> or via live chat.
                     </div>
                 </div>
 
@@ -121,7 +121,7 @@
                     <div class="contact-box-modern">
                         <div class="c-row">
                             <span>Email Support:</span>
-                            <a href="mailto:info@ireland-safetycourse.ie">info@ireland-safetycourse.ie</a>
+                            <a href="mailto:info@ireland-safetycourse.com">info@ireland-safetycourse.com</a>
                         </div>
                         <div class="c-row">
                             <span>Instant Assistance:</span>
