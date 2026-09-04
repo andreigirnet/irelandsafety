@@ -71,7 +71,7 @@
             <div class="footer-legal-info mt-4 pt-3 border-top" style="border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 1.5rem; padding-top: 1rem;">
                 <p class="footer-company-name mb-1" style="font-size: 0.9rem; font-weight: 700; color: #fff;">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</p>
                 <p class="footer-reg-num mb-1" style="font-size: 0.85rem; color: #94a3b8;">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED CRO Reg. Number: <strong>822301</strong></p>
-                <p class="footer-address mb-2" style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">19 Harcourt Street, Dublin, D02 H364, Ireland</p>
+                <p class="footer-address mb-2" style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">WORKHUB 51 Bracken Road Sandyford DUBLIN Ireland D18 CV48</p>
                 <p class="footer-contact mb-0" style="font-size: 0.85rem; color: #94a3b8;">
                     Support: <a href="mailto:info@ireland-safetycourse.com" style="color: #60a5fa; text-decoration: none;">info@ireland-safetycourse.com</a>
                 </p>

@@ -117,8 +117,8 @@
                                 <h4 class="contact-title">Registered Office Address</h4>
                                 <p class="contact-detail">
                                     <strong>PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</strong><br>
-                                    19 Harcourt Street<br>
-                                    Dublin, D02 H364<br>
+                                    51 Bracken Road<br>
+                                    Dublin, D18 CV48<br>
                                     Ireland
                                 </p>
                             </div>
