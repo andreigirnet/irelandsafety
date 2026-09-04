@@ -45,7 +45,46 @@
                     </div>
                 </div>
 
-                <!-- Section 2: Educational Services & Scope -->
+                <!-- Section 2: Official Verification & Legal Documents (Added for Ad Review & Identity Proof) -->
+                <div class="legal-card primary-accent-card">
+                    <div class="legal-header">
+                        <div class="legal-icon">📂</div>
+                        <h3 class="legal-heading">Official Verification & Statutory Documents</h3>
+                    </div>
+                    <div class="legal-body">
+                        <p class="legal-text">
+                            In compliance with platform transparency and advertiser verification guidelines, we provide direct access to our official corporate registration and financial documentation below for audit and review:
+                        </p>
+                        <div class="legal-docs-grid">
+                            <a href="{{ asset('legalDocs/certIncorp.pdf') }}" target="_blank" class="legal-doc-item">
+                                <div class="doc-icon">📄</div>
+                                <div class="doc-info">
+                                    <span class="doc-title">Certificate of Incorporation</span>
+                                    <span class="doc-subtitle">Official CRO corporate formation record</span>
+                                </div>
+                                <span class="doc-action">View PDF →</span>
+                            </a>
+                            <a href="{{ asset('legalDocs/companyDetails.pdf') }}" target="_blank" class="legal-doc-item">
+                                <div class="doc-icon">📊</div>
+                                <div class="doc-info">
+                                    <span class="doc-title">CRO Company Printout</span>
+                                    <span class="doc-subtitle">Detailed active company register details</span>
+                                </div>
+                                <span class="doc-action">View PDF →</span>
+                            </a>
+                            <a href="{{ asset('legalDocs/BankStatement.pdf') }}" target="_blank" class="legal-doc-item">
+                                <div class="doc-icon">🏦</div>
+                                <div class="doc-info">
+                                    <span class="doc-title">Corporate Bank Verification</span>
+                                    <span class="doc-subtitle">Official entity banking and billing statement</span>
+                                </div>
+                                <span class="doc-action">View PDF →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Educational Services & Scope -->
                 <div class="legal-card">
                     <div class="legal-header">
                         <div class="legal-icon">📜</div>
@@ -61,7 +100,7 @@
                     </div>
                 </div>
 
-                <!-- Section 3: Pricing, Transactions & Refunds -->
+                <!-- Section 4: Pricing, Transactions & Refunds -->
                 <div class="legal-card">
                     <div class="legal-header">
                         <div class="legal-icon">💳</div>
@@ -77,7 +116,7 @@
                     </div>
                 </div>
 
-                <!-- Section 4: Contact & Dispute Resolution -->
+                <!-- Section 5: Contact & Dispute Resolution -->
                 <div class="legal-card">
                     <div class="legal-header">
                         <div class="legal-icon">✉️</div>
@@ -95,7 +134,7 @@
                     </div>
                 </div>
 
-                <!-- Section 5: Platform Directory & Transparency Navigation -->
+                <!-- Section 6: Platform Directory & Transparency Navigation -->
                 <div class="legal-card">
                     <div class="legal-header">
                         <div class="legal-icon">🔗</div>
@@ -187,6 +226,10 @@
             padding: 2.5rem;
         }
 
+        .legal-card.primary-accent-card {
+            border-left: 5px solid #2563eb;
+        }
+
         .legal-header {
             display: flex;
             align-items: center;
@@ -266,6 +309,60 @@
             color: #2563eb;
         }
 
+        /* Document Grid Styles */
+        .legal-docs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .legal-doc-item {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 1rem 1.25rem;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .legal-doc-item:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        .doc-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .doc-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .doc-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .doc-subtitle {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .doc-action {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
         .legal-contact-strip {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
@@ -332,6 +429,14 @@
             }
             .legal-nav-grid {
                 grid-template-columns: 1fr;
+            }
+            .legal-doc-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .doc-action {
+                align-self: flex-end;
             }
         }
     </style>
