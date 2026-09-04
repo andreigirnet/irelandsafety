@@ -12,8 +12,8 @@
                         Establish total **Fire Safety Compliance Ireland** with our 2026 digital certification. Professional, HSA-aligned, and ready for immediate deployment.
                     </p>
                     <div class="mh-btn-row">
-                        <a href="{{route('home')}}" class="btn-exclusive-teal">Start Warden Training — €{{ config('global.course_price') }}</a>
-                        <a href="{{route('home')}}" class="btn-exclusive-ghost">Group Compliance Portal</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-teal">Start Warden Training — €{{ config('global.course_price') }}</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-ghost">Group Compliance Portal</a>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
             <p>Our **Health and Safety Training Online** is the most cost-effective solution for modern Irish safety management. Join the 50,000+ professionals who trust our platform for their mandatory Fire Warden credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="{{route('home')}}" class="btn-gold">Enrol Now — €{{ config('global.course_price') }}</a>
+                <a href="{{route('register')}}" class="btn-gold">Enrol Now — €{{ config('global.course_price') }}</a>
             </div>
         </article>
     </div>

@@ -12,8 +12,8 @@
                         Secure your **Health and Safety Certification Online** with our 2026 HSA-aligned curriculum. Master the selection, use, and maintenance of life-critical equipment.
                     </p>
                     <div class="mh-btn-row">
-                        <a href="{{route('home')}}" class="btn-exclusive-teal">Start PPE Training — €{{ config('global.course_price') }}</a>
-                        <a href="{{route('home')}}" class="btn-exclusive-ghost">Corporate Group Rates</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-teal">Start PPE Training — €{{ config('global.course_price') }}</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-ghost">Corporate Group Rates</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +91,7 @@
             <p>With 24/7 access and instant PDF delivery, our **Health and Safety Training Online** is the most cost-effective path to compliance for modern Irish industry. Join the 350,000+ professionals who trust our platform for their mandatory safety credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="{{route('home')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>
+                <a href="{{route('register')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>
             </div>
         </article>
     </div>

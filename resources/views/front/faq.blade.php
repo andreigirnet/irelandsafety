@@ -186,7 +186,7 @@
                             <span class="fq-question-text">I paid for the course, what now?</span>
                             <svg class="fq-icon-chevron" :class="open ? 'fq-rotate' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div class="fq-accordion-content" x-show="open" x-transition>Visit <a href="{{route('home')}}" style="color: blue">"https://ireland-safetycourse.com/packages"</a> to activate your license. If you have trouble, contact us via the Online Chat.</div>
+                        <div class="fq-accordion-content" x-show="open" x-transition>Visit <a href="{{route('register')}}" style="color: blue">"https://ireland-safetycourse.com/packages"</a> to activate your license. If you have trouble, contact us via the Online Chat.</div>
                     </div>
                     <div class="fq-accordion-item" x-data="{ open: false }">
                         <button class="fq-accordion-trigger" @click="open = !open">

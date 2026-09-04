@@ -12,8 +12,8 @@
                         Secure your **Health and Safety Certification Online** through our HSA-aligned 2026 digital platform.
                     </p>
                     <div class="mh-btn-row">
-                        <a href="{{route('home')}}" class="btn-exclusive-teal">Enrol Individual — €{{ config('global.course_price') }}</a>
-                        <a href="{{route('home')}}" class="btn-exclusive-ghost">Request Enterprise Quote</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-teal">Enrol Individual — €{{ config('global.course_price') }}</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-ghost">Request Enterprise Quote</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <p>Our **Health and Safety Course** is designed for the modern professional. You can pause the modules, resume on your mobile, and download your **Health and Safety Training Online** certificate the moment you pass the assessment. Join over 50,000 Irish workers who have chosen the fastest, most reliable path to safety compliance.</p>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="{{route('home')}}" class="btn-gold">Get Certified Now — €{{ config('global.course_price') }}</a>
+                <a href="{{route('register')}}" class="btn-gold">Get Certified Now — €{{ config('global.course_price') }}</a>
             </div>
         </article>
     </div>

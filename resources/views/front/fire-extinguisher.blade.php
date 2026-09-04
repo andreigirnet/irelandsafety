@@ -12,8 +12,8 @@
                         Secure your **Health and Safety Certification Online** with our 2026 HSA-aligned curriculum. Professional mastery of I.S. 291:2015 standards.
                     </p>
                     <div class="mh-btn-row">
-                        <a href="{{route('home')}}" class="btn-exclusive-teal">Start Course — €{{ config('global.course_price') }}</a>
-                        <a href="{{route('home')}}" class="btn-exclusive-ghost">Corporate Group Enrolment</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-teal">Start Course — €{{ config('global.course_price') }}</a>
+                        <a href="{{route('register')}}" class="btn-exclusive-ghost">Corporate Group Enrolment</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <p>With 24/7 access and instant PDF delivery, our **Health and Safety Training Online** is the most efficient path to compliance for modern Irish businesses. Join over 350,000 professionals who have trusted our platform for their mandatory safety credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
-                <a href="{{route('home')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>
+                <a href="{{route('register')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>
             </div>
         </article>
     </div>

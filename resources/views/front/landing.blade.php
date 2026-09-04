@@ -175,7 +175,7 @@
 {{--                                    @csrf--}}
 {{--                                    <input type="hidden" value="{{$product->id}}" name="productId">--}}
                                     <div class="productButtons">
-                                        <a href="{{route('home')}}" class="buttonProductAdminAdd">Add To Basket</a>
+                                        <a href="{{route('register')}}" class="buttonProductAdminAdd">Add To Basket</a>
                                         @if($product->description)
                                             <a href="{{route('front.product', $product->slug)}}" class="homeStartCourseButton">Info</a>
                                         @endif
