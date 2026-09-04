@@ -21,6 +21,7 @@
                 <li><a href="{{ route('front.accreditation') }}">Accreditations</a></li>
                 <li><a href="{{ route('front.privacy') }}">Privacy policy</a></li>
                 <li><a href="{{ route('front.refund') }}">Refund policy</a></li>
+                <li><a href="{{ route('front.legal') }}">Legal</a></li>
             </ul>
         </div>
 
@@ -64,6 +65,16 @@
                 <img src="https://img.icons8.com/color/96/mastercard.png" class="footerImg" alt="Mastercard">
                 <img src="https://img.icons8.com/ios-filled/96/000000/apple-pay.png" class="footerImg" alt="Apple Pay">
                 <img src="https://img.icons8.com/color/96/google-pay.png" class="footerImg" alt="Google Pay">
+            </div>
+
+            <!-- Corporate Identity & Legal Footer Information -->
+            <div class="footer-legal-info mt-4 pt-3 border-top" style="border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 1.5rem; padding-top: 1rem;">
+                <p class="footer-company-name mb-1" style="font-size: 0.9rem; font-weight: 700; color: #fff;">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</p>
+                <p class="footer-reg-num mb-1" style="font-size: 0.85rem; color: #94a3b8;">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED CRO Reg. Number: <strong>822301</strong></p>
+                <p class="footer-address mb-2" style="font-size: 0.85rem; color: #94a3b8; line-height: 1.4;">19 Harcourt Street, Dublin, D02 H364, Ireland</p>
+                <p class="footer-contact mb-0" style="font-size: 0.85rem; color: #94a3b8;">
+                    Support: <a href="mailto:info@ireland-safetycourse.com" style="color: #60a5fa; text-decoration: none;">info@ireland-safetycourse.com</a>
+                </p>
             </div>
         </div>
 

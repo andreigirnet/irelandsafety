@@ -36,6 +36,8 @@ Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallba
         return view("front.landing", compact('products'));
     })->name('frontHome');
     Route::get('/terms', function(){return view("front.terms");})->name('terms');
+    Route::get('/about-us', function(){return view("front.about");})->name('front.about');
+    Route::get('/legal', function(){return view("front.legal");})->name('front.legal');
     Route::get('/products', function(){return view("front.products");})->name('front.products');
     Route::get('/team', function(){return view("front.teamTraining");})->name('front.team');
     Route::get('/contact', function(){return view("front.contact");})->name('front.contact');

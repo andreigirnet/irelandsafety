@@ -13,7 +13,7 @@
             <a href="/">HOME</a>
             <a href="{{route('front.faq')}}">MANUAL HANDLING FAQ's</a>
             <a href="{{route('front.team')}}">TEAM TRAINING</a>
-{{--            <a href="{{route('front.consulting')}}">CONSULTING</a>--}}
+            <a href="{{route('front.about')}}">ABOUT US</a>
             {{--            <a href="{{route('front.blog')}}"></a>--}}
             <a href="{{route('front.contact')}}">CONTACT</a>
         </div>
@@ -58,7 +58,7 @@
                 <div class="safetyResponsiveNavItem mobile"><a href="/" class="safetyMenuColor mobile">Home</a></div>
                 <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.faq')}}" class="safetyMenuColor mobile">Please Read Faq's</a></div>
                 <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.team')}}" class="safetyMenuColor mobile">Team Training</a></div>
-{{--                <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.consulting')}}" class="safetyMenuColor mobile">Consulting</a></div>--}}
+                <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.about')}}" class="safetyMenuColor mobile">About Us</a></div>
                 <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.blog')}}" class="safetyMenuColor mobile">Blog</a></div>
                 <div class="safetyResponsiveNavItem mobile"><a href="{{route('front.contact')}}" class="safetyMenuColor mobile">Contact Us</a></div>
             </div>
