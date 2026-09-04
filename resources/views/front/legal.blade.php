@@ -1,159 +1,172 @@
 @extends('front.app')
 
 @section('content')
-    <div class="legal-wrapper">
-        <div class="legal-container">
+    <div class="enterprise-about-wrapper">
+        <div class="enterprise-container">
 
-            <!-- Hero Header -->
-            <div class="legal-hero">
-                <span class="legal-badge">Regulatory & Compliance</span>
-                <h1 class="legal-title">Legal Information & Disclosures</h1>
-                <p class="legal-subtitle">Official terms, governance policies, and statutory compliance framework for PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED.</p>
+            <!-- Hero Banner Section -->
+            <div class="enterprise-hero">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span> Regulatory & Compliance
+                </div>
+                <h1 class="enterprise-main-title">Legal Information & Disclosures</h1>
+                <p class="enterprise-lead-text">
+                    Official terms, governance policies, and statutory compliance framework for <span class="highlight-domain">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</span> via ireland-safetycourse.ie.
+                </p>
             </div>
 
-            <!-- Content Grid -->
-            <div class="legal-grid">
+            <!-- Bento Grid Layout -->
+            <div class="enterprise-bento-grid">
 
-                <!-- Section 1: Corporate Registration & Governance -->
-                <div class="legal-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">🏛️</div>
-                        <h3 class="legal-heading">Corporate Registration & Jurisdiction</h3>
+                <!-- Card 1: Corporate Registration & Jurisdiction -->
+                <div class="bento-card span-two corporate-profile-card">
+                    <div class="card-top-row">
+                        <div class="icon-badge">🏛️</div>
+                        <span class="card-category">Corporate Governance</span>
                     </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            This digital platform and its associated services are operated and maintained by <strong>PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</strong>, a legally incorporated entity registered under the laws of the Republic of Ireland.
-                        </p>
-                        <div class="legal-data-box">
-                            <div class="data-row">
-                                <span class="d-label">Registered Legal Name</span>
-                                <span class="d-val">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</span>
-                            </div>
-                            <div class="data-row">
-                                <span class="d-label">Registration Office</span>
-                                <span class="d-val">CRO Ireland (Companies Registration Office)</span>
-                            </div>
-                            <div class="data-row">
-                                <span class="d-label">Company Registration Number</span>
-                                <span class="d-val highlight">822301</span>
-                            </div>
-                            <div class="data-row">
-                                <span class="d-label">Registered Office Address</span>
-                                <span class="d-val">19 Harcourt Street, Dublin, D02 H364, Ireland</span>
-                            </div>
+                    <h3 class="bento-title">Corporate Registration & Jurisdiction</h3>
+                    <p class="bento-desc">
+                        This digital platform and its associated services are operated and maintained by <strong>PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</strong>, a legally incorporated entity registered under the laws of the Republic of Ireland.
+                    </p>
+
+                    <div class="credentials-flex-box">
+                        <div class="cred-pill">
+                            <span class="c-label">Registered Legal Name</span>
+                            <span class="c-val">PROGRESSIVE VELOCITY FAST SOLUTIONS LIMITED</span>
+                        </div>
+                        <div class="cred-pill">
+                            <span class="c-label">Registration Office</span>
+                            <span class="c-val">CRO Ireland</span>
+                        </div>
+                        <div class="cred-pill">
+                            <span class="c-label">Company Number</span>
+                            <span class="c-val highlight-num">822301</span>
+                        </div>
+                        <div class="cred-pill">
+                            <span class="c-label">Registered Address</span>
+                            <span class="c-val">51 Bracken Road, D18 CV48, Ireland</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Section 2: Official Verification & Legal Documents (Added for Ad Review & Identity Proof) -->
-                <div class="legal-card primary-accent-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">📂</div>
-                        <h3 class="legal-heading">Official Verification & Statutory Documents</h3>
+                <!-- Card 2: Official Verification & Statutory Documents -->
+                <div class="bento-card span-two trust-accent-card">
+                    <div class="card-top-row">
+                        <div class="icon-badge">📂</div>
+                        <span class="card-category">Advertiser Verification</span>
                     </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            In compliance with platform transparency and advertiser verification guidelines, we provide direct access to our official corporate registration and financial documentation below for audit and review:
-                        </p>
-                        <div class="legal-docs-grid">
-                            <a href="{{ asset('legalDocs/certIncorp.pdf') }}" target="_blank" class="legal-doc-item">
-                                <div class="doc-icon">📄</div>
-                                <div class="doc-info">
-                                    <span class="doc-title">Certificate of Incorporation</span>
-                                    <span class="doc-subtitle">Official CRO corporate formation record</span>
-                                </div>
-                                <span class="doc-action">View PDF →</span>
-                            </a>
-                            <a href="{{ asset('legalDocs/companyDetails.pdf') }}" target="_blank" class="legal-doc-item">
-                                <div class="doc-icon">📊</div>
-                                <div class="doc-info">
-                                    <span class="doc-title">CRO Company Printout</span>
-                                    <span class="doc-subtitle">Detailed active company register details</span>
-                                </div>
-                                <span class="doc-action">View PDF →</span>
-                            </a>
-                            <a href="{{ asset('legalDocs/BankStatement.pdf') }}" target="_blank" class="legal-doc-item">
-                                <div class="doc-icon">🏦</div>
-                                <div class="doc-info">
-                                    <span class="doc-title">Corporate Bank Verification</span>
-                                    <span class="doc-subtitle">Official entity banking and billing statement</span>
-                                </div>
-                                <span class="doc-action">View PDF →</span>
-                            </a>
+                    <h3 class="bento-title text-dark">Official Verification & Statutory Documents</h3>
+                    <p class="bento-desc">
+                        In compliance with platform transparency and advertiser verification guidelines, direct access to our official corporate registration and financial documentation is provided below for audit and review:
+                    </p>
+                    <div class="modern-steps-grid three-cols">
+                        <a href="{{ asset('legalDocs/certIncorp.pdf') }}" target="_blank" class="step-card-item doc-link-card">
+                            <div class="step-number-tag">📄</div>
+                            <h4>Certificate of Incorporation</h4>
+                            <p>Official CRO corporate formation record. <span class="doc-action-text">View PDF →</span></p>
+                        </a>
+                        <a href="{{ asset('legalDocs/companyDetails.pdf') }}" target="_blank" class="step-card-item doc-link-card">
+                            <div class="step-number-tag">📊</div>
+                            <h4>CRO Company Printout</h4>
+                            <p>Detailed active company register details. <span class="doc-action-text">View PDF →</span></p>
+                        </a>
+                        <a href="{{ asset('legalDocs/BankStatement.pdf') }}" target="_blank" class="step-card-item doc-link-card">
+                            <div class="step-number-tag">🏦</div>
+                            <h4>Corporate Bank Verification</h4>
+                            <p>Official entity banking and billing statement. <span class="doc-action-text">View PDF →</span></p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Educational Scope & Operational Terms -->
+                <div class="bento-card">
+                    <div class="card-top-row">
+                        <div class="icon-badge">📜</div>
+                        <span class="card-category">Operational Terms</span>
+                    </div>
+                    <h3 class="bento-title">Educational Scope & Terms</h3>
+                    <p class="bento-desc mb-3">
+                        We function exclusively as a digital educational provider offering standardized safety modules, ergonomic training content, and professional development programs via ireland-safetycourse.ie.
+                    </p>
+                    <div class="address-box-modern">
+                        All users agree that course completion grants a digital certificate of training participation, verifying that the user has completed our self-paced online curriculum and passed the integrated testing framework.
+                    </div>
+                </div>
+
+                <!-- Card 4: Transactions, Pricing & Refunds -->
+                <div class="bento-card">
+                    <div class="card-top-row">
+                        <div class="icon-badge">💳</div>
+                        <span class="card-category">Financial Policy</span>
+                    </div>
+                    <h3 class="bento-title">Transactions & Fulfillment</h3>
+                    <p class="bento-desc mb-3">
+                        All transactions processed through our platform are billed in Euros (EUR) and are fully itemized prior to checkout.
+                    </p>
+                    <div class="address-box-modern">
+                        Upon successful digital payment processing, automated credentials are issued instantly granting immediate access. Refund requests are evaluated case-by-case before course completion. Contact us at <a href="mailto:info@ireland-safetycourse.ie" style="color:#2563eb; font-weight:600; text-decoration:none;">info@ireland-safetycourse.ie</a> or via live chat.
+                    </div>
+                </div>
+
+                <!-- Card 5: Official Contact & Inquiry Handling -->
+                <div class="bento-card span-two">
+                    <div class="card-top-row">
+                        <div class="icon-badge">✉️</div>
+                        <span class="card-category">Inquiry Handling</span>
+                    </div>
+                    <h3 class="bento-title">Official Contact & Dispute Resolution</h3>
+                    <p class="bento-desc">
+                        For any regulatory inquiries, legal notices, or consumer support concerns, official communication channels are actively monitored during regular business hours (Monday through Friday, 9:00 AM – 10:00 PM GMT). You can reach us via email, our contact page, or real-time website live chat.
+                    </p>
+                    <div class="contact-box-modern">
+                        <div class="c-row">
+                            <span>Email Support:</span>
+                            <a href="mailto:info@ireland-safetycourse.ie">info@ireland-safetycourse.ie</a>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Section 3: Educational Services & Scope -->
-                <div class="legal-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">📜</div>
-                        <h3 class="legal-heading">Educational Scope & Operational Terms</h3>
-                    </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            We function exclusively as a digital educational provider offering standardized safety modules, ergonomic training content, and professional development programs via <a href="https://ireland-safetycourse.com">ireland-safetycourse.com</a>.
-                        </p>
-                        <p class="legal-text">
-                            All users agree that course completion grants a digital certificate of training participation, verifying that the user has completed our self-paced online curriculum and passed the integrated testing framework.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Section 4: Pricing, Transactions & Refunds -->
-                <div class="legal-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">💳</div>
-                        <h3 class="legal-heading">Transactions, Pricing & Fulfillment Policy</h3>
-                    </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            All transactions processed through our platform are billed in Euros (EUR) and are fully itemized prior to checkout. Upon successful digital payment processing, automated credentials are issued instantly granting immediate access to the purchased online portal module.
-                        </p>
-                        <p class="legal-text mb-0">
-                            Because our educational service offers instant digital access and certification processing, refund requests are evaluated on a case-by-case basis before course module completion. For billing disputes or support, contact our team directly at <a href="mailto:info@ireland-safetycourse.com">info@ireland-safetycourse.com</a> or via our live chat support.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Section 5: Contact & Dispute Resolution -->
-                <div class="legal-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">✉️</div>
-                        <h3 class="legal-heading">Official Contact & Inquiry Handling</h3>
-                    </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            For any regulatory inquiries, legal notices, or consumer support concerns, official communication channels are actively monitored during regular business hours (Monday through Friday, 9:00 AM – 10:00 PM GMT). You can reach us via email, our dedicated contact page, or through our real-time website live chat system.
-                        </p>
-                        <div class="legal-contact-strip">
-                            <div><strong>Email Support:</strong> <a href="mailto:info@ireland-safetycourse.com">info@ireland-safetycourse.com</a></div>
-                            <div><strong>Instant Assistance:</strong> Available via On-Site Live Chat Widget</div>
-                            <div><strong>Governing Law:</strong> Courts and Legislation of the Republic of Ireland</div>
+                        <div class="c-row">
+                            <span>Instant Assistance:</span>
+                            <strong>Available via On-Site Live Chat Widget</strong>
                         </div>
+
                     </div>
                 </div>
 
-                <!-- Section 6: Platform Directory & Transparency Navigation -->
-                <div class="legal-card">
-                    <div class="legal-header">
-                        <div class="legal-icon">🔗</div>
-                        <h3 class="legal-heading">Regulatory Directory & Platform Policies</h3>
+                <!-- Card 6: Regulatory Directory & Platform Policies -->
+                <div class="bento-card span-two">
+                    <div class="card-top-row">
+                        <div class="icon-badge">🔗</div>
+                        <span class="card-category">Directory</span>
                     </div>
-                    <div class="legal-body">
-                        <p class="legal-text">
-                            To ensure total transparency for users, participants, and automated compliance evaluators, please review our comprehensive corporate documentation links below:
-                        </p>
-                        <div class="legal-nav-grid">
-                            <a href="{{ route('front.about') }}" class="legal-nav-link">About Our Organization</a>
-                            <a href="{{ route('terms') }}" class="legal-nav-link">Terms & Conditions</a>
-                            <a href="{{ route('front.privacy') }}" class="legal-nav-link">Privacy & Data Policy</a>
-                            <a href="{{ route('front.refund') }}" class="legal-nav-link">Refund Policy</a>
-                            <a href="{{ route('front.accreditation') }}" class="legal-nav-link">Accreditations</a>
-                            <a href="{{ route('front.cookies') }}" class="legal-nav-link">Cookie Policy</a>
-                            <a href="{{ route('front.faq') }}" class="legal-nav-link">Help & FAQ</a>
-                            <a href="{{ route('front.contact') }}" class="legal-nav-link">Contact Department</a>
-                        </div>
+                    <h3 class="bento-title">Regulatory Directory & Platform Policies</h3>
+                    <p class="bento-desc">
+                        To ensure total transparency for users, participants, and automated compliance evaluators, please review our comprehensive corporate documentation links below:
+                    </p>
+
+                    <div class="modern-steps-grid four-cols">
+                        <a href="{{ route('front.about') }}" class="step-card-item nav-pill-item">
+                            <h4>About Our Organization</h4>
+                        </a>
+                        <a href="{{ route('terms') }}" class="step-card-item nav-pill-item">
+                            <h4>Terms & Conditions</h4>
+                        </a>
+                        <a href="{{ route('front.privacy') }}" class="step-card-item nav-pill-item">
+                            <h4>Privacy & Data Policy</h4>
+                        </a>
+                        <a href="{{ route('front.refund') }}" class="step-card-item nav-pill-item">
+                            <h4>Refund Policy</h4>
+                        </a>
+                        <a href="{{ route('front.accreditation') }}" class="step-card-item nav-pill-item">
+                            <h4>Accreditations</h4>
+                        </a>
+                        <a href="{{ route('front.cookies') }}" class="step-card-item nav-pill-item">
+                            <h4>Cookie Policy</h4>
+                        </a>
+                        <a href="{{ route('front.faq') }}" class="step-card-item nav-pill-item">
+                            <h4>Help & FAQ</h4>
+                        </a>
+                        <a href="{{ route('front.contact') }}" class="step-card-item nav-pill-item">
+                            <h4>Contact Department</h4>
+                        </a>
                     </div>
                 </div>
 
@@ -163,83 +176,143 @@
     </div>
 
     <style>
-        /* Modern Legal Page Stylesheet */
-        .legal-wrapper {
+        /* Strict X-Axis Containment & 95% Mobile Sizing Optimization */
+        html, body {
             width: 100%;
+            max-width: 100%;
+            overflow-x: hidden !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .enterprise-about-wrapper *,
+        .enterprise-about-wrapper *::before,
+        .enterprise-about-wrapper *::after {
+            box-sizing: border-box;
+        }
+
+        .enterprise-about-wrapper {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             min-height: 100vh;
-            padding: 5rem 1.5rem;
+            padding: 4rem 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: #1e293b;
+            display: flex;
+            justify-content: center;
         }
 
-        .legal-container {
-            max-width: 950px;
+        .enterprise-container {
+            width: 95%;
+            max-width: 1100px;
             margin: 0 auto;
+            overflow-x: hidden;
         }
 
-        .legal-hero {
+        /* Hero Section */
+        .enterprise-hero {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
+            padding: 0 0.5rem;
         }
 
-        .legal-badge {
-            display: inline-block;
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             background: #e0f2fe;
+            border: 1px solid #bae6fd;
             color: #0369a1;
-            font-size: 0.875rem;
+            font-size: 0.95rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 1.25rem;
             border-radius: 50px;
             margin-bottom: 1.25rem;
         }
 
-        .legal-title {
-            font-size: 3rem;
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #0284c7;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(2, 132, 199, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
+        }
+
+        .enterprise-main-title {
+            font-size: clamp(2.2rem, 5vw, 3.75rem);
             font-weight: 800;
             color: #0f172a;
             letter-spacing: -0.03em;
             margin-bottom: 1rem;
         }
 
-        .legal-subtitle {
-            font-size: 1.15rem;
-            color: #64748b;
-            max-width: 600px;
+        .enterprise-lead-text {
+            font-size: 1.2rem;
+            color: #334155;
+            max-width: 750px;
             margin: 0 auto;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .legal-grid {
+        .highlight-domain {
+            color: #2563eb;
+            font-weight: 700;
+            word-break: break-all;
+        }
+
+        /* Bento Grid Architecture with minmax(0, 1fr) to Prevent Grid Blowouts */
+        .enterprise-bento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.5rem;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 24px;
+            padding: 2.25rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            width: 100%;
+            min-width: 0;
+            overflow: hidden;
         }
 
-        .legal-card {
-            background: #ffffff;
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04);
-            padding: 2.5rem;
+        .bento-card:hover {
+            border-color: #94a3b8;
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.08);
         }
 
-        .legal-card.primary-accent-card {
-            border-left: 5px solid #2563eb;
+        .bento-card.span-two {
+            grid-column: span 2;
         }
 
-        .legal-header {
+        .card-top-row {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
             gap: 1rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 1rem;
         }
 
-        .legal-icon {
+        .icon-badge {
             font-size: 1.5rem;
             background: #f8fafc;
             width: 48px;
@@ -248,195 +321,248 @@
             align-items: center;
             justify-content: center;
             border-radius: 12px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #cbd5e1;
+            flex-shrink: 0;
         }
 
-        .legal-heading {
-            font-size: 1.3rem;
+        .card-category {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #475569;
+            background: #e2e8f0;
+            padding: 0.3rem 0.75rem;
+            border-radius: 20px;
+            text-align: right;
+        }
+
+        .bento-title {
+            font-size: 1.4rem;
             font-weight: 700;
             color: #0f172a;
-            margin: 0;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
         }
 
-        .legal-text {
+        .bento-desc {
             font-size: 1.05rem;
             line-height: 1.7;
             color: #334155;
             margin-bottom: 1.25rem;
         }
 
-        .legal-text.mb-0 {
-            margin-bottom: 0;
+        /* Credentials Grid inside Bento */
+        .credentials-flex-box {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: auto;
+            background: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 16px;
+            border: 1px solid #cbd5e1;
+            width: 100%;
+            min-width: 0;
         }
 
-        .legal-data-box {
+        .cred-pill {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            min-width: 0;
+        }
+
+        .c-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #475569;
+        }
+
+        .c-val {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            word-break: break-word;
+        }
+
+        .highlight-num {
+            color: #2563eb;
+            font-size: 1.1rem;
+        }
+
+        /* Address & Contact boxes */
+        .address-box-modern, .contact-box-modern {
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
             padding: 1.25rem;
-            margin-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #1e293b;
+            margin-top: auto;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .contact-box-modern {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
 
-        .data-row {
+        .c-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.95rem;
-            border-bottom: 1px dashed #e2e8f0;
+            border-bottom: 1px dashed #cbd5e1;
             padding-bottom: 0.5rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
-        .data-row:last-child {
+        .c-row:last-child {
             border-bottom: none;
             padding-bottom: 0;
         }
 
-        .d-label {
-            font-weight: 600;
-            color: #64748b;
-        }
-
-        .d-val {
+        .c-row a {
+            color: #2563eb;
+            text-decoration: none;
             font-weight: 700;
-            color: #0f172a;
-            text-align: right;
+            word-break: break-all;
         }
 
-        .d-val.highlight {
-            color: #2563eb;
-        }
-
-        /* Document Grid Styles */
-        .legal-docs-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .legal-doc-item {
-            display: flex;
-            align-items: center;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 1rem 1.25rem;
-            border-radius: 14px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .legal-doc-item:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
-            transform: translateY(-2px);
-            text-decoration: none;
-        }
-
-        .doc-icon {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-        }
-
-        .doc-info {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .doc-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .doc-subtitle {
-            font-size: 0.85rem;
-            color: #64748b;
-        }
-
-        .doc-action {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #2563eb;
-        }
-
-        .legal-contact-strip {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            font-size: 0.95rem;
-            color: #475569;
-        }
-
-        .legal-contact-strip a {
-            color: #2563eb;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .legal-contact-strip a:hover {
+        .c-row a:hover {
             text-decoration: underline;
         }
 
-        .legal-nav-grid {
+        /* Modern Steps Grid inside Bento */
+        .modern-steps-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
+            gap: 1rem;
             margin-top: 1.25rem;
+            width: 100%;
+            min-width: 0;
         }
 
-        .legal-nav-link {
+        .modern-steps-grid.three-cols {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .modern-steps-grid.four-cols {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .step-card-item {
             background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #2563eb;
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-width: 0;
+            width: 100%;
             text-decoration: none;
-            text-align: center;
             transition: all 0.2s ease;
         }
 
-        .legal-nav-link:hover {
+        .doc-link-card:hover {
             background: #e0f2fe;
-            border-color: #bae6fd;
-            text-decoration: none;
+            border-color: #38bdf8;
+            transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
-            .legal-title {
-                font-size: 2.25rem;
+        .nav-pill-item {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 0.5rem;
+        }
+
+        .nav-pill-item:hover {
+            background: #e0f2fe;
+            border-color: #38bdf8;
+        }
+
+        .step-number-tag {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: #2563eb;
+            background: #eff6ff;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-bottom: 0.85rem;
+        }
+
+        .step-card-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 0.4rem;
+        }
+
+        .step-card-item p {
+            font-size: 0.9rem;
+            color: #334155;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        .doc-action-text {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        /* Trust Accent Card */
+        .trust-accent-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #94a3b8;
+        }
+
+        .text-dark { color: #0f172a !important; }
+        .mb-3 { margin-bottom: 1rem; }
+
+        /* Responsive Breakpoints forcing 95% width container formatting */
+        @media (max-width: 900px) {
+            .enterprise-container {
+                width: 95%;
             }
-            .legal-card {
-                padding: 1.5rem;
+            .enterprise-bento-grid {
+                grid-template-columns: minmax(0, 1fr);
             }
-            .data-row {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.2rem;
+            .bento-card.span-two {
+                grid-column: span 1;
             }
-            .d-val {
-                text-align: left;
+            .modern-steps-grid.three-cols,
+            .modern-steps-grid.four-cols {
+                grid-template-columns: minmax(0, 1fr);
             }
-            .legal-nav-grid {
-                grid-template-columns: 1fr;
+            .credentials-flex-box {
+                grid-template-columns: minmax(0, 1fr);
             }
-            .legal-doc-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
+            .enterprise-about-wrapper {
+                padding: 2.5rem 0;
             }
-            .doc-action {
-                align-self: flex-end;
+            .bento-card {
+                padding: 1.25rem;
+                border-radius: 16px;
+            }
+            .bento-title {
+                font-size: 1.15rem;
+            }
+            .bento-desc {
+                font-size: 0.95rem;
             }
         }
     </style>
