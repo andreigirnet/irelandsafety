@@ -73,8 +73,8 @@
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">02</div>
-                                <h4>Video Modules</h4>
-                                <p>Learn at your own pace through self-paced online video lessons accessible 24/7 across all devices.</p>
+                                <h4>Interactive Modules</h4>
+                                <p>Learn at your own pace through self-paced online interactive lessons accessible 24/7 across all devices.</p>
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">03</div>
