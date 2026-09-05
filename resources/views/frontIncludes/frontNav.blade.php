@@ -78,7 +78,7 @@
                     Register
                 </a>
             @endauth
-            <p class="mobilesafetynav-mobile-footer-text mobile">IRELAND'S LEADING HEALTH AND SAFETY TRAINING</p>
+            <p class="mobilesafetynav-mobile-footer-text mobile">IRELAND'S LEADING SAFETY TRAINING</p>
         </div>
     </div>
 </nav>
