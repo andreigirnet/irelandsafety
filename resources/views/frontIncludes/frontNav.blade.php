@@ -19,7 +19,7 @@
         </div>
         <a href="{{route('frontHome')}}" class="brand">
             <img src="{{asset('images/logo/logoLanding.png')}}" alt="Ireland Safety Course" class="logoradius">
-            <div>Ireland Safety Course</div>
+            <div class="textLogoDisplay">Ireland Safety Course</div>
         </a>
         <div class="nav-utils">
             <div class="nav-auth-buttons">
@@ -43,8 +43,9 @@
 
     <div class="mobilesafetynav-mobile-menu-drawer" :class="{ 'open': mobileMenuOpen }">
         <div class="mobilesafetynav-mobile-menu-header">
-            <a href="{{route('frontHome')}}" class="mobilesafetynav-brand">
-                <img src="{{asset('images/logo/logomain.webp')}}" alt="Ireland Safety Course" class="mobilesafetynav-logoradius">
+            <a href="{{route('frontHome')}}" class="brand">
+                <img src="{{asset('images/logo/logoLanding.png')}}" alt="Ireland Safety Course" class="logoradius">
+                <div class="textLogoMob">Ireland Safety Course</div>
             </a>
             <button class="mobilesafetynav-mobile-menu-close" @click="mobileMenuOpen = false" aria-label="Close Menu">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">

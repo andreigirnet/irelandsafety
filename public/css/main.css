@@ -24,11 +24,13 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    flex-wrap: nowrap;
-    white-space: nowrap;
 }
-.brand div {
-    white-space: nowrap;
+
+.textLogoMob{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 .brand img {
     flex-shrink: 0;
@@ -395,7 +397,8 @@
 }
 
 .payment-icons {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     gap: 12px;
 }
@@ -1254,11 +1257,17 @@ a .navItem{
     .brand{
         font-size: 19px;
     }
+    .textLogoDisplay{
+        display: none;
+    }
     .brand img.logoradius{
         height: 54px;
     }
     .nav-wrapper{
         column-gap: 10px;
+    }
+    .payment-icons {
+        grid-template-columns: 1fr 1fr;
     }
 }
 [x-cloak] { display: none !important; }

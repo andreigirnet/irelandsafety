@@ -8,7 +8,7 @@
         <div class="opacityLayer"></div>
         <div class="mainBannerContent">
             <div class="mainBannerRight">
-                <h1 class="mainBannerTitle">WORKPLACE SAFETY COURSES IRELAND -<br> WORKPLACE SAFETY COURSES ONLINE</h1>
+                <h1 class="mainBannerTitle">IRELAND SAFETY COURSE -<br> WORKPLACE SAFETY COURSES ONLINE</h1>
                 <div class="trust-badges-column">
 
                     <div class="trust-badge">
