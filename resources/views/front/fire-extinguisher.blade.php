@@ -5,11 +5,11 @@
         <header class="mh-hero-corporate">
             <div class="mh-container">
                 <div class="mh-hero-content">
-                    <span class="mh-top-badge">Accredited Fire Safety Hub</span>
+                    <span class="mh-top-badge">Fire Safety Hub</span>
                     <h1>Fire Extinguisher <br>Training Online Ireland</h1>
                     <p class="mh-lead-text">
-                        The definitive **Health and Safety Course** for fire combat in the Irish workplace.
-                        Secure your **Health and Safety Certification Online** with our 2026 HSA-aligned curriculum. Professional mastery of I.S. 291:2015 standards.
+                        The definitive **Safe Operation Curriculum** for fire combat in the Irish workplace.
+                        Secure your **Operator Proficiency Verification** with our 2026 standards-aligned framework. Professional mastery of I.S. 291:2015 standards.
                     </p>
                     <div class="mh-btn-row">
                         <a href="{{route('register')}}" class="btn-exclusive-teal">Start Course — €{{ config('global.course_price') }}</a>
@@ -21,13 +21,13 @@
 
         <article class="mh-container-content">
             <h2>Fire Extinguisher Law: The Irish Compliance Standard</h2>
-            <p>In the Republic of Ireland, the provision and maintenance of fire-fighting equipment are strictly governed by the <strong>Fire Services Acts 1981 and 2003</strong> and the <strong>Safety, Health and Welfare at Work Act 2005</strong>. It is a legal requirement for employers to ensure that "competent persons" are trained to use the specific fire-fighting equipment provided in the workplace.</p>
+            <p>In the Republic of Ireland, the provision and maintenance of fire-fighting equipment are strictly governed by the <strong>Fire Services Acts 1981 and 2003</strong> and the <strong>Safety and Welfare at Work Act 2005</strong>. It is a legal requirement for employers to ensure that "competent persons" are trained to use the specific fire-fighting equipment provided in the workplace.</p>
 
-            <p>This **Health and Safety Course** is designed to satisfy the rigorous requirements of <strong>I.S. 291:2015</strong>—the Irish Standard for the selection, commissioning, and maintenance of portable fire extinguishers. Without a valid **Health and Safety Certification**, employees may lack the confidence or knowledge to act during the critical "early stages" of a fire, potentially leading to catastrophic property damage or loss of life. Our **Health and Safety Training Online** ensures your team is compliant and ready for any HSA inspection.</p>
+            <p>This **Safe Operation Curriculum** is designed to satisfy the rigorous requirements of <strong>I.S. 291:2015</strong>—the Irish Standard for the selection, commissioning, and maintenance of portable fire extinguishers. Without a valid **Operator Proficiency Verification**, employees may lack the confidence or knowledge to act during the critical "early stages" of a fire, potentially leading to catastrophic property damage or loss of life. Our **Digital Safety Instruction Online** ensures your team is compliant and ready for any regulatory inspection.</p>
 
             <div class="mh-feature-list">
-                <li><strong>Legal Shield:</strong> Fully aligned with I.S. 291:2015 and HSA guidelines.</li>
-                <li><strong>Audit Ready:</strong> Every **Health and Safety Certification Online** features a unique verification ID.</li>
+                <li><strong>Legal Shield:</strong> Fully aligned with I.S. 291:2015 and regulatory guidelines.</li>
+                <li><strong>Audit Ready:</strong> Every **Operator Proficiency Verification** features a unique verification ID.</li>
             </div>
         </article>
 
@@ -61,10 +61,9 @@
 
         <article class="mh-container-content">
             <h2>The Physics of Extinction: The PASS Technique</h2>
-            <p>Understanding the "Fire Triangle" is the foundation of this **Health and Safety Course**. Fire requires three elements: Heat, Fuel, and Oxygen. A fire extinguisher works by removing one or more of these elements. However, even the correct extinguisher is useless without the proper application technique.</p>
+            <p>Understanding the "Fire Triangle" is the foundation of this **Safe Operation Curriculum**. Fire requires three elements: Heat, Fuel, and Oxygen. A fire extinguisher works by removing one or more of these elements. However, even the correct extinguisher is useless without the proper application technique.</p>
 
-
-            <p>Our **Health and Safety Training Online** provides a deep dive into the <strong>PASS Technique</strong>, the internationally recognized standard for fire combat:</p>
+            <p>Our **Digital Safety Instruction Online** provides a deep dive into the <strong>PASS Technique</strong>, the internationally recognized standard for fire combat:</p>
             <ul class="mh-v8-list">
                 <li><strong>P – Pull:</strong> Pull the safety pin to break the tamper seal.</li>
                 <li><strong>A – Aim:</strong> Aim low, pointing the nozzle at the base of the fire, not the flames.</li>
@@ -77,8 +76,7 @@
 
         <article class="mh-container-content">
             <h2>I.S. 291:2015 Maintenance Protocols</h2>
-            <p>Possessing a **Health and Safety Certification Online** also implies a knowledge of equipment maintenance. In Ireland, fire extinguishers must be serviced annually by a competent person. Additionally, 33% of your water, foam, and powder units must be test-discharged and refilled every three years.</p>
-
+            <p>Possessing an **Operator Proficiency Verification** also implies a knowledge of equipment maintenance. In Ireland, fire extinguishers must be serviced annually by a competent person. Additionally, 33% of your water, foam, and powder units must be test-discharged and refilled every three years.</p>
 
             <ul class="mh-feature-list">
                 <li><strong>Monthly Visual Checks:</strong> Ensuring the unit is in its designated place and unobstructed.</li>
@@ -89,10 +87,10 @@
         </article>
 
         <article class="mh-container-content">
-            <h2>Secure Your Fire Safety Health and Safety Certification Online</h2>
-            <p>For Dublin-based enterprises and nationwide retailers, the logistics of fire safety training are complex. Our **Health and Safety Certification Online** removes the need for expensive on-site visits and half-day shutdowns. Your staff can complete their **Health and Safety Course** on any device, ensuring they are certified and audit-ready in just 45 minutes.</p>
+            <h2>Secure Your Fire Safety Operator Proficiency Verification</h2>
+            <p>For Dublin-based enterprises and nationwide retailers, the logistics of fire safety training are complex. Our **Operator Proficiency Verification** removes the need for expensive on-site visits and half-day shutdowns. Your staff can complete their **Safe Operation Curriculum** on any device, ensuring they are certified and audit-ready in just 45 minutes.</p>
 
-            <p>With 24/7 access and instant PDF delivery, our **Health and Safety Training Online** is the most efficient path to compliance for modern Irish businesses. Join over 350,000 professionals who have trusted our platform for their mandatory safety credentials.</p>
+            <p>With 24/7 access and instant PDF delivery, our **Digital Safety Instruction Online** is the most efficient path to compliance for modern Irish businesses. Join over 350,000 professionals who have trusted our platform for their mandatory compliance credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
                 <a href="{{route('register')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>

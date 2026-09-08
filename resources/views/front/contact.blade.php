@@ -34,6 +34,11 @@
                         <a href="mailto:info@ireland-safetycourse.com" style="color: #2563eb; text-decoration: none;">info@ireland-safetycourse.com</a>
                     </div>
 
+                    <div class="ct-detail-text">
+                        <strong>Call Us:</strong><br>
+                        <p style="color: #2563eb; text-decoration: none;">+353899735295</p>
+                    </div>
+
                     <div class="ct-address-box">
                         51 Bracken Road, D18 CV48, Ireland
                     </div>

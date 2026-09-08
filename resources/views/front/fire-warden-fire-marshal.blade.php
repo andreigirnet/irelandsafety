@@ -8,8 +8,8 @@
                     <span class="mh-top-badge">Emergency Response Leadership</span>
                     <h1>Fire Warden <br>(Fire Marshal) Training</h1>
                     <p class="mh-lead-text">
-                        The gold standard **Health and Safety Course** for Irish fire safety officers.
-                        Establish total **Fire Safety Compliance Ireland** with our 2026 digital certification. Professional, HSA-aligned, and ready for immediate deployment.
+                        The gold standard **Safe Operation Curriculum** for Irish safety officers.
+                        Establish total **Fire Safety Compliance Ireland** with our 2026 digital verification. Professional, standards-aligned, and ready for immediate deployment.
                     </p>
                     <div class="mh-btn-row">
                         <a href="{{route('register')}}" class="btn-exclusive-teal">Start Warden Training — €{{ config('global.course_price') }}</a>
@@ -21,13 +21,13 @@
 
         <article class="mh-container-content">
             <h2>Fire Safety Law in Ireland: The Warden's Role</h2>
-            <p>In the Republic of Ireland, fire safety is not an option—it is a strict legal requirement governed by the <strong>Fire Services Acts 1981 and 2003</strong> and the <strong>Safety, Health and Welfare at Work Act 2005</strong>. Under these acts, every employer is legally obligated to appoint and train a sufficient number of staff to assist in fire prevention and emergency evacuation.</p>
+            <p>In the Republic of Ireland, fire safety is not an option—it is a strict legal requirement governed by the <strong>Fire Services Acts 1981 and 2003</strong> and the <strong>Safety and Welfare at Work Act 2005</strong>. Under these acts, every employer is legally obligated to appoint and train a sufficient number of staff to assist in fire prevention and emergency evacuation.</p>
 
-            <p>This **Health and Safety Course** is specifically tailored to meet the criteria for a "Competent Person" as defined by Irish law. Without a trained Fire Warden, your business is at significant risk of failing a fire safety audit or, worse, failing to evacuate staff during a real emergency. Our **Health and Safety Training Online** ensures your wardens are equipped with the knowledge to manage fire drills, identify ignition sources, and lead evacuations with total confidence.</p>
+            <p>This **Safe Operation Curriculum** is specifically tailored to meet the criteria for a "Competent Person" as defined by Irish law. Without a trained Fire Warden, your business is at significant risk of failing a fire safety audit or, worse, failing to evacuate staff during a real emergency. Our **Digital Safety Instruction Online** ensures your wardens are equipped with the knowledge to manage fire drills, identify ignition sources, and lead evacuations with total confidence.</p>
 
             <div class="mh-feature-list">
                 <li><strong>Legal Shield:</strong> Compliant with the 2005 Safety Act and Fire Services Acts.</li>
-                <li><strong>Digital Credentials:</strong> Your **Health and Safety Certification Online** is audit-ready.</li>
+                <li><strong>Digital Credentials:</strong> Your **Operator Proficiency Verification** is audit-ready.</li>
             </div>
         </article>
 
@@ -61,11 +61,9 @@
 
         <article class="mh-container-content">
             <h2>The Chemistry of Fire: Prevention through Science</h2>
-            <p>A central component of obtaining your **Health and Safety Certification Online** is understanding the "Fire Triangle". Fire requires three elements to exist: Heat, Fuel, and Oxygen. By removing just one of these elements, a fire is extinguished. Our **Health and Safety Course** explores how different materials—from office paper to industrial chemicals—fuel fires in unique ways.</p>
+            <p>A central component of obtaining your **Operator Proficiency Verification** is understanding the "Fire Triangle". Fire requires three elements to exist: Heat, Fuel, and Oxygen. By removing just one of these elements, a fire is extinguished. Our **Safe Operation Curriculum** explores how different materials—from office paper to industrial chemicals—fuel fires in unique ways.</p>
 
-
-
-            <p>Furthermore, this **Health and Safety Training Online** covers the critical danger of **Smoke Inhalation** and "Flashovers". Most fatalities in building fires are not caused by heat, but by the toxic gases produced by burning synthetic materials. A Fire Warden must understand the speed at which smoke travels and the importance of fire-rated doors in maintaining "compartmentation".</p>
+            <p>Furthermore, this **Digital Safety Instruction Online** covers the critical danger of **Smoke Inhalation** and "Flashovers". Most fatalities in building fires are not caused by heat, but by the toxic gases produced by burning synthetic materials. A Fire Warden must understand the speed at which smoke travels and the importance of fire-rated doors in maintaining "compartmentation".</p>
 
             <h3>Emergency Evacuation: The "Sweep" Method</h3>
             <p>One of the most vital practical skills covered in this course is the floor sweep. A Fire Warden is trained to check all areas—including restrooms and storage rooms—without putting their own life at risk. We teach the "Tag" or "Visual Mark" system to ensure that emergency services are updated immediately on which areas have been cleared.</p>
@@ -74,8 +72,6 @@
         <article class="mh-container-content">
             <h2>Fire Classification and Mitigation</h2>
             <p>Not all fires are the same. Using the wrong extinguisher on a fire can be more dangerous than doing nothing at all. For example, using a Water (Red) extinguisher on a Class F fat fire or a Class C electrical fire can result in explosive results.</p>
-
-
 
             <ul class="mh-feature-list">
                 <li><strong>Class A (Wood/Paper):</strong> Water or Foam extinguishers.</li>
@@ -86,10 +82,10 @@
         </article>
 
         <article class="mh-container-content">
-            <h2>Secure Your Fire Marshal Health and Safety Certification Online</h2>
-            <p>For Dublin offices and nationwide factories, training multiple Fire Wardens is often a logistical challenge. Our **Health and Safety Certification Online** removes the need for site visits and expensive on-site trainers. Your wardens can complete their **Health and Safety Course** at their own pace, ensuring your building is never left without a "Competent Person" on-site.</p>
+            <h2>Secure Your Fire Marshal Operator Proficiency Verification</h2>
+            <p>For Dublin offices and nationwide factories, training multiple Fire Wardens is often a logistical challenge. Our **Operator Proficiency Verification** removes the need for site visits and expensive on-site trainers. Your wardens can complete their **Safe Operation Curriculum** at their own pace, ensuring your building is never left without a "Competent Person" on-site.</p>
 
-            <p>Our **Health and Safety Training Online** is the most cost-effective solution for modern Irish safety management. Join the 50,000+ professionals who trust our platform for their mandatory Fire Warden credentials.</p>
+            <p>Our **Digital Safety Instruction Online** is the most cost-effective solution for modern Irish safety management. Join the 50,000+ professionals who trust our platform for their mandatory Fire Warden credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
                 <a href="{{route('register')}}" class="btn-gold">Enrol Now — €{{ config('global.course_price') }}</a>

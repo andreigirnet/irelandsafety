@@ -190,7 +190,7 @@
     border-radius: 4px; /* Rounded corners */
     cursor: pointer;
 }
-.accredited-feature-bar {
+.certif-feature-bar {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -202,12 +202,12 @@
     transition: all 0.2s ease;
 }
 
-.accredited-feature-bar:hover {
+.certif-feature-bar:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(5, 150, 105, 0.15);
 }
 
-.accredited-icon-box {
+.certif-icon-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +220,7 @@
     box-shadow: 0 2px 5px rgba(5, 150, 105, 0.15);
 }
 
-.accredited-text {
+.certif-text {
     font-size: 13.5px;
     font-weight: 750;
     color: #064e3b;

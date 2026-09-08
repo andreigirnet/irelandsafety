@@ -17,7 +17,7 @@
                         </div>
                         <div class="badge-content">
                             <span class="badge-number">4.9 / 5</span>
-                            <span class="badge-label">QQI & RoSPA Approved</span>
+                            <span class="badge-label">Satisfied Customers</span>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mainBannerDescription" >Certified Workplace safety courses and Workplace safety training online trusted by 350,000+ professionals across Ireland and Europe. Our QQI and RoSPA approved Workplace safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your Workplace safety training at your own pace on any device and receive your certificate instantly.</div>
+                <div class="mainBannerDescription" >Certified Workplace safety courses and Workplace safety training online trusted by 350,000+ professionals across Ireland and Europe. Our Workplace safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your Workplace safety training at your own pace on any device and receive your certificate instantly.</div>
                 <a href="{{route('register')}}" class="modern-glow-btn">
                     GET CERTIFIED TODAY
                 </a>
@@ -125,20 +125,20 @@
                                     <span class="feature-desc">Theory + Practical part included</span>
                                 </div>
                             @else
-                                <div class="accredited-feature-bar">
-                                    <div class="accredited-icon-box">
+                                <div class="certif-feature-bar">
+                                    <div class="certif-icon-box">
                                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 6L9 17l-5-5"/>
                                         </svg>
                                     </div>
-                                    <span class="accredited-text">Online Training · Instant Certificate</span>
+                                    <span class="certif-text">Online Training · Instant Certificate</span>
                                 </div>
                             @endif
                             <div class="certification-wrapper">
                                 <div class="cert-tags">
-                                    <span class="tag">QQI</span>
-                                    <span class="tag">CPD</span>
-                                    <span class="tag">RoSPA</span>
+                                    <span class="tag">Instant</span>
+                                    <span class="tag">Affordable</span>
+                                    <span class="tag">Professional</span>
                                 </div>
                                 <span class="shield-tick-icon" title="Verified & Certified">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -201,7 +201,7 @@
 
     <div class="langTitle" data-aos="fade-up">
         <div class="languageText"  >
-            At Ireland Safety Course, our QQI-accredited Workplace safety courses and online Workplace safety training programs are designed to be simple, engaging, and accessible for learners of all nationalities. Each safety course online includes clear videos, illustrative graphics, straightforward images, and easy-to-read content to ensure every step is simple to follow. Our Workplace safety courses fully comply with HSA and HSE standards, align with European Union legislation, and provide recognized certification trusted across Ireland, the UK, Europe, and beyond. Discover our safety courses online and begin your Workplace safety training today.
+            At Ireland Safety Course, our Workplace safety courses and online Workplace safety training programs are designed to be simple, engaging, and accessible for learners of all nationalities. Each safety course online includes clear videos, illustrative graphics, straightforward images, and easy-to-read content to ensure every step is simple to follow. Our Workplace safety courses fully comply with standards, align with European Union legislation, and provide recognized certification trusted across Ireland, the UK, Europe, and beyond. Discover our safety courses online and begin your Workplace safety training today.
         </div>
         <div class="languagesSection">
             <img src="{{asset('images/flags/en.png')}}" alt="">
@@ -276,8 +276,8 @@
                                     <img src="{{asset('images/icons/1.png')}}" alt="">
                                 </div>
                                 <div class="cpdContent">
-                                    <div class="cpdItemTitle"  >Complete this QQI and ROSPA </div>
-                                    <div class="cpdItemContent"  >Accredited Course to obtain your Official Certificate!</div>
+                                    <div class="cpdItemTitle"  >Complete this compliant course </div>
+                                    <div class="cpdItemContent"  >Professional Course to obtain your Certificate!</div>
                                 </div>
                             </div>
                             <div class="cpdItem">
@@ -286,7 +286,7 @@
                                 </div>
                                 <div class="cpdContent">
                                     <div class="cpdItemTitle"  >Certify Your Skills</div>
-                                    <div class="cpdItemContent"  >An Ireland Safety Course Diploma/Certificate, accredited by CPD and ROSPA, validates the skills you have acquired.</div>
+                                    <div class="cpdItemContent"  >An Ireland Safety Course Diploma/Certificate, validates the skills you have acquired.</div>
                                 </div>
                             </div>
                             <div class="cpdItem">
@@ -614,7 +614,7 @@
                         <img src="{{asset('images/logo/download.svg')}}" alt="Download">
                     </div>
                     <h3 class="exclusive-title" >INSTANT Workplace SAFETY CERTIFICATE</h3>
-                    <p class="exclusive-text" >Finish your modules and download your accredited certificate immediately upon completion.</p>
+                    <p class="exclusive-text" >Finish your modules and download your certificate immediately upon completion.</p>
                 </div>
 
                 <div class="exclusive-card">
@@ -677,7 +677,7 @@
                     <div class="imh-feature-item">
                         <span class="imh-feature-icon">🏅</span>
                         <div>
-                            <strong>Accredited Certification</strong>
+                            <strong>Instant Certification</strong>
                             <p>Showcase compliance with recognized safety regulations.</p>
                         </div>
                     </div>
@@ -708,14 +708,14 @@
             <div class="mh-faq-list">
 
                 <!-- FAQ 1 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is Workplace safety training a legal requirement in ireland? hsa law'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is Workplace safety training a legal requirement in ireland? '.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
                         <span class="mh-faq-question">Is Workplace Safety training a legal requirement for my business?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Yes, under the <strong>Safety, Workplace Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong>HSA compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
+                            Yes, under the <strong>Safety, Workplace Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong> compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
                         </p>
                     </div>
                 </div>
@@ -728,13 +728,13 @@
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            While the law does not always specify a hard expiry date for every course, the industry standard and <strong>HSA best practice</strong> is that most safety certificates (such as Manual Handling or Fire Safety) remain valid for <strong>3 years</strong>. However, high-risk industries or specific certifications like <strong>First Aid Response (FAR)</strong> require a refresher every 2 years. Keeping your staff’s <strong>safety certification</strong> up to date is critical for maintaining your insurance coverage and ensuring continuous workplace competency.
+                            While the law does not always specify a hard expiry date for every course, the industry standard and <strong> best practice</strong> is that most safety certificates (such as Manual Handling or Fire Safety) remain valid for <strong>3 years</strong>. However, high-risk industries or specific certifications like <strong>First Aid Response (FAR)</strong> require a refresher every 2 years. Keeping your staff’s <strong>safety certification</strong> up to date is critical for maintaining your insurance coverage and ensuring continuous workplace competency.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'are online safety courses legally recognized? hsa accepted'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'are online safety courses legally recognized?  accepted'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
                         <span class="mh-faq-question">Are online safety certificates recognized by Irish regulators?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
@@ -773,14 +773,14 @@
                 </div>
 
                 <!-- FAQ 6 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what happens if a business is not compliant? hsa fines'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what happens if a business is not compliant?  fines'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
                         <span class="mh-faq-question">What are the penalties for non-compliance with safety laws?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Failing to provide <strong>HSA compliant training</strong> can result in catastrophic consequences for a business. Penalties include summary fines of up to €3,000 per offense or fines of up to €3 million on indictment. Furthermore, business owners or directors can face up to two years in prison. Beyond the court system, a lack of certified training usually leads to the <strong>voiding of insurance policies</strong>, leaving the company liable for massive personal injury settlement costs.
+                            Failing to provide <strong> compliant training</strong> can result in catastrophic consequences for a business. Penalties include summary fines of up to €3,000 per offense or fines of up to €3 million on indictment. Furthermore, business owners or directors can face up to two years in prison. Beyond the court system, a lack of certified training usually leads to the <strong>voiding of insurance policies</strong>, leaving the company liable for massive personal injury settlement costs.
                         </p>
                     </div>
                 </div>

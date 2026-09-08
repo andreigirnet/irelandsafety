@@ -75,6 +75,7 @@
                 <p class="footer-contact mb-0" style="font-size: 0.85rem; color: #94a3b8;">
                     Support: <a href="mailto:info@ireland-safetycourse.com" style="color: #60a5fa; text-decoration: none;">info@ireland-safetycourse.com</a>
                 </p>
+                <p class="footer-contact mb-0" style="font-size: 0.85rem; color: #94a3b8;">+353899735295</p>
             </div>
         </div>
 

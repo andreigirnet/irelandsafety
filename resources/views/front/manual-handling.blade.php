@@ -8,8 +8,8 @@
                     <span class="mh-top-badge">National Safety Standard 2026</span>
                     <h1>Manual Handling <br>Course Online Ireland</h1>
                     <p class="mh-lead-text">
-                        The ultimate **Health and Safety Course** for the Irish workforce.
-                        Secure your **Health and Safety Certification Online** with our 2026 HSA-aligned curriculum. Professional mastery of safe lifting and injury prevention.
+                        The ultimate **Safe Operation Curriculum** for the Irish workforce.
+                        Secure your **Operator Proficiency Verification** with our 2026 standards-aligned framework. Professional mastery of safe lifting and injury prevention.
                     </p>
                     <div class="mh-btn-row">
                         <a href="{{route('register')}}" class="btn-exclusive-teal">Start Manual Handling — €{{ config('global.course_price') }}</a>
@@ -23,11 +23,11 @@
             <h2>Manual Handling Law: The Irish Legal Framework</h2>
             <p>In the Republic of Ireland, manual handling is strictly governed by the <strong>Safety, Health and Welfare at Work Act 2005</strong> and the <strong>General Application Regulations 2007</strong> (Chapter 4 of Part 2). The legislation defines manual handling as any activity involving the transporting or supporting of a load, including lifting, putting down, pushing, pulling, or carrying.</p>
 
-            <p>This **Health and Safety Course** satisfies the legal requirement for employers to provide "appropriate" training to any employee involved in the movement of loads that pose a risk of injury. Without a valid **Health and Safety Certification**, both employers and employees are exposed to significant legal liability and the risk of Health and Safety Authority (HSA) fines. Our **Health and Safety Training Online** ensures your team meets these legal thresholds while drastically reducing workplace absenteeism due to Musculoskeletal Disorders (MSDs).</p>
+            <p>This **Safe Operation Curriculum** satisfies the legal requirement for employers to provide "appropriate" training to any employee involved in the movement of loads that pose a risk of injury. Without a valid **Operator Proficiency Verification**, both employers and employees are exposed to significant legal liability and the risk of regulatory fines. Our **Digital Safety Instruction Online** ensures your team meets these legal thresholds while drastically reducing workplace absenteeism due to Musculoskeletal Disorders (MSDs).</p>
 
             <div class="mh-feature-list">
                 <li><strong>Legal Shield:</strong> Fully compliant with the 2007 General Application Regulations.</li>
-                <li><strong>Audit Ready:</strong> Every **Health and Safety Certification Online** features a unique verification ID.</li>
+                <li><strong>Audit Ready:</strong> Every **Operator Proficiency Verification** features a unique verification ID.</li>
             </div>
         </article>
 
@@ -61,16 +61,12 @@
 
         <article class="mh-container-content">
             <h2>The Physics of Injury: Spinal Biomechanics</h2>
-            <p>A central component of this **Health and Safety Course** is understanding the "Lever Effect". When you bend at the waist to lift a load, your lower back acts as a fulcrum. Lifting a 10kg box with a rounded back can exert over 100kg of pressure on your lumbar vertebrae.</p>
+            <p>A central component of this **Safe Operation Curriculum** is understanding the "Lever Effect". When you bend at the waist to lift a load, your lower back acts as a fulcrum. Lifting a 10kg box with a rounded back can exert over 100kg of pressure on your lumbar vertebrae.</p>
 
-
-
-            <p>Our **Health and Safety Training Online** provides a deep dive into the anatomy of <strong>Intervertebral Discs</strong>. We explain how improper lifting leads to "Bulging" or "Herniated" discs, where the gel-like center of the disc is pushed out, causing agonizing nerve compression. Maintaining a "Neutral Spine" and avoiding "Asymmetrical Loading" (twisting while lifting) are the most critical skills for achieving total **Health and Safety Certification Online** for your industrial staff.</p>
+            <p>Our **Digital Safety Instruction Online** provides a deep dive into the anatomy of <strong>Intervertebral Discs</strong>. We explain how improper lifting leads to "Bulging" or "Herniated" discs, where the gel-like center of the disc is pushed out, causing agonizing nerve compression. Maintaining a "Neutral Spine" and avoiding "Asymmetrical Loading" (twisting while lifting) are the most critical skills for achieving total **Operator Proficiency Verification** for your industrial staff.</p>
 
             <h3>Dynamic Risk Assessment: The TILE Method</h3>
             <p>Before any physical movement begins, we train your staff to perform a TILE assessment:</p>
-
-
 
             <ul class="mh-v8-list">
                 <li><strong>Task:</strong> Does the movement involve twisting, stooping, or excessive reaching?</li>
@@ -82,9 +78,7 @@
 
         <article class="mh-container-content">
             <h2>Ergonomics & Team Handling</h2>
-            <p>Possessing a **Health and Safety Certification Online** means understanding when a task is too dangerous for a single person. We cover the use of mechanical aids (trolleys, pallet trucks) and the protocols for "Team Lifting," where communication is the primary safety tool.</p>
-
-
+            <p>Possessing an **Operator Proficiency Verification** means understanding when a task is too dangerous for a single person. We cover the use of mechanical aids (trolleys, pallet trucks) and the protocols for "Team Lifting," where communication is the primary safety tool.</p>
 
             <ul class="mh-feature-list">
                 <li><strong>Mechanical Aids:</strong> Identifying when a trolley is safer than a manual carry.</li>
@@ -95,10 +89,10 @@
         </article>
 
         <article class="mh-container-content">
-            <h2>Secure Your Workplace Health and Safety Certification Online</h2>
-            <p>For Dublin logistics firms and nationwide retail managers, the logistics of manual handling training are a significant hurdle. Our **Health and Safety Certification Online** removes the need for expensive classroom hire and travel. Your team can complete their **Health and Safety Course** at their own pace—whether in the warehouse or working from home—ensuring they are certified and audit-ready in just 45 minutes.</p>
+            <h2>Secure Your Workplace Operator Proficiency Verification</h2>
+            <p>For Dublin logistics firms and nationwide retail managers, the logistics of manual handling training are a significant hurdle. Our **Operator Proficiency Verification** removes the need for expensive classroom hire and travel. Your team can complete their **Safe Operation Curriculum** at their own pace—whether in the warehouse or working from home—ensuring they are certified and audit-ready in just 45 minutes.</p>
 
-            <p>With 24/7 access and instant PDF delivery, our **Health and Safety Training Online** is the most cost-effective path to compliance for modern Irish businesses. Join the 350,000+ professionals who trust our platform for their mandatory safety credentials.</p>
+            <p>With 24/7 access and instant PDF delivery, our **Digital Safety Instruction Online** is the most cost-effective path to compliance for modern Irish businesses. Join the 350,000+ professionals who trust our platform for their mandatory compliance credentials.</p>
 
             <div style="text-align: center; margin-top: 50px;">
                 <a href="{{route('register')}}" class="btn-gold">Enrol Today — €{{ config('global.course_price') }}</a>

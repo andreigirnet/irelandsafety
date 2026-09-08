@@ -7,7 +7,7 @@
             <!-- Hero Header -->
             <div class="enterprise-hero">
                 <div class="hero-badge">
-                    <span class="pulse-dot"></span> Official Compliance Portal
+                    <span class="pulse-dot"></span> Our Compliance Portal
                 </div>
                 <h1 class="enterprise-main-title">About Our Organization</h1>
                 <p class="enterprise-lead-text">
@@ -83,7 +83,7 @@
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">04</div>
-                                <h4>Official Certificate</h4>
+                                <h4>Instant Certificate</h4>
                                 <p>Instantly download your verifiable digital certificate of completion immediately upon passing the final assessment.</p>
                             </div>
                         </div>
