@@ -80,7 +80,7 @@
     <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=FCKWCyQL7PYg"></script>
     <script src="https://cdn.tiny.cloud/1/8htcs2m2n03rmg8dbr9dhfupzckkc16co1pzuf80yst8q9tj/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script>
 
-    {{--    <script src="{{asset('js/prevent.js')}}"></script>--}}
+        <script src="{{asset('js/prevent.js')}}"></script>
 </body>
 
 </html>

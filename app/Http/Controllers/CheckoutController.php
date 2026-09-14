@@ -97,11 +97,7 @@ class CheckoutController extends Controller
                 'metadata' => [
                     'user_id' => $user->id,
                     'cart_items' => $request->input('cart_items') ?? ($json_payload['cart_items'] ?? '[]'),
-                    'cart_qty' => $request->input('cartQty') ?? ($json_payload['cartQty'] ?? 1),
-                    'address' => $request->input('address') ?? ($json_payload['address'] ?? ''),
-                    'city' => $request->input('city') ?? ($json_payload['city'] ?? ''),
-                    'county' => $request->input('county') ?? ($json_payload['county'] ?? ''),
-                    'country' => $request->input('country') ?? ($json_payload['country'] ?? ''),
+                    'cart_qty' => $request->input('cartQty') ?? ($json_payload['cartQty'] ?? 1)
                 ]
             ]);
 
@@ -152,10 +148,6 @@ class CheckoutController extends Controller
                     'paid' => $request->cartTotal,
                     'charge_id' => $intent->id,
                     'invoice_id' => $intent->id,
-                    'address' => $request->address,
-                    'city' => $request->city,
-                    'county' => $request->county,
-                    'country' => $request->country,
                     'status' => 'paid',
                 ]);
 
@@ -224,10 +216,6 @@ class CheckoutController extends Controller
                             'paid' => $intent->amount / 100,
                             'charge_id' => $intent->id,
                             'invoice_id' => $intent->id,
-                            'address' => $metadata->address ?? null,
-                            'city' => $metadata->city ?? null,
-                            'county' => $metadata->county ?? null,
-                            'country' => $metadata->country ?? null,
                             'status' => 'paid',
                         ]);
 
@@ -368,10 +356,6 @@ class CheckoutController extends Controller
                 'paid' => $request->cartTotal ?? ($json_obj->cartTotal ?? 0),
                 'charge_id' => $intent->id,
                 'invoice_id' => $intent->id,
-                'address' => $request->address ?? ($json_obj->address ?? ''),
-                'city' => $request->city ?? ($json_obj->city ?? ''),
-                'county' => $request->county ?? ($json_obj->county ?? ''),
-                'country' => $request->country ?? ($json_obj->country ?? ''),
                 'status' => 'paid',
             ]);
 

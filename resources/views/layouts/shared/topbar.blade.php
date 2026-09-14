@@ -7,20 +7,20 @@
                 <!-- Logo light -->
                 <span  class="logo-light">
                     <span class="logo-lg">
-                        <img src="{{asset('images/login/whiteLoginLogo.png')}}" alt="logo">
+                        <img src="{{asset('images/login/logoLanding.png')}}" alt="logo">
                     </span>
                     <span class="logo-sm">
-                        <img src="{{asset('images/logo/whiteLoginLogo.png')}}" style="width: 80px" alt="small logo">
+                        <img src="{{asset('images/logo/logoLanding.png')}}" style="width: 80px" alt="small logo">
                     </span>
                 </span>
 
                 <!-- Logo Dark -->
                 <span class="logo-dark" id="showNavPanel" style="display:flex;">
                     <span class="logo-lg" >
-                        <img src="{{asset('images/logo/whiteLoginLogo.png')}}" style="width: 60px; height: 60px;" alt="small logo">
+                        <img src="{{asset('images/logo/logoLanding.png')}}" style="width: 60px; height: 60px;" alt="small logo">
                     </span>
                     <span class="logo-sm">
-                         <img src="{{asset('images/logo/whiteLoginLogo.png')}}" style="width: 40px; height: 40px" alt="small logo">
+                         <img src="{{asset('images/logo/logoLanding.png')}}" style="width: 50px; height: 50px" alt="small logo">
                     </span>
                 </span>
             </div>

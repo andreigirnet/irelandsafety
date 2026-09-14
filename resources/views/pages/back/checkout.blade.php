@@ -88,27 +88,6 @@
                     <input type="hidden" id="cart_items" name="cart_items" :value="JSON.stringify($store.cart.items)">
                     <input type="hidden" id="userId"  name="userId" value="{{auth()->user()->id}}">
 
-                    <div class="custom-input-group">
-                        <label>Street Address</label>
-                        <input type="text" class="custom-field" id="address" name="address" placeholder="Enter your full address" required>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6 custom-input-group">
-                            <label>County / State</label>
-                            <input type="text" class="custom-field" id="county" name="county" placeholder="e.g. Dublin" required>
-                        </div>
-                        <div class="col-md-6 custom-input-group">
-                            <label>City</label>
-                            <input type="text" class="custom-field" id="city" name="city" placeholder="e.g. Dublin" required>
-                        </div>
-                    </div>
-
-                    <div class="custom-input-group mb-4">
-                        <label>Country</label>
-                        <input type="text" class="custom-field" id="country" name="country" placeholder="e.g. Ireland" required>
-                    </div>
-
                     <div class="pt-3 border-top">
 
                         <div id="express-checkout-element"></div>

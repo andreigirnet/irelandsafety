@@ -8,6 +8,80 @@
     --mainWidth: 1178px;
     font-family: 'Montserrat', sans-serif;
 }
+
+.metrics-wrapper {
+    /*background-color: #005b36;*/
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+}
+.metrics-grid {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    background: white;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, #169b62 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ff883e 66.66%) 1;
+}
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.metric-value {
+    color: #005b36;
+    font-size: 2.75rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: baseline;
+}
+
+.metric-glyph-plus {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: 1px;
+}
+
+.metric-glyph-star {
+    font-size: 1.6rem;
+    margin-left: 4px;
+    align-self: center;
+}
+
+.metric-glyph-percent {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: 2px;
+}
+
+.metric-caption {
+    color: #94a3b8; /* Muted slate gray for highly legible text contrast */
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
 .modern-nav {
     width: 100%;
     background: #005b36;
@@ -15,6 +89,253 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+.hero-course-card {
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 100%;
+    max-width: 440px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 91, 54, 0.08);
+}
+
+.hero-course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 64px rgba(0, 91, 54, 0.14);
+}
+
+/* Badge styling */
+.card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    padding: 8px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.orange-badge {
+    background: rgba(255, 127, 0, 0.95);
+    color: white;
+}
+
+.green-badge {
+    background: rgba(0, 91, 54, 0.95);
+    color: white;
+}
+
+/* Image container */
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background: #0f172a;
+}
+
+.hero-course-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hero-course-card:hover .hero-course-img {
+    transform: scale(1.04);
+}
+
+.image-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+}
+
+.floating-price-tag {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    background: #ffffff;
+    color: #005b36;
+    padding: 8px 18px;
+    border-radius: 16px;
+    font-size: 28px;
+    font-weight: 900;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: baseline;
+}
+
+.floating-price-tag .currency {
+    font-size: 16px;
+    font-weight: 800;
+    margin-right: 2px;
+}
+
+/* Content Area */
+.card-content-area {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #ffffff;
+}
+
+.hero-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 20px 0;
+    line-height: 1.35;
+}
+
+/* Specs Grid */
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.spec-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.spec-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(0, 91, 54, 0.08);
+    color: #005b36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.spec-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.spec-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* Benefits Row */
+.benefits-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-top: 4px;
+}
+
+.benefit-item {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Action Buttons */
+.card-action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btn-secondary-info {
+    flex: 1;
+    background: #f1f5f9;
+    color: #334155;
+    text-align: center;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-secondary-info:hover {
+    background: #e2e8f0;
+    color: #005b36;
+}
+
+.btn-primary-enroll {
+    flex: 1.5;
+    background: #ff7f00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(255, 127, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.btn-primary-enroll:hover {
+    background: #e67300;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 127, 0, 0.4);
+}
+
+.btn-primary-enroll svg {
+    transition: transform 0.2s;
+}
+
+.btn-primary-enroll:hover svg {
+    transform: translateX(4px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .hero-course-card {
+        max-width: 90%;
+    }
+    .card-image-container {
+        height: 190px;
+    }
+    .hero-title {
+        font-size: 18px;
+    }
 }
 
 .brand{
@@ -1111,6 +1432,9 @@ a .navItem{
    ========================================= */
 
 @media (max-width: 968px) {
+    .metrics-wrapper{
+        display: none;
+    }
     .mobilesafetynav-links,
     .mobilesafetynav-auth-buttons {
         display: none;
@@ -1160,6 +1484,9 @@ a .navItem{
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px){
+    .metrics-wrapper{
+        display: none;
+    }
     .mainBannerTitle{
         font-size: 45px;
     }
@@ -1261,7 +1588,7 @@ a .navItem{
         display: none;
     }
     .brand img.logoradius{
-        height: 54px;
+        height: 80px;
     }
     .nav-wrapper{
         column-gap: 10px;

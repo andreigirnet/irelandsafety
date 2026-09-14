@@ -92,97 +92,85 @@
         <div class="adminProductsBack">
             @foreach($products as $product)
                 @if($product->status == 0)
-                <div class="adminProductBack">
-                    <img src="{{asset('images/productAdd/'.$product->image)}}" alt="" class="adminProductImageBack">
-                    <div class="adminProductBottomBack">
-                        <div class="adminProductNameBack">{{$product->name}}</div>
+                    <div class="pro-course-card" x-data="{}">
                         @if($product->id == 1)
-                            <div class="info-bar">
-                                <div class="video-camera-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M23 7l-7 5 7 5V7z"></path>
-                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                                    </svg>
-                                </div>
-                                <span class="text">Theory + Practical part</span>
+                            <div class="pro-badge badge-theory">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                Theory + Practical Included
                             </div>
                         @else
-                            <div class="info-bar">
-                                <div class="check-badge">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M20 6L9 17l-5-5"/>
-                                    </svg>
-                                </div>
-                                <span class="text">Accredited · Instant Certificate</span>
+                            <div class="pro-badge badge-online">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                Instant Certificate
                             </div>
                         @endif
-                        <div class="certification-wrapper">
-                            <!-- Using a span with a specific icon character or font-awesome class -->
 
-                            <span class="shield-tick-icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#00a86b">
-                                  <!-- Shield shape -->
-                                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                    <!-- Tick mark -->
-                                  <path fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
-                                </svg>
-                              </span>
-                            <div class="cert-tags">
-                                <span class="tag">QQI</span>
-                                <span class="tag">CPD</span>
-                                <span class="tag">RoSPA</span>
+                        <div class="pro-image-container">
+                            <img src="{{asset('images/productAdd/'.$product->image)}}" alt="{{$product->name}}" class="pro-img">
+                            <div class="pro-img-overlay"></div>
+                            <div class="pro-price-tag">
+                                <span class="currency">€</span>{{$product->price}}
                             </div>
                         </div>
-                        <div class="product-info-icons">
-                            @if($product->id == 14)
-                                <div class="product-icons-back">
-                                    <img src="images/icons/back-in-time.png" alt="">
-                                    <div>Duration: {{$product->durationTraining}} Day(Half day)</div>
+
+                        <div class="pro-content">
+                            <h3 class="pro-title">{{$product->name}}</h3>
+
+                            <div class="pro-features-grid">
+                                <div class="pro-feature-card">
+                                    <div class="pro-f-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    </div>
+                                    <div class="pro-f-text">
+                                        <span class="f-label">Duration</span>
+                                        <span class="f-val">@if($product->id == 14) {{$product->durationTraining}} Day @else {{$product->durationTraining}} Mins @endif</span>
+                                    </div>
                                 </div>
-                            @else
-                                <div class="product-icons-back">
-                                    <img src="images/icons/back-in-time.png" alt="">
-                                    <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Duration: <span style="font-weight: 500">{{$product->durationTraining}} minutes</span></div>
+
+                                <div class="pro-feature-card">
+                                    <div class="pro-f-icon">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <div class="pro-f-text">
+                                        <span class="f-label">Validity</span>
+                                        <span class="f-val">{{$product->certificateValidity}} Years</span>
+                                    </div>
                                 </div>
-                            @endif
-                            <div class="product-icons-back">
-                                <img src="images/icons/certificate.png" alt="">
-                                <div style="font-weight: 600; display: flex; align-items: center; column-gap: 5px">Validity: <span style="font-weight: 500">{{$product->certificateValidity}} Years</span></div>
                             </div>
-                            <div class="product-icons-back">
-                                <img src="images/icons/money.png" alt="">
-                                <div style="font-weight: bold">
-{{--                                    <del style="color: gray; font-size:18px">{{round($product->price * 2.31)}} €</del>--}}
-                                    <span style="color: red; font-size: 30px">{{$product->price}} €</span></div>
+
+                            <div class="pro-accreditations">
+                                <span class="acc-tag">INSTANT</span>
+                                <span class="acc-tag">AFFORDABLE</span>
+                                <span class="acc-tag">PROFESSIONAL</span>
+                                <span class="acc-verified">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#059669"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/></svg>
+                Verified
+            </span>
                             </div>
-                        </div>
-                        <div x-data="{}">
-                            <div class="productButtonsBack">
+
+                            <div class="pro-actions">
                                 @if($product->description)
-                                    <a href="{{route('front.product', $product->slug)}}" class="homeInfoCourseButton">Info</a>
+                                    <a href="{{route('front.product', $product->slug)}}" class="pro-btn-info">Info</a>
                                 @endif
-
-                                <!-- Add to Basket Button -->
-                                    <button
-                                        type="button"
-                                        class="buttonProductAdminAddBack"
-                                        @click="
-                                                $store.cart.addItem({
-                                                    id: {{ $product->id }},
-                                                    title: '{{ addslashes($product->name) }}',
-                                                    image: '{{ addslashes($product->image) }}',
-                                                    price: {{ $product->price }},
-                                                    quantity: 1
-                                                });
-                                                cartAlert = true;
-                                                setTimeout(() => { cartAlert = false }, 1000);
-                                            ">
-                                        Add To Basket
-                                    </button>
+                                <button
+                                    type="button"
+                                    class="pro-btn-basket"
+                                    @click="
+                                            $store.cart.addItem({
+                                                id: {{ $product->id }},
+                                                title: '{{ addslashes($product->name) }}',
+                                                image: '{{ addslashes($product->image) }}',
+                                                price: {{ $product->price }},
+                                                quantity: 1
+                                            });
+                                            cartAlert = true;
+                                            setTimeout(() => { cartAlert = false }, 1000);
+                                        ">
+                                    Add To Basket
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endif
             @endforeach
 
@@ -193,7 +181,7 @@
             🍀
         </div>
         <div class="trustBadge__text">
-            <div class="trustBadge__eyebrow">Nr.1 rated</div>
+            <div class="trustBadge__eyebrow">Top rated</div>
             <div class="trustBadge__label">Irish Safety Provider</div>
         </div>
     </div>

@@ -73,18 +73,18 @@
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">02</div>
-                                <h4>Interactive Modules</h4>
-                                <p>Learn at your own pace through self-paced online interactive lessons accessible 24/7 across all devices.</p>
+                                <h4>Sequential Theory</h4>
+                                <p>Progress through self-paced interactive lessons without skipping modules to ensure complete comprehension.</p>
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">03</div>
-                                <h4>Interactive Test</h4>
-                                <p>Complete the integrated multi-choice test following the course material to verify your practical comprehension.</p>
+                                <h4>Theory Assessment</h4>
+                                <p>Complete the integrated multi-choice test on the platform following the course material.</p>
                             </div>
                             <div class="step-card-item">
                                 <div class="step-number-tag">04</div>
-                                <h4>Instant Certificate</h4>
-                                <p>Instantly download your verifiable digital certificate of completion immediately upon passing the final assessment.</p>
+                                <h4>WhatsApp Video & Cert</h4>
+                                <p>Submit your practical test via WhatsApp video demonstration to receive your instant digital certificate.</p>
                             </div>
                         </div>
                     </div>

@@ -73,10 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const getCheckoutPayload = () => {
         const liveTotal = document.getElementById('cartTotal')?.value || currentTotalValue;
         return {
-            address: document.getElementById('address')?.value || '',
-            county: document.getElementById('county')?.value || '',
-            city: document.getElementById('city')?.value || '',
-            country: document.getElementById('country')?.value || '',
             cartTotal: liveTotal,
             cartQty: document.getElementById('cartQty')?.value || 0,
             cart_items: document.getElementById('cart_items')?.value || '[]',

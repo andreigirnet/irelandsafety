@@ -1,7 +1,7 @@
 @extends('front.app')
 @section('content')
     <div id="mainBanner">
-        <img src="{{asset('images/banners/BackgroundIreland.png')}}" class="warehouse" alt="">
+{{--        <img src="{{asset('images/banners/BackgroundIreland.png')}}" class="warehouse" alt="">--}}
 {{--        <video autoplay muted loop class="warehouse" >--}}
 {{--            <source src="video/bannerVideoBig.mp4" type="video/mp4">--}}
 {{--        </video>--}}
@@ -43,59 +43,37 @@
                 </div>
                 <div class="mainBannerDescription" >Certified Workplace safety courses and Workplace safety training online trusted by 350,000+ professionals across Ireland and Europe. Our Workplace safety courses are clear, practical, and easy to follow, with videos, images, and concise text. Complete your Workplace safety training at your own pace on any device and receive your certificate instantly.</div>
                 <a href="{{route('register')}}" class="modern-glow-btn">
-                    GET CERTIFIED TODAY
+                    START NOW
                 </a>
             </div>
         </div>
+        <div class="metrics-wrapper bg-brand-deep">
+            <div class="metrics-grid">
 
-    </div>
-
-    <div class="bold-dark-section">
-        <div class="bold-dark-container">
-
-            <div class="bold-stat-item">
-                <div class="bold-icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
+                <div class="metric-card">
+                    <span class="metric-value">100%</span>
+                    <span class="metric-caption">ONLINE LEARNING</span>
                 </div>
-                <div class="bold-stat-data">
-                    <div class="bold-number" id="customersCounter">14,200</div>
-                    <div class="bold-label">Happy Customers</div>
+
+                <div class="metric-card">
+                    <span class="metric-value">€{{config('global.course_price')}}</span>
+                    <span class="metric-caption">Course & certificate</span>
                 </div>
+
+                {{--            <div class="metric-card">--}}
+                {{--                <span class="metric-value">30</span></span>--}}
+                {{--                <span class="metric-caption">Minutes Course</span>--}}
+                {{--            </div>--}}
+
+                <div class="metric-card">
+                    <span class="metric-value">24/7</span>
+                    <span class="metric-caption">Train at your own pace</span>
+                </div>
+
             </div>
-
-            <div class="bold-stat-item">
-                <div class="bold-icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="6"/>
-                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-                    </svg>
-                </div>
-                <div class="bold-stat-data">
-                    <div class="bold-number" id="certificatesCounter">8,450</div>
-                    <div class="bold-label">Certificates Issued</div>
-                </div>
-            </div>
-
-            <div class="bold-stat-item">
-                <div class="bold-icon-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                        <polyline points="16 7 22 7 22 13"/>
-                    </svg>
-                </div>
-                <div class="bold-stat-data">
-                    <div class="bold-number" id="instructorsCounter">99.4%</div>
-                    <div class="bold-label">Pass Rate</div>
-                </div>
-            </div>
-
         </div>
     </div>
+
 
     <div class="title" data-aos="fade-up">
         <div class="titleText" >Explore our Workplace Safety Courses</div>
@@ -107,92 +85,78 @@
             <div class="adminProducts">
                 @foreach($products as $product)
                     @if($product->status == 0)
-                    <div class="adminProduct">
-                        <img src="{{asset('images/productAdd/'.$product->image)}}" alt="" class="adminProductImage">
-                        <div class="adminProductBottom">
-                            <div class="adminProductName">{{$product->name}}</div>
-{{--                            @if (!in_array($product->id, [13, 14, 15, 16]))--}}
-{{--                                <div style="color: #397b21; font-weight: bold">e-Learning Course</div>--}}
-{{--                            @endif--}}
+                        <div class="hero-course-card">
                             @if($product->id == 1)
-                                <div class="custom-course-feature-box">
-                                    <div class="feature-icon-wrapper">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M23 7l-7 5 7 5V7z"></path>
-                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                                        </svg>
-                                    </div>
-                                    <span class="feature-desc">Theory + Practical part included</span>
+                                <div class="card-badge orange-badge">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                                    Theory + Practical Included
                                 </div>
                             @else
-                                <div class="certif-feature-bar">
-                                    <div class="certif-icon-box">
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M20 6L9 17l-5-5"/>
-                                        </svg>
-                                    </div>
-                                    <span class="certif-text">Online Training · Instant Certificate</span>
+                                <div class="card-badge green-badge">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    Instant Online Certification
                                 </div>
                             @endif
-                            <div class="certification-wrapper">
-                                <div class="cert-tags">
-                                    <span class="tag">Instant</span>
-                                    <span class="tag">Affordable</span>
-                                    <span class="tag">Professional</span>
+
+                            <div class="card-image-container">
+                                <img src="{{asset('images/productAdd/'.$product->image)}}" alt="{{$product->name}}" class="hero-course-img">
+                                <div class="image-gradient-overlay"></div>
+                                <div class="floating-price-tag">
+                                    <span class="currency">€</span>{{$product->price}}
                                 </div>
-                                <span class="shield-tick-icon" title="Verified & Certified">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#059669"/>
-                                    <path stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M8 11.5l3 3 6-7"/>
-                                </svg>
-                            </span>
                             </div>
-                            <div class="product-info-icons">
-                                @if($product->id == 14)
-                                    <div class="product-icons">
-                                        <img src="images/icons/back-in-time.png" alt="">
-                                        <div>Duration: {{$product->durationTraining}} Day(Half day)</div>
+
+                            <div class="card-content-area">
+                                <h3 class="hero-title">{{$product->name}}</h3>
+
+                                <div class="specs-grid">
+                                    <div class="spec-card">
+                                        <div class="spec-icon">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        </div>
+                                        <div class="spec-data">
+                                            <span class="spec-label">Duration</span>
+                                            <span class="spec-value">@if($product->id == 14) {{$product->durationTraining}} Day @else {{$product->durationTraining}} Mins @endif</span>
+                                        </div>
                                     </div>
-                                @else
-                                    <div class="product-icons">
-                                        <img src="images/icons/back-in-time.png" alt="">
-                                        <div>Duration: {{$product->durationTraining}} minutes</div>
+
+                                    <div class="spec-card">
+                                        <div class="spec-icon">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                        </div>
+                                        <div class="spec-data">
+                                            <span class="spec-label">Validity</span>
+                                            <span class="spec-value">{{$product->certificateValidity}} Years</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="benefits-row">
+                                    <span class="benefit-item">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                        Instant Certification
+                                    </span>
+                                                            <span class="benefit-item">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                        100% Pass Guarantee
+                                    </span>
+                                </div>
+
+                                @if($product->status == 0)
+                                    <div class="card-action-buttons">
+                                        @if($product->description)
+                                            <a href="{{route('front.product', $product->slug)}}" class="btn-secondary-info">
+                                                Course Info
+                                            </a>
+                                        @endif
+                                        <a href="{{route('register')}}" class="btn-primary-enroll">
+                                            <span>Start Now</span>
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                        </a>
                                     </div>
                                 @endif
-                                <div class="product-icons">
-                                    <img src="images/icons/certificate.png" alt="">
-                                    <div>Valid: {{$product->certificateValidity}} Years</div>
-                                </div>
-                                <div class="product-icons">
-                                    <img src="images/icons/money.png" alt="">
-                                    <div style="font-weight: bold">
-{{--                                        <del style="color: gray">{{round($product->price * 2.31)}} €</del> --}}
-                                        <span style="color: green; font-size: 25px">{{$product->price}} €</span></div>
-                                </div>
                             </div>
-                            @if($product->status == 0)
-{{--                                <form action="{{route('basket.add')}}" method="POST">--}}
-{{--                                    @csrf--}}
-{{--                                    <input type="hidden" value="{{$product->id}}" name="productId">--}}
-                                    <div class="productButtons">
-                                        <a href="{{route('register')}}" class="buttonProductAdminAdd">Add To Basket</a>
-                                        @if($product->description)
-                                            <a href="{{route('front.product', $product->slug)}}" class="homeStartCourseButton">Info</a>
-                                        @endif
-                                    </div>
-{{--                                </form>--}}
-{{--                            @else--}}
-{{--                                <div class="productButtons">--}}
-
-{{--                                    --}}{{--                                    <button type="submit" class="buttonProductAdminAdd">Coming Soon</button>--}}
-
-{{--                                    @if($product->description)--}}
-{{--                                        <a href="{{route('front.product', $product->id)}}" class="homeStartCourseButton">Info</a>--}}
-{{--                                    @endif--}}
-{{--                                </div>--}}
-                            @endif
                         </div>
-                    </div>
                     @endif
                 @endforeach
             </div>
@@ -225,19 +189,22 @@
                 </header>
 
                 <div class="premium-step-list">
-                    <div class="premium-step-card">
-                        <div class="premium-icon-box">
-                            <img src="{{asset('images/icons/11.png')}}" alt="Purchase">
-                        </div>
-                        <p class="premium-step-text" >Purchase your training license online.</p>
-                    </div>
 
                     <div class="premium-step-card">
                         <div class="premium-icon-box">
                             <img src="{{asset('images/icons/22.png')}}" alt="Activate">
                         </div>
-                        <p class="premium-step-text" >Activate your account and begin your modules immediately.</p>
+                        <p class="premium-step-text" >Create or Login in your account to buy the courses you need</p>
                     </div>
+
+                    <div class="premium-step-card">
+                        <div class="premium-icon-box">
+                            <img src="{{asset('images/icons/11.png')}}" alt="Purchase">
+                        </div>
+                        <p class="premium-step-text" >Complete the payment and go to your courses section to start the course</p>
+                    </div>
+
+
 
                     <div class="premium-step-card">
                         <div class="premium-icon-box">
@@ -256,7 +223,7 @@
             </div>
 
             <div class="premium-visual-wing">
-                <img src="{{asset('images/landingBulk.png')}}" class="premium-promo-img" alt="Bulk Purchase Offer">
+                <img src="{{asset('images/landingBulk.webp')}}" class="premium-promo-img" alt="Bulk Purchase Offer">
             </div>
 
         </div>
@@ -715,7 +682,7 @@
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Yes, under the <strong>Safety, Workplace Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong> compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
+                            Yes, under the <strong>Safety, Health and Welfare at Work Act 2005</strong>, providing safety training is a fundamental legal obligation for all Irish employers. Section 8 of the Act states that employers must provide the necessary information, instruction, and training to ensure, as far as is reasonably practicable, the safety and health of their employees. Failing to provide <strong>compliant training</strong> can lead to criminal prosecution, heavy fines, and significant civil liability in the event of a workplace accident.
                         </p>
                     </div>
                 </div>
@@ -728,33 +695,32 @@
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            While the law does not always specify a hard expiry date for every course, the industry standard and <strong> best practice</strong> is that most safety certificates (such as Manual Handling or Fire Safety) remain valid for <strong>3 years</strong>. However, high-risk industries or specific certifications like <strong>First Aid Response (FAR)</strong> require a refresher every 2 years. Keeping your staff’s <strong>safety certification</strong> up to date is critical for maintaining your insurance coverage and ensuring continuous workplace competency.
+                            While the law does not always specify a hard expiry date for every course, industry standards indicate that most safety certificates (such as Manual Handling or Fire Safety) remain valid for <strong>3 years</strong>. However, high-risk industries or specific certifications like <strong>First Aid Response (FAR)</strong> require a refresher every 2 years. Keeping safety certifications up to date is critical for maintaining insurance coverage and ensuring continuous workplace competency.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'are online safety courses legally recognized?  accepted'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how are online safety courses utilized in compliance frameworks?'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">Are online safety certificates recognized by Irish regulators?</span>
+                        <span class="mh-faq-question">How are online safety courses utilized in compliance frameworks?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Absolutely. <strong>Online E-Learning safety courses</strong> are highly effective and widely accepted for theory-based subjects such as <i>Safety Awareness, DSE/Ergonomics, and Chemical Safety (COSHH)</i>. For courses that require a physical skill (like First Aid or Lift Truck operation), we utilize a <strong>Blended Learning</strong> model. This allows your team to complete the theoretical portion online at their own pace, followed by a brief, focused practical assessment to meet full regulatory standards.
+                            Online e-learning safety courses are applied for general theory-based subjects. For programs that require physical competencies, a <strong>blended learning</strong> model is typically used, allowing the theoretical portion to be completed online followed by a mandatory practical assessment to meet full compliance standards.
                         </p>
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what is a workplace risk assessment? safety statement'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how do i verify a certificate validation check'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">What is a workplace Risk Assessment and why do I need one?</span>
+                        <span class="mh-faq-question">How do I verify a safety certificate?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            A <strong>Risk Assessment</strong> is a systematic examination of your workplace to identify anything that could cause injury or illness. Under the 2005 Act, every employer in Ireland must have a written <strong>Safety Statement</strong> based on these assessments. Our training programs teach your staff how to identify hazards, evaluate the level of risk, and implement the "General Principles of Prevention" to eliminate or control dangers effectively.
+                            <strong>Yes, verification is simple.</strong> You can verify any certificate directly by visiting the <a href="{{ route('front.verify') }}">certificate verification page</a> on this website.
                         </p>
                     </div>
                 </div>
@@ -767,59 +733,59 @@
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Legally, the <strong>employer is responsible</strong> for all costs associated with mandatory Workplace safety training. Section 25 of the Safety, Workplace Welfare at Work Act 2005 specifies that training must be provided during paid working hours and must not result in any financial deduction or cost to the employee. Providing this training is a core "duty of care" that protects the business from litigation while ensuring a safe environment for everyone.
+                            Legally, the <strong>employer is responsible</strong> for all costs associated with mandatory workplace safety training. Section 25 of the Safety, Health and Welfare at Work Act 2005 specifies that training must be provided during paid working hours and must not result in any financial deduction or cost to the employee.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 6 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what happens if a business is not compliant?  fines'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what happens if a business is not compliant? fines'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
                         <span class="mh-faq-question">What are the penalties for non-compliance with safety laws?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Failing to provide <strong> compliant training</strong> can result in catastrophic consequences for a business. Penalties include summary fines of up to €3,000 per offense or fines of up to €3 million on indictment. Furthermore, business owners or directors can face up to two years in prison. Beyond the court system, a lack of certified training usually leads to the <strong>voiding of insurance policies</strong>, leaving the company liable for massive personal injury settlement costs.
+                            Failing to provide <strong>compliant training</strong> can result in summary fines of up to €3,000 per offense or fines of up to €3 million on indictment in Ireland. Furthermore, business owners or directors can face up to two years in prison. A lack of certified training can also lead to the <strong>voiding of insurance policies</strong>, leaving the company liable for personal injury settlement costs.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 7 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'how many first aiders does a business need? FAR responder'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'do i get a discount if i buy bulk for my team corporate training'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">How many First Aiders does my company legally require?</span>
+                        <span class="mh-faq-question">Do I get a discount if I buy bulk for my team?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            This is determined by your <strong>First Aid Needs Assessment</strong>, which looks at your headcount and risk profile. Generally, low-risk offices require at least one trained <strong>First Aid Responder (FAR)</strong> per 50 employees. However, high-risk sites (like manufacturing or construction) require more frequent coverage. It is vital to ensure that a trained responder is available during all shifts, including lunch breaks and overtime hours, to remain compliant.
+                            <strong>Yes.</strong> You receive a discount when purchasing 10 or more courses. Please check the corporate training section on the website for pricing tiers and group booking details.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 8 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'is fire safety training mandatory for everyone? warden'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'can i retake assessment attempts exam test'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">Is Fire Safety training mandatory for every member of staff?</span>
+                        <span class="mh-faq-question">Can I retake the assessment if I fail?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Yes. Under the <strong>Fire Services Acts</strong>, every staff member must receive basic <strong>Fire Safety Awareness</strong> training upon induction and at regular intervals. This training covers evacuation procedures, emergency exit routes, and the location of fire-fighting equipment. Additionally, your business must appoint and train <strong>Fire Wardens</strong> who are responsible for managing evacuations and conducting regular workplace fire checks.
+                            <strong>Yes.</strong> You can retake the assessment as many times as you need with unlimited attempts until you successfully pass the course.
                         </p>
                     </div>
                 </div>
 
                 <!-- FAQ 9 -->
-                <div class="mh-faq-item" x-data="{ open: false }" x-show="'what is coshh training? chemical safety hazardous'.includes(search.toLowerCase())">
+                <div class="mh-faq-item" x-data="{ open: false }" x-show="'can training be performed from mobile device mobile friendly smartphone languages'.includes(search.toLowerCase())">
                     <button class="mh-faq-trigger" @click="open = !open">
-                        <span class="mh-faq-question">What is COSHH and do my employees require it?</span>
+                        <span class="mh-faq-question">Can safety training be performed from a mobile device?</span>
                         <div class="mh-faq-plus" :style="open ? 'transform: rotate(45deg);' : ''"></div>
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            <strong>COSHH</strong> stands for the Control of Substances Hazardous to Health. If your employees handle chemicals, cleaners, dusts, fumes, or biological agents, they legally require COSHH training. This course teaches staff how to read <strong>Safety Data Sheets (SDS)</strong>, understand hazard symbols, and use Personal Protective Equipment (PPE) correctly to prevent long-term occupational illnesses such as dermatitis or respiratory issues.
+                            <strong>Yes.</strong> Modern e-learning safety courses are fully responsive and optimized for smartphones and tablets, allowing employees to complete theoretical modules, read training materials, and take assessments directly from any mobile device. Additionally, the courses are fully available in <strong>5 languages</strong> to accommodate diverse workforces.
                         </p>
                     </div>
                 </div>
@@ -832,7 +798,7 @@
                     </button>
                     <div class="mh-faq-content" x-show="open" x-collapse x-cloak>
                         <p class="mh-faq-text">
-                            Modern <strong>occupational Workplace safety</strong> now places a high priority on psychosocial risks. Employers have a legal duty to manage workplace stress just as they do physical hazards. Providing <strong>Mental Health First Aid</strong> and stress management training is now recognized as an essential part of a robust corporate safety culture. This training helps to identify early signs of burnout, reduce absenteeism, and improve overall employee retention and productivity.
+                            Modern occupational safety places a high priority on psychosocial risks. Employers have a legal duty to manage workplace stress alongside physical hazards. Providing <strong>Mental Health First Aid</strong> and stress management training helps identify early signs of burnout, reduce absenteeism, and improve overall employee well-being.
                         </p>
                     </div>
                 </div>

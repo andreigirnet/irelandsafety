@@ -19,10 +19,6 @@ return new class extends Migration
             $table->float('paid');
             $table->text('charge_id')->nullable();
             $table->text('invoice_id')->nullable();
-            $table->text('address')->nullable();
-            $table->text('county')->nullable();
-            $table->text('city')->nullable();
-            $table->text('country')->nullable();
             $table->text('status')->nullable();
             $table->timestamps();
         });
